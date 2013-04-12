@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: PCHC
+Author: Chris Violette
 
 Stylesheet: Main Stylesheet
 
@@ -10,6 +10,9 @@ and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
 
+
+// IMPORTING COMPASS
+@import "compass";
 
 //
 // IMPORTING STYLES
