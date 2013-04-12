@@ -1,3 +1,17 @@
+			<?php if ( is_active_sidebar( 'sidebar_below_content' ) ) : ?>
+			
+				<div id="below-content">
+
+					<div id="inner-below-content" class="wrap clearfix">
+
+				<?php dynamic_sidebar( 'sidebar_below_content' ); ?>
+				
+					</div><!-- end #inner-below-content -->
+					
+				</div><!-- end #below-content -->
+
+			<?php endif; ?>
+
 			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">
