@@ -61,3 +61,17 @@
 				</div> <!-- end #inner-header -->
 
 			</header> <!-- end header -->
+			
+			<?php if ( is_active_sidebar( 'sidebar_above_content' ) ) : ?>
+			
+				<div id="above-content">
+
+					<div id="inner-above-content" class="wrap clearfix">
+
+				<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
+				
+					</div><!-- end #inner-above-content -->
+					
+				</div><!-- end #above-content -->
+
+			<?php endif; ?>
