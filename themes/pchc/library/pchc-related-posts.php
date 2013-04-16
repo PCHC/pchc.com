@@ -20,7 +20,7 @@ class PCHC_Related_Posts extends WP_Widget {
 	function PCHC_Related_Posts() {
 		$widget_ops = array( 
 			'classname' => 'pchcrelatedposts', 
-			'description' => __('A widget that displays related practices, providers, & services. ', 'pchcrelatedposts') 
+			'description' => __('A widget that displays related locations, providers, & services. ', 'pchcrelatedposts') 
 		);
 		
 		$control_ops = array( 
@@ -39,7 +39,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		
 		$post_ids = get_post_meta( $post->ID, $instance['post_type'], false );
 
-        if(!empty($post_ids)) {
+        if( !empty( $post_ids ) && is_single() ) {
 
 			//Our variables from the widget settings.
 			$title = apply_filters('widget_title', $instance['title'] );
@@ -105,7 +105,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		//Set up some default widget settings.
 		$defaults = array( 
 			'title' => __('', 'pchcrelatedposts'), 
-			'post_type' => __('_cmb_practices_list', 'pchcrelatedposts'), 
+			'post_type' => __('_cmb_locations_list', 'pchcrelatedposts'), 
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
@@ -117,7 +117,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e('Post Type:', 'pchcrelatedposts'); ?></label>
 			<select class="select" id="<?php echo $this->get_field_id( 'post_type' ); ?>" name="<?php echo $this->get_field_name( 'post_type' ); ?>">
-				<option value="_cmb_practices_list" <?php echo $instance['post_type'] == '_cmb_practices_list' ? 'selected="selected"' : ''; ?>>Practices</option>
+				<option value="_cmb_locations_list" <?php echo $instance['post_type'] == '_cmb_locations_list' ? 'selected="selected"' : ''; ?>>Locations</option>
 				<option value="_cmb_providers_list" <?php echo $instance['post_type'] == '_cmb_providers_list' ? 'selected="selected"' : ''; ?>>Providers</option>
 				<option value="_cmb_services_list" <?php echo $instance['post_type'] == '_cmb_services_list' ? 'selected="selected"' : ''; ?>>Services</option>
 			</select>
