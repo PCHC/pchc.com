@@ -48,8 +48,7 @@ require_once('library/custom-posts.php'); // you can disable this if you like
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'pchc-thumb-250w', 250, 9999 );
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -69,6 +68,10 @@ for the 600 x 100 image:
 You can change the names and dimensions to whatever
 you like. Enjoy!
 */
+
+
+/************* RELATED POSTS WIDGET *************/
+require_once( 'library/pchc-related-posts.php' );
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -191,5 +194,31 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
+/************* GET RELATED POSTS *************/
+// Querys the database and gets the linked custom posts
+function pchc_get_related_posts($type, $post_id) {
+
+    $post_ids = get_post_meta( $post_id, '_cmb_' . $type . '_list', false );
+    
+    $args = null;
+
+    if(!empty($post_ids)) {
+
+	    $args = array(
+	        'post__in'          =>  $post_ids,
+	        'post_type'         =>  'any',
+	        'post_status'       =>  'publish',
+	        'posts_per_page'    =>  -1,
+	        'orderby'           =>  'title',
+	    );
+	    
+    }
+	
+	$posts = new WP_Query( $args );
+	
+	return $posts;
+	
+    
+} // don't remove this bracket!
 
 ?>

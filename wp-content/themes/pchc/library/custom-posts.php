@@ -20,26 +20,26 @@ URL: http://themble.com/bones/
     Start Practices
 ************************************************************/
 
-function custom_practices() { 
+function custom_locations() { 
 	// creating (registering) the custom type 
-	register_post_type( 'practice', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'location', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Practices', 'bonestheme'), /* This is the Title of the Group */
-			'singular_name' => __('Practice', 'bonestheme'), /* This is the individual type */
-			'all_items' => __('All Practices', 'bonestheme'), /* the all items menu item */
+			'name' => __('Location', 'bonestheme'), /* This is the Title of the Group */
+			'singular_name' => __('Location', 'bonestheme'), /* This is the individual type */
+			'all_items' => __('All Locations', 'bonestheme'), /* the all items menu item */
 			'add_new' => __('Add New', 'bonestheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Practice', 'bonestheme'), /* Add New Display Title */
+			'add_new_item' => __('Add New Location', 'bonestheme'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Practice', 'bonestheme'), /* Edit Display Title */
-			'new_item' => __('New Practice', 'bonestheme'), /* New Display Title */
-			'view_item' => __('View Practice', 'bonestheme'), /* View Display Title */
-			'search_items' => __('Search Practice', 'bonestheme'), /* Search Custom Type Title */ 
+			'edit_item' => __('Edit Location', 'bonestheme'), /* Edit Display Title */
+			'new_item' => __('New Location', 'bonestheme'), /* New Display Title */
+			'view_item' => __('View Location', 'bonestheme'), /* View Display Title */
+			'search_items' => __('Search Location', 'bonestheme'), /* Search Custom Type Title */ 
 			'not_found' =>  __('Nothing found in the Database.', 'bonestheme'), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __('Nothing found in Trash', 'bonestheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example practice', 'bonestheme' ), /* Custom Type Description */
+			'description' => __( 'This is the example location', 'bonestheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -47,8 +47,8 @@ function custom_practices() {
 			'query_var' => true,
 			'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */ 
 			//'menu_icon' => get_stylesheet_directory_uri() . '/library/images/icons/marker.png', /* the icon for the custom post type menu */
-            'rewrite'	=> array( 'slug' => 'practices', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'practices', /* you can rename the slug here */
+            'rewrite'	=> array( 'slug' => 'locations', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'locations', /* you can rename the slug here */
 			'capability_type' => 'post', /* Type of post -- Post or Page */
 			'hierarchical' => false, /* Whether or not posts can be nested -- must have 'page' capability_type */
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -77,7 +77,7 @@ function custom_practices() {
 } 
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'custom_practices');
+	add_action( 'init', 'custom_locations');
 	
 /************************************************************
     End Practices
@@ -285,7 +285,7 @@ function custom_jobs() {
 } 
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'custom_jobs');
+//	add_action( 'init', 'custom_jobs');
 	
 	/*
 	for more information on taxonomies, go here:
@@ -357,9 +357,9 @@ function custom_metaboxes( array $meta_boxes ) {
         Practice Details
     */
     $meta_boxes[] = array(
-        'id'            =>  'practice_details',
-        'title'         =>  'Practice Details',
-        'pages'         =>  array( 'practice', ), // Post type
+        'id'            =>  'location_details',
+        'title'         =>  'Location Details',
+        'pages'         =>  array( 'location', ), // Post type
         'context'       =>  'normal',
         'priority'      =>  'high',
         'show_names'    =>  true, // Show field names on the left
@@ -368,40 +368,95 @@ function custom_metaboxes( array $meta_boxes ) {
             array(
 				'name' => 'Address',
 				'desc' => '',
-				'id'   => $prefix . 'practice_address',
+				'id'   => $prefix . 'location_address',
 				'type' => 'textarea_small',
+			),
+			array(
+				'name'    => 'Map Display',
+				'desc'    => '',
+				'id'      => $prefix . 'location_map',
+				'type'    => 'select',
+				'options' => array(
+					array( 'name' => 'Show Map', 'value' => '1', ),
+					array( 'name' => 'Hide Map', 'value' => '0', ),
+				),
 			),
             array(
 				'name' => 'Primary Phone Number',
 				'desc' => '',
-				'id'   => $prefix . 'practice_primary_phone',
+				'id'   => $prefix . 'location_primary_phone',
 				'type' => 'text',
 			),
             array(
 				'name' => 'Secondary Phone Number',
 				'desc' => '',
-				'id'   => $prefix . 'practice_secondary_phone',
+				'id'   => $prefix . 'location_secondary_phone',
 				'type' => 'text',
 			),
             array(
 				'name' => 'Fax Number',
 				'desc' => '',
-				'id'   => $prefix . 'practice_fax',
+				'id'   => $prefix . 'location_fax',
 				'type' => 'text',
 			),
             array(
-				'name' => 'Email',
+				'name' => 'Email Address',
 				'desc' => '',
-				'id'   => $prefix . 'practice_email',
+				'id'   => $prefix . 'location_email',
 				'type' => 'text',
 			),
             array(
 				'name' => 'Hours',
 				'desc' => '',
-				'id'   => $prefix . 'practice_hours',
+				'id'   => $prefix . 'location_hours',
 				'type' => 'textarea_small',
 			),
         ),
+    );
+    
+    
+    /*
+    	Providers Details
+    */
+    $meta_boxes[] = array(
+    	'id'			=>	'provider_details',
+    	'title'			=>	'Provider Details',
+    	'pages'			=>	array( 'provider', ),
+    	'context'		=>	'normal',
+    	'priority'		=>	'high',
+    	'show_names'	=>	true,
+    	'fields'		=>	array(
+    		array(
+    			'name'	=>	'Title',
+    			'desc'	=>	'',
+    			'id'	=>	$prefix . 'provider_title',
+    			'type'	=>	'text',
+    		),
+    		array(
+    			'name'	=>	'Email Address',
+    			'desc'	=>	'',
+    			'id'	=>	$prefix . 'provider_email',
+    			'type'	=>	'text',
+    		),
+    		array(
+    			'name'	=>	'Education',
+    			'desc'	=>	'',
+    			'id'	=>	$prefix . 'provider_education',
+    			'type'	=>	'textarea_small',
+    		),
+    		array(
+    			'name'	=>	'Affiliations',
+    			'desc'	=>	'',
+    			'id'	=>	$prefix . 'provider_affiliations',
+    			'type'	=>	'textarea_small',
+    		),
+    		array(
+    			'name'	=>	'Credentials',
+    			'desc'	=>	'',
+    			'id'	=>	$prefix . 'provider_credentials',
+    			'type'	=>	'textarea_small',
+    		),
+    	),
     );
     
     
@@ -411,7 +466,7 @@ function custom_metaboxes( array $meta_boxes ) {
     $meta_boxes[] = array(
         'id'            =>  'providers_list',
         'title'         =>  'Providers',
-        'pages'         =>  array( 'practice', 'service', ), // Post type
+        'pages'         =>  array( 'location', 'service', ), // Post type
         'context'       =>  'side',
         'priority'      =>  'default',
         'show_names'    =>  false, // Show field names on the left
@@ -432,8 +487,8 @@ function custom_metaboxes( array $meta_boxes ) {
         Practices Checkboxes
     */
     $meta_boxes[] = array(
-        'id'            =>  'practices_list',
-        'title'         =>  'Practices',
+        'id'            =>  'locations_list',
+        'title'         =>  'Locations',
         'pages'         =>  array( 'provider', 'service', ), // Post type
         'context'       =>  'side',
         'priority'      =>  'default',
@@ -443,9 +498,9 @@ function custom_metaboxes( array $meta_boxes ) {
             array(
 				'name' => 'Practices',
 				'desc' => '',
-				'id'   => $prefix . 'practices_list',
+				'id'   => $prefix . 'locations_list',
 				'type' => 'posts_multicheck',
-                'post_type' => 'practice',
+                'post_type' => 'location',
 			),
         ),
     );
@@ -457,7 +512,7 @@ function custom_metaboxes( array $meta_boxes ) {
     $meta_boxes[] = array(
         'id'            =>  'services_list',
         'title'         =>  'Services',
-        'pages'         =>  array( 'provider', 'practice', ), // Post type
+        'pages'         =>  array( 'provider', 'location', ), // Post type
         'context'       =>  'side',
         'priority'      =>  'default',
         'show_names'    =>  false, // Show field names on the left
