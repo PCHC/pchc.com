@@ -126,5 +126,4 @@ class PCHC_Related_Posts extends WP_Widget {
 	<?php
 	}
 }
-
 ?>
