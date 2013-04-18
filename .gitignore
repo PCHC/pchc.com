@@ -1,27 +1,27 @@
 # Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!wp-content/
+# /*
+# !.gitignore
+# !wp-content/
  
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+# wp-content/*
+# !wp-content/plugins/
+# !wp-content/themes/
  
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
-wp-content/plugins/*
+# wp-content/plugins/*
 # !wp-content/plugins/my-single-file-plugin.php
 # !wp-content/plugins/my-directory-plugin/
  
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
-wp-content/themes/*
-!wp-content/themes/pchc/
+# wp-content/themes/*
+# !wp-content/themes/pchc/
 
 # Recognise these files in previously ignored locations
-!wp-content/uploads/.htaccess
+# !wp-content/uploads/.htaccess
 
 # Ignore data and junk files
 *.DS_Store
