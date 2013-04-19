@@ -1,7 +1,13 @@
+# Just ignore wp-config.php and that pesky wpcf7_captcha
+wp-config.php
+wp-content/uploads/wpcf7_captcha/
+!wp-content/uploads/wpcf7_captcha/.htaccess
+
+# Update the stuff below when it's go-time.
+
 # Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!wp-content/
+# /*
+# !.gitignore
  
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
