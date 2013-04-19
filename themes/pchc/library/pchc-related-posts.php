@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * Plugin Name: PCHC Related Posts
  * Description: A widget that displays related practices, providers, & services.
@@ -6,7 +6,6 @@
  * Author: Chris Violette
  * Author URI: 
  */
-
 
 add_action( 'widgets_init', 'pchc_related_posts' );
 
@@ -70,7 +69,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		      
 		        while( $the_posts->have_posts() ) { $the_posts->the_post(); ?>
                     <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                <? }
+                <?php }
                
                 echo '</ul>';
              
@@ -123,7 +122,5 @@ class PCHC_Related_Posts extends WP_Widget {
 			</select>
 		</p>
 
-	<?php
-	}
-}
-?>
+	<?php }
+} ?>
