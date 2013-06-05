@@ -13,7 +13,7 @@
 				<?php the_title(); ?>
 			<?php endif; ?>
 		</h1>
-		<?php foreach( $the_meta['_cmb_location_address'] as $location_address ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_address'] as $location_address ) : ?>
 			<div class="byline vcard" itemprop="about"><?php echo wpautop( $location_address ); ?></div>
 		<?php endforeach; ?>
 
@@ -23,35 +23,35 @@
 	
 		<?php the_content(); ?>
 		
-		<?php foreach( $the_meta['_cmb_location_primary_phone'] as $location_primary_phone ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_primary_phone'] as $location_primary_phone ) : ?>
 			<section class="entry-details">
 				<h3>Primary Phone</h3>
 				<?php echo wpautop( $location_primary_phone ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_location_secondary_phone'] as $location_secondary_phone ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_secondary_phone'] as $location_secondary_phone ) : ?>
 			<section class="entry-details">
 				<h3>Secondary Phone</h3>
 				<?php echo wpautop( $location_secondary_phone ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_location_fax'] as $location_fax ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_fax'] as $location_fax ) : ?>
 			<section class="entry-details">
 				<h3>Fax</h3>
 				<?php echo wpautop( $location_fax ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_location_email'] as $location_email ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_email'] as $location_email ) : ?>
 			<section class="entry-details">
 				<h3>Email</h3>
 				<?php echo wpautop( '<a href="mailto:'.$location_email.'">'.$location_email.'</a>' ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_location_hours'] as $location_hours ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_location_hours'] as $location_hours ) : ?>
 			<section class="entry-details">
 				<h3>Hours</h3>
 				<?php echo wpautop( $location_hours ); ?>
@@ -59,7 +59,7 @@
 		<?php endforeach; ?>
 		
 		<?php if( get_post_meta( $post->ID, '_cmb_location_map', true ) ) {
-			foreach( $the_meta['_cmb_location_address'] as $location_address ) : ?>
+			foreach( (array)$the_meta['_cmb_location_address'] as $location_address ) : ?>
 				<section class="entry-details">
 					<h3>Map</h3>
 					<?php 

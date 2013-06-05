@@ -17,7 +17,9 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {}
+body {
+	background: mix($pchc-blue, #FFF, 7%);
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -28,10 +30,27 @@ LAYOUT & GRID STYLES
 }
 
 /*********************
+RESPONSIVE DISPLAY CLASSES
+*********************/
+
+/* Show ONLY on this device */
+.visible-phone { display: none !important; }
+.visible-tablet { display: none !important; }
+.visible-desktop { display: inherit !important; }
+
+/* Hidden ONLY on this device */
+.hidden-phone { display: inherit !important; }
+.hidden-tablet { display: inherit !important; }
+.hidden-desktop { display: none !important; }
+
+/*********************
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	background-color: #FFFFFF;
+	@include box-shadow(0 10px 10px rgba(#000,0.1));
+}
 
 	#logo {}
 
@@ -40,22 +59,23 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
-	border: 0;
+	text-align: center;
 
 	li {
-		float: left;
+		display: inline-block;
 		position: relative;
 
 		a {
 			border-bottom: 0;
+			padding: 5px 10px;
+			text-align: left;
+			display: block;
 
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
 
 			}
 		}
@@ -69,23 +89,26 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
+			background: #FFF;
+			@include box-shadow(0 10px 10px rgba(#000, 0.1));
 
 			li {
 
 				a {
-					padding-left: 10px;
-					border-right: 0;
+					padding: 10px;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					text-shadow: 0 1px 0 #FFF;
+					border-bottom: 1px solid #ddd;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						background: mix($pchc-brown, #FFF, 7%);
+					}
 
 					&:link {}
 				}
@@ -133,21 +156,36 @@ NAVIGATION STYLES
 } /* end .nav */
 
 /*********************
+MAIN CONTENT
+*********************/
+
+#content {}
+
+#main {
+	background: #FFF;
+	border: 1px solid rgba($pchc-blue, 0.25);
+	padding: 10px;
+	@include border-radius(3px);
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
-		margin-bottom: 0.75em;
+		font-family: $header;
+		font-weight: bold;
+		color: $pchc-blue;
+		margin-top: 0;
 	}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+		@extend #main; // Inherit styles from #main
+		margin: 0 0 1.5em;
 
 		ul {
 			li {
@@ -264,8 +302,8 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-.footer-links {
-	ul {
+#footer {
+	.nav {
 		li {
 			a {
 				&:hover {}
@@ -275,7 +313,7 @@ mobile. Make sure to double check these!
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/
-			ul {}
+			ul { display: none; }
 		}
 	}
 } /* end .footer-links */

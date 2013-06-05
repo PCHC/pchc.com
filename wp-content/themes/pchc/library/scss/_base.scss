@@ -73,6 +73,20 @@ LAYOUT & GRID STYLES
 }
 
 /*********************
+RESPONSIVE DISPLAY CLASSES
+*********************/
+
+/* Show ONLY on this device */
+.visible-phone { display: inherit !important; }
+.visible-tablet { display: none !important; }
+.visible-desktop { display: none !important; }
+
+/* Hidden ONLY on this device */
+.hidden-phone { display: none !important; }
+.hidden-tablet { display: inherit !important; }
+.hidden-desktop { display: inherit !important; }
+
+/*********************
 LINK STYLES
 *********************/
 
@@ -105,9 +119,9 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: $sans-serif;
+	font-family: $header;
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: bold;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -150,9 +164,27 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	@include vector-bg-with-fallback(header-swoosh);
+	//background-size: contain;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+}
 
-	#logo {}
+	#logo {
+		a {
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-indent: 200%;
+			width:	250px;
+			height: 166px;
+			@include vector-bg-with-fallback(pchc-logo);
+			background-size: contain;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -167,17 +199,17 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
+	font-family: $avenir;
+	font-weight: 300;
+
+	ul {
+		margin: 0;
+	}
 
 	li {
 
 		a {
-			display: block;
 			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -186,7 +218,6 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
 			}
 		}
 
@@ -203,11 +234,12 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
+			margin-left: 1em;
+			font-size: 0.9em;
 
 			li {
 
 				a {
-					padding-left: 30px;
 
 					&:hover,
 					&:focus {}
@@ -810,8 +842,58 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-.footer {
+.footer-top {
 	clear: both;
+	@include vector-bg-with-fallback(footer-swoosh);
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	height: 150px;
+}
+
+.footer-bottom {
+	background: $pchc-brown;
+	min-height: 1px;
+}
+
+.footer-mid {
+	background: $pchc-darkbrown;
+}
+
+#footer-locations {
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	
+	li {
+		margin: 0 0 20px 0;
+		padding: 0 20px 0 0;
+		width: (100%/6);
+		float: left;
+		
+		h4 {
+			font-size: 1em;
+			font-family: $serif;
+			font-weight: bold;
+			margin: 0;
+		}
+		
+		p {
+			margin: 0;
+		}
+		
+		a {
+			color: #FFF;
+		}
+		
+		&:nth-child(6n+1) {
+			clear: left;
+		}
+	}
+}
+
+.footer {
+	
 }
 
 	/*
@@ -823,11 +905,22 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
-	.footer-links {
+	
+	#footer {
 
-		ul {
+		.nav {
+			margin: 0;
 
-			li {}
+			li {
+				a {
+					padding: 10px;
+					color: #FFF;
+					
+					&:hover {
+						background: $pchc-brown;
+					}
+				}
+			}
 
 		}
 
