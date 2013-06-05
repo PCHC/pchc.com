@@ -73,6 +73,8 @@ you like. Enjoy!
 /************* RELATED POSTS WIDGET *************/
 require_once( 'library/pchc-related-posts.php' );
 
+//require_once( 'library/pchc-crosslink.php' );
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas

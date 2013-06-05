@@ -15,7 +15,19 @@ upon your base.scss styles.
 
 ******************************************************************/
 
+/*********************
+RESPONSIVE DISPLAY CLASSES
+*********************/
 
+/* Show ONLY on this device */
+.visible-phone { display: none !important; }
+.visible-tablet { display: inherit !important; }
+.visible-desktop { display: none !important; }
+
+/* Hidden ONLY on this device */
+.hidden-phone { display: inherit !important; }
+.hidden-tablet { display: none !important; }
+.hidden-desktop { display: inherit !important; }
 	
 /*********************
 NAVIGATION STYLES

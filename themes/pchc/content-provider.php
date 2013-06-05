@@ -13,7 +13,7 @@
 				<?php the_title(); ?>
 			<?php endif; ?>
 		</h1>
-		<?php foreach( $the_meta['_cmb_provider_title'] as $provider_title ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_provider_title'] as $provider_title ) : ?>
 			<p class="byline vcard" itemprop="about"><?php echo $provider_title; ?></p>
 		<?php endforeach; ?>
 
@@ -28,21 +28,21 @@
 	
 		<?php the_content(); ?>
 		
-		<?php foreach( $the_meta['_cmb_provider_education'] as $provider_education ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_provider_education'] as $provider_education ) : ?>
 			<section class="entry-details">
 				<h3>Education</h3>
 				<?php echo wpautop( $provider_education ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_provider_affiliations'] as $provider_affiliations ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_provider_affiliations'] as $provider_affiliations ) : ?>
 			<section class="entry-details">
 				<h3>Affiliations</h3>
 				<?php echo wpautop( $provider_affiliations ); ?>
 			</section>
 		<?php endforeach; ?>
 		
-		<?php foreach( $the_meta['_cmb_provider_credentials'] as $provider_credentials ) : ?>
+		<?php foreach( (array)$the_meta['_cmb_provider_credentials'] as $provider_credentials ) : ?>
 			<section class="entry-details">
 				<h3>Credentials</h3>
 				<?php echo wpautop( $provider_credentials ); ?>
