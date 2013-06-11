@@ -67,6 +67,11 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
+	$('.nav-toggle').toggle(function(){
+		$('~ .nav', this).slideDown();
+	}, function(){
+		$('~ .nav', this).slideUp();
+	});
 	
  
 }); /* end of as page load scripts */
