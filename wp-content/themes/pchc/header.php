@@ -54,11 +54,32 @@
 					<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
+					
 
 				</div> <!-- end #inner-header -->
+				
+				<?php if( has_nav_menu('main-nav') ) : ?>
+				
+				<div id="header-nav">
+				
+					<div class="wrap clearfix">
+				
+						<nav role="navigation">
+							<span class="hidden-desktop nav-title">Main Menu</span>
+							<button type="button" class="hidden-desktop nav-toggle">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<div class="clearfix"></div>
+							<?php bones_main_nav(); ?>
+						</nav>
+					
+					</div>
+					
+				</div>
+					
+				<?php endif; ?>
 
 			</header> <!-- end header -->
 			
@@ -68,7 +89,7 @@
 
 					<div id="inner-above-content" class="wrap clearfix">
 
-				<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
+						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
 				
 					</div><!-- end #inner-above-content -->
 					
