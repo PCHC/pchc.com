@@ -8,3 +8,52 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+
+/*********************
+FEATURE STYLES
+*********************/
+	
+#above-content {
+	
+	.wrap {
+		
+	}
+	
+	a {
+		
+		
+		&:hover {
+			
+		}
+	}
+	
+	.widget, #homepage-features {
+		
+	}
+	
+	.homepage-feature {
+		padding: 0 40px;
+		
+		img {
+			
+			&:hover {
+				
+			}
+		}
+		
+		h3 {
+			font-size: 1.7em;
+		}
+		
+		.content {
+			font-size: 1.3em;
+			
+			p {
+				
+				&:last-child {
+					
+				}
+			}
+		}
+	}
+}

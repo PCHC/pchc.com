@@ -49,6 +49,7 @@ require_once('library/custom-posts.php'); // you can disable this if you like
 
 // Thumbnail sizes
 add_image_size( 'pchc-thumb-250w', 250, 9999 );
+add_image_size( 'pchc-feature-thumbnail', 350, 350, true );
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -90,6 +91,16 @@ function bones_register_sidebars() {
 	));
 	
 	register_sidebar(array(
+		'id' => 'sidebar_middle',
+		'name' => __('Right Sidebar (middle)', 'bonestheme'),
+		'description' => __('This area appears in the middle of the right column.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
 		'id' => 'sidebar_bottom',
 		'name' => __('Right Sidebar (bottom)', 'bonestheme'),
 		'description' => __('This area appears at the bottom of the right column.', 'bonestheme'),
@@ -118,6 +129,8 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+	
+	add_filter('widget_text', 'do_shortcode');
 
 	/*
 	to add more sidebars or widgetized areas, just copy
