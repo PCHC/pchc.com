@@ -53,7 +53,36 @@
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
 
-
+					<div id="header-icons">
+						<a href="#">
+								<i class="icon-user-md"></i>
+							<span>Find a Physician</span>
+						</a>
+						
+						<a href="#">
+							<i class="icon-medkit"></i>
+							<span>eHealth Login</span>
+						</a>
+						
+						<a href="#">
+							<i class="icon-money"></i>
+							<span>Online Billpay</span>
+						</a>
+						
+						<a href="#">
+							<i class="icon-gift"></i>
+							<span>Donate Online</span>
+						</a>
+						
+						<a href="#">
+							<i class="icon-facebook-sign"></i>
+						</a>
+						
+						<a href="#">
+							<i class="icon-youtube-sign"></i>
+						</a>
+						
+					</div>
 					
 
 				</div> <!-- end #inner-header -->
@@ -83,11 +112,13 @@
 
 			</header> <!-- end header -->
 			
-			<?php if ( is_active_sidebar( 'sidebar_above_content' ) ) : ?>
+			<?php if ( is_active_sidebar( 'sidebar_above_content' ) || is_front_page() ) : ?>
 			
 				<div id="above-content">
 
 					<div id="inner-above-content" class="wrap clearfix">
+					
+						<?php get_template_part( 'homepage', 'feature' ); ?>
 
 						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
 				

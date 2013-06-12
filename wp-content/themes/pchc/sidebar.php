@@ -10,6 +10,16 @@
 
 					<?php endif; ?>
 					
+					<?php if ( is_active_sidebar( 'sidebar_middle' ) ) : ?>
+					
+						<div id="sidebar-middle">
+
+							<?php dynamic_sidebar( 'sidebar_middle' ); ?>
+						
+						</div><!-- end #sidebar-middle -->
+
+					<?php endif; ?>
+					
 					<?php if ( is_active_sidebar( 'sidebar_bottom' ) ) : ?>
 					
 						<div id="sidebar-bottom">

@@ -52,3 +52,7 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+
+.lt-ie8 {
+	@import "font-awesome-ie7";
+}

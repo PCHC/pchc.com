@@ -50,6 +50,8 @@ HEADER STYLES
 .header {
 	background-color: #FFFFFF;
 	@include box-shadow(0 10px 10px rgba(#000,0.1));
+	position: relative;
+	z-index: 10;
 }
 
 	#logo {}
@@ -179,8 +181,6 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	
-}
 
 	.widgettitle {
 		font-family: $header;
@@ -209,6 +209,8 @@ SIDEBARS & ASIDES
 			}
 		}
 	}
+	
+}
 
 
 	/* links widget */
@@ -297,6 +299,54 @@ SIDEBARS & ASIDES
 	.textwidget {}
 	.widget_text {}
 	.textwidget p {}
+
+
+/*********************
+FEATURE STYLES
+*********************/
+	
+#above-content {
+	
+	.wrap {
+		
+	}
+	
+	a {
+		
+		
+		&:hover {
+			
+		}
+	}
+	
+	.widget, #homepage-features {
+		
+	}
+	
+	.homepage-feature {
+		
+		img {
+			
+			&:hover {
+				
+			}
+		}
+		
+		h3 {
+			
+		}
+		
+		.content {
+			
+			p {
+				
+				&:last-child {
+					
+				}
+			}
+		}
+	}
+}
 
 
 /*********************
