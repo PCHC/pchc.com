@@ -29,6 +29,38 @@ RESPONSIVE DISPLAY CLASSES
 .hidden-tablet { display: none !important; }
 .hidden-desktop { display: inherit !important; }
 	
+
+/*********************
+HEADER STYLES
+*********************/
+
+#logo {
+	width: (100% / 4);
+
+	a {
+		height: 125px;
+		background-position: 50% 0;
+		@include vector-bg-with-fallback(pchc-logo);
+	}
+}
+
+.header-right {
+	width: (100% / 4 * 3);
+}
+
+.header-contact {
+	font-size: 1em;
+}
+
+#menu-header-mobile-menu {
+	li {
+		a {
+			font-size: 1em;
+		}
+	}
+}
+	
+	
 /*********************
 NAVIGATION STYLES
 *********************/

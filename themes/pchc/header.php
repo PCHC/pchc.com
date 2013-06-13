@@ -52,36 +52,50 @@
 
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
+					
+					<div class="header-right">
+					
+						<?php if( has_nav_menu('header-mobile-nav') ) : ?>
+							<?php pchc_header_mobile_nav(); ?>
+						<?php endif; ?>
 
-					<div id="header-icons">
-						<a href="#">
-								<i class="icon-user-md"></i>
-							<span>Find a Physician</span>
-						</a>
+						<div id="header-icons" class="visible-desktop clearfix">
+							<a href="#">
+									<i class="icon-user-md"></i>
+								<span>Find a Physician</span>
+							</a>
+							
+							<a href="#">
+								<i class="icon-medkit"></i>
+								<span>eHealth Login</span>
+							</a>
+							
+							<a href="#">
+								<i class="icon-money"></i>
+								<span>Online Billpay</span>
+							</a>
+							
+							<a href="#">
+								<i class="icon-gift"></i>
+								<span>Donate Online</span>
+							</a>
+							
+							<a href="http://www.facebook.com/PenobscotCommunityHealthCare" target="_blank">
+								<i class="icon-facebook-sign"></i>
+							</a>
+							
+							<a href="http://www.youtube.com/pchcvideo" target="_blank">
+								<i class="icon-youtube-sign"></i>
+							</a>
+							
+						</div>
 						
-						<a href="#">
-							<i class="icon-medkit"></i>
-							<span>eHealth Login</span>
-						</a>
+						<?php get_search_form( ); ?>
 						
-						<a href="#">
-							<i class="icon-money"></i>
-							<span>Online Billpay</span>
-						</a>
-						
-						<a href="#">
-							<i class="icon-gift"></i>
-							<span>Donate Online</span>
-						</a>
-						
-						<a href="#">
-							<i class="icon-facebook-sign"></i>
-						</a>
-						
-						<a href="#">
-							<i class="icon-youtube-sign"></i>
-						</a>
-						
+						<p class="header-contact clearfix">
+							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="#">Locations &amp; Hours</a>
+						</p>
+					
 					</div>
 					
 
@@ -114,7 +128,7 @@
 			
 			<?php if ( is_active_sidebar( 'sidebar_above_content' ) || is_front_page() ) : ?>
 			
-				<div id="above-content">
+				<div id="above-content" class="hidden-phone">
 
 					<div id="inner-above-content" class="wrap clearfix">
 					
