@@ -16,7 +16,12 @@
 			
 				<div class="footer-top">
 					<div id="inner-footer-top" class="inner-footer wrap clearfix">
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+						<p class="accreditation">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/ncqa-2011_whitebacker.png">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/joint-commission_whitebacker.png">
+							PCHC is nationally accredited for quality.
+						</p>
 					</div>
 				</div>
 				
