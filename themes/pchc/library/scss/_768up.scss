@@ -224,6 +224,19 @@ MAIN CONTENT
 	@include border-radius(3px);
 }
 
+.related-posts {
+	.sixcol {
+		background: #f0f0f6;
+		padding: 0.5em;
+		border: none;
+		@include box-shadow(
+			0 1px 3px rgba(#000, 0.1) inset,
+			0 -1px 0 rgba(#FFF, 0.25) inset
+		);
+		@include border-radius(3px);
+	}
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -422,3 +435,23 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+.accreditation {
+	max-width: none;
+	width: 40%;
+}
+
+#footer-locations {
+	font-size: 0.8em;
+	
+	li {
+		width: (100%/6);
+		
+		&:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		&:nth-child(6n+1) {
+			clear: left;
+		}
+	}
+}

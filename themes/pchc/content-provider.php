@@ -21,8 +21,8 @@
 
 	<section class="entry-content clearfix" itemprop="articleBody">
 	
-		<?php the_post_thumbnail( 'pchc-thumb-250w', array(
-				'class'	=>	'alignright',
+		<?php the_post_thumbnail( 'pchc-thumb-300w', array(
+				'class'	=>	'alignright polaroid',
 			)
 		); ?>
 	

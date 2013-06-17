@@ -121,14 +121,26 @@ POSTS & CONTENT STYLES
 	
 	/* at this larger size, we can start to align images */
 	.alignleft, img.alignleft { 
-		margin-right: 1.5em; 
+		margin-right: 1.5em;
+		margin-left: 0;
 		display: inline; 
-		float: left; 
+		float: left;
+		max-width: 45%;
+		
+		&.polaroid {
+			@include transform(rotate(2deg));
+		} 
 	}
 	.alignright, img.alignright { 
-		margin-left: 1.5em; 
+		margin-left: 1.5em;
+		margin-right: 0;
 		display: inline; 
 		float: right; 
+		max-width: 45%;
+		
+		&.polaroid {
+			@include transform(rotate(-2deg));
+		} 
 	}
 	.aligncenter, img.aligncenter { 
 		margin-right: auto; 
@@ -152,4 +164,23 @@ do they need tweaking?
 		li {}
 	}
 } /* end .footer-links */
-			
+
+.copyright {
+	float: left;
+	width: 60%;
+}
+
+.accreditation {
+	float: right;
+	text-align: center;
+	font-size: 0.8em;
+	color: #FFF;
+	font-family: $sans-serif;
+	font-weight: 100;
+	max-width: 30%;
+	margin: 30px 0 0;
+	
+	img {
+		height: 60px;
+	}
+}			
