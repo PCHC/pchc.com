@@ -750,7 +750,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 222, ../scss/_mixins.scss */
+/* line 232, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #1e2154;
@@ -774,7 +774,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #2f3485, #282d72);
   background-image: linear-gradient(to bottom, #2f3485, #282d72);
 }
-/* line 241, ../scss/_mixins.scss */
+/* line 251, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid #1e2154;
@@ -787,7 +787,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #282d72, #22255f);
   background-image: linear-gradient(to bottom, #282d72, #22255f);
 }
-/* line 249, ../scss/_mixins.scss */
+/* line 259, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #2f3485;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#282d72), to(#2f3485));
@@ -797,7 +797,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #282d72, #2f3485);
 }
 
-/* line 254, ../scss/_mixins.scss */
+/* line 264, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #22255f;
   text-shadow: 0 1px 1px #22255f;
@@ -809,7 +809,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #2f3485, #282d72);
   box-shadow: inset 0 0 3px #474ebe;
 }
-/* line 260, ../scss/_mixins.scss */
+/* line 270, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #1b1e4c;
   background-color: #22255f;
@@ -819,7 +819,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #2a2e76, #22255f);
   background-image: linear-gradient(to bottom, #2a2e76, #22255f);
 }
-/* line 264, ../scss/_mixins.scss */
+/* line 274, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #2f3485;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#282d72), to(#2f3485));
@@ -1393,12 +1393,42 @@ POSTS & CONTENT STYLES
   max-width: 100%;
   height: auto;
 }
-/* line 570, ../scss/_base.scss */
+/* line 566, ../scss/_base.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 574, ../scss/_base.scss */
+.entry-content .alignleft, .entry-content img.alignleft, .entry-content .alignright, .entry-content img.alignright, .entry-content .aligncenter, .entry-content img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 580, ../scss/_base.scss */
+.entry-content .polaroid {
+  padding: 0.5em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  background-color: #fafafa;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5));
+  background-image: -webkit-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -moz-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -o-linear-gradient(#fafafa, #f5f5f5);
+  background-image: linear-gradient(#fafafa, #f5f5f5);
+}
+/* line 588, ../scss/_base.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 575, ../scss/_base.scss */
+/* line 593, ../scss/_base.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1406,20 +1436,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 583, ../scss/_base.scss */
+/* line 601, ../scss/_base.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 589, ../scss/_base.scss */
+/* line 607, ../scss/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 595, ../scss/_base.scss */
+/* line 613, ../scss/_base.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1430,16 +1460,31 @@ POSTS & CONTENT STYLES
 /* image gallery styles */
 /* end .gallery */
 /* gallery caption styles */
+/* line 647, ../scss/_base.scss */
+.related-posts .sixcol {
+  background: #f0f0f6;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  -webkit-box-shadow: 0 3px 0px #ddddeb;
+  -moz-box-shadow: 0 3px 0px #ddddeb;
+  box-shadow: 0 3px 0px #ddddeb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 633, ../scss/_base.scss */
+/* line 664, ../scss/_base.scss */
 .page-navigation,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 636, ../scss/_base.scss */
+/* line 667, ../scss/_base.scss */
 .bones_page_navi {
   /* current page link */
   /* end .bones_page_navi .bpn-current */
@@ -1450,44 +1495,44 @@ PAGE NAVI STYLES
   /* first page link */
   /* last page link */
 }
-/* line 638, ../scss/_base.scss */
+/* line 669, ../scss/_base.scss */
 .bones_page_navi li {
   float: left;
   margin-left: 10px;
 }
-/* line 642, ../scss/_base.scss */
+/* line 673, ../scss/_base.scss */
 .bones_page_navi li a {
   padding: 3px 6px;
   display: block;
   text-decoration: none;
   position: relative;
 }
-/* line 649, ../scss/_base.scss */
+/* line 680, ../scss/_base.scss */
 .bones_page_navi li a:hover, .bones_page_navi li a:focus {
   color: #f01d4f;
   text-decoration: underline;
 }
-/* line 658, ../scss/_base.scss */
+/* line 689, ../scss/_base.scss */
 .bones_page_navi li.bpn-current {
   padding: 3px 6px;
   border-bottom: 2px solid #f01d4f;
   position: relative;
 }
-/* line 663, ../scss/_base.scss */
+/* line 694, ../scss/_base.scss */
 .bones_page_navi li.bpn-current a {
   /* hovering on current page link */
 }
-/* line 674, ../scss/_base.scss */
+/* line 705, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link,
 .bones_page_navi li.bpn-next-link {
   font-weight: 700;
 }
-/* line 677, ../scss/_base.scss */
+/* line 708, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link a,
 .bones_page_navi li.bpn-next-link a {
   padding: 0;
 }
-/* line 686, ../scss/_base.scss */
+/* line 717, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link a:hover,
 .bones_page_navi li.bpn-next-link a:hover,
 .bones_page_navi li.bpn-first-page-link a:hover,
@@ -1497,11 +1542,11 @@ PAGE NAVI STYLES
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 729, ../scss/_base.scss */
+/* line 760, ../scss/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 733, ../scss/_base.scss */
+/* line 764, ../scss/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
@@ -1511,12 +1556,12 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 744, ../scss/_base.scss */
+/* line 775, ../scss/_base.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 761, ../scss/_base.scss */
+/* line 792, ../scss/_base.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -1527,7 +1572,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 763, ../scss/_base.scss */
+/* line 794, ../scss/_base.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -1537,63 +1582,63 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 771, ../scss/_base.scss */
+/* line 802, ../scss/_base.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 775, ../scss/_base.scss */
+/* line 806, ../scss/_base.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 793, ../scss/_base.scss */
+/* line 824, ../scss/_base.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 797, ../scss/_base.scss */
+/* line 828, ../scss/_base.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 802, ../scss/_base.scss */
+/* line 833, ../scss/_base.scss */
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
   margin-left: -10px;
   margin-top: 0;
   padding-bottom: 0;
 }
-/* line 816, ../scss/_base.scss */
+/* line 847, ../scss/_base.scss */
 .commentlist .odd {
   background: #eee;
 }
-/* line 819, ../scss/_base.scss */
+/* line 850, ../scss/_base.scss */
 .commentlist .even {
   background: #fefefe;
 }
-/* line 834, ../scss/_base.scss */
+/* line 865, ../scss/_base.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 837, ../scss/_base.scss */
+/* line 868, ../scss/_base.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 845, ../scss/_base.scss */
+/* line 876, ../scss/_base.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 848, ../scss/_base.scss */
+/* line 879, ../scss/_base.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 852, ../scss/_base.scss */
+/* line 883, ../scss/_base.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 862, ../scss/_base.scss */
+/* line 893, ../scss/_base.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -1601,17 +1646,17 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 887, ../scss/_base.scss */
+/* line 918, ../scss/_base.scss */
 .commentlist .comment_content {
   margin-left: 50px;
 }
-/* line 890, ../scss/_base.scss */
+/* line 921, ../scss/_base.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 899, ../scss/_base.scss */
+/* line 930, ../scss/_base.scss */
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
@@ -1623,7 +1668,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 911, ../scss/_base.scss */
+/* line 942, ../scss/_base.scss */
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -1632,27 +1677,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 923, ../scss/_base.scss */
+/* line 954, ../scss/_base.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 927, ../scss/_base.scss */
+/* line 958, ../scss/_base.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 930, ../scss/_base.scss */
+/* line 961, ../scss/_base.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 936, ../scss/_base.scss */
+/* line 967, ../scss/_base.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 944, ../scss/_base.scss */
+/* line 975, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -1663,14 +1708,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 950, ../scss/_base.scss */
+/* line 981, ../scss/_base.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 955, ../scss/_base.scss */
+/* line 986, ../scss/_base.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -1683,14 +1728,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 968, ../scss/_base.scss */
+/* line 999, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 973, ../scss/_base.scss */
+/* line 1004, ../scss/_base.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -1699,7 +1744,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 986, ../scss/_base.scss */
+/* line 1017, ../scss/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -1707,13 +1752,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 999, ../scss/_base.scss */
+/* line 1030, ../scss/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 1004, ../scss/_base.scss */
+/* line 1035, ../scss/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -1721,7 +1766,7 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1020, ../scss/_base.scss */
+/* line 1051, ../scss/_base.scss */
 .widget ul li {
   /* deep nesting */
 }
@@ -1729,30 +1774,30 @@ SIDEBARS & ASIDES
 /*********************
 FEATURE STYLES
 *********************/
-/* line 1042, ../scss/_base.scss */
+/* line 1073, ../scss/_base.scss */
 #above-content {
   background: #2f3485;
   color: #FFF;
 }
-/* line 1050, ../scss/_base.scss */
+/* line 1081, ../scss/_base.scss */
 #above-content a {
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 1053, ../scss/_base.scss */
+/* line 1084, ../scss/_base.scss */
 #above-content a:hover {
   color: #FFF;
 }
-/* line 1058, ../scss/_base.scss */
+/* line 1089, ../scss/_base.scss */
 #above-content .widget, #above-content #homepage-features {
   padding: 1.5em 0;
 }
-/* line 1062, ../scss/_base.scss */
+/* line 1093, ../scss/_base.scss */
 #above-content .homepage-feature {
   width: 33.33333%;
   float: left;
   padding: 0 20px;
 }
-/* line 1067, ../scss/_base.scss */
+/* line 1098, ../scss/_base.scss */
 #above-content .homepage-feature img {
   max-width: 100%;
   height: auto;
@@ -1771,29 +1816,29 @@ FEATURE STYLES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 1075, ../scss/_base.scss */
+/* line 1106, ../scss/_base.scss */
 #above-content .homepage-feature img:hover {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-/* line 1080, ../scss/_base.scss */
+/* line 1111, ../scss/_base.scss */
 #above-content .homepage-feature h3 {
   text-align: center;
   font-size: 1.4em;
   margin-bottom: 0.5em;
 }
-/* line 1086, ../scss/_base.scss */
+/* line 1117, ../scss/_base.scss */
 #above-content .homepage-feature .content {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1.2em;
 }
-/* line 1091, ../scss/_base.scss */
+/* line 1122, ../scss/_base.scss */
 #above-content .homepage-feature .content p {
   margin: 0 0 1em;
 }
-/* line 1094, ../scss/_base.scss */
+/* line 1125, ../scss/_base.scss */
 #above-content .homepage-feature .content p:last-child {
   margin-bottom: 0;
 }
@@ -1801,7 +1846,7 @@ FEATURE STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1106, ../scss/_base.scss */
+/* line 1137, ../scss/_base.scss */
 .footer-top {
   clear: both;
   background-image: url("../images/footer-swoosh.png");
@@ -1809,50 +1854,60 @@ FOOTER STYLES
   background-position: 50% 0;
   background-repeat: no-repeat;
   height: 150px;
+  overflow: hidden;
 }
 
-/* line 1114, ../scss/_base.scss */
+/* line 1146, ../scss/_base.scss */
 .footer-bottom {
   background: #8d7167;
   min-height: 1px;
 }
 
-/* line 1119, ../scss/_base.scss */
+/* line 1151, ../scss/_base.scss */
 .footer-mid {
   background: #6e4c39;
 }
 
-/* line 1123, ../scss/_base.scss */
+/* line 1155, ../scss/_base.scss */
+.copyright {
+  color: #FFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  margin: 85px 0 0;
+}
+
+/* line 1162, ../scss/_base.scss */
 #footer-locations {
   color: #FFF;
   margin: 0;
   padding: 0;
   font-size: 0.8em;
+  padding: 2em 0;
 }
-/* line 1129, ../scss/_base.scss */
+/* line 1169, ../scss/_base.scss */
 #footer-locations li {
   margin: 0 0 20px 0;
   padding: 0 20px 0 0;
-  width: 16.66667%;
+  width: 33.33333%;
   float: left;
 }
-/* line 1135, ../scss/_base.scss */
+/* line 1175, ../scss/_base.scss */
 #footer-locations li h4 {
   font-size: 1em;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: bold;
   margin: 0;
 }
-/* line 1142, ../scss/_base.scss */
+/* line 1182, ../scss/_base.scss */
 #footer-locations li p {
   margin: 0;
 }
-/* line 1146, ../scss/_base.scss */
+/* line 1186, ../scss/_base.scss */
 #footer-locations li a {
   color: #FFF;
 }
-/* line 1150, ../scss/_base.scss */
-#footer-locations li:nth-child(6n+1) {
+/* line 1190, ../scss/_base.scss */
+#footer-locations li:nth-child(3n+1) {
   clear: left;
 }
 
@@ -1865,16 +1920,16 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 1172, ../scss/_base.scss */
+/* line 1212, ../scss/_base.scss */
 #footer .nav {
   margin: 0;
 }
-/* line 1176, ../scss/_base.scss */
+/* line 1216, ../scss/_base.scss */
 #footer .nav li a {
   padding: 10px;
   color: #FFF;
 }
-/* line 1180, ../scss/_base.scss */
+/* line 1220, ../scss/_base.scss */
 #footer .nav li a:hover {
   background: #8d7167;
 }
@@ -2008,16 +2063,36 @@ tweeners.
   /* line 123, ../scss/_481up.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
+    margin-left: 0;
     display: inline;
     float: left;
+    max-width: 45%;
   }
-  /* line 128, ../scss/_481up.scss */
+  /* line 130, ../scss/_481up.scss */
+  .entry-content .alignleft.polaroid, .entry-content img.alignleft.polaroid {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  /* line 134, ../scss/_481up.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
+    margin-right: 0;
     display: inline;
     float: right;
+    max-width: 45%;
   }
-  /* line 133, ../scss/_481up.scss */
+  /* line 141, ../scss/_481up.scss */
+  .entry-content .alignright.polaroid, .entry-content img.alignright.polaroid {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  /* line 145, ../scss/_481up.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -2034,6 +2109,27 @@ tweeners.
   do they need tweaking?
   */
   /* end .footer-links */
+  /* line 168, ../scss/_481up.scss */
+  .copyright {
+    float: left;
+    width: 60%;
+  }
+
+  /* line 173, ../scss/_481up.scss */
+  .accreditation {
+    float: right;
+    text-align: center;
+    font-size: 0.8em;
+    color: #FFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    max-width: 30%;
+    margin: 30px 0 0;
+  }
+  /* line 183, ../scss/_481up.scss */
+  .accreditation img {
+    height: 60px;
+  }
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -2391,26 +2487,41 @@ you can add resource intensive styles.
     border-radius: 3px;
   }
 
+  /* line 228, ../scss/_768up.scss */
+  .related-posts .sixcol {
+    background: #f0f0f6;
+    padding: 0.5em;
+    border: none;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 233, ../scss/_768up.scss */
+  /* line 246, ../scss/_768up.scss */
   .sidebar .widgettitle {
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     font-weight: bold;
     color: #2f3485;
     margin-top: 0;
   }
-  /* line 240, ../scss/_768up.scss */
+  /* line 253, ../scss/_768up.scss */
   .sidebar .widget {
     margin: 0 0 1.5em;
   }
-  /* line 245, ../scss/_768up.scss */
+  /* line 258, ../scss/_768up.scss */
   .sidebar .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 253, ../scss/_768up.scss */
+  /* line 266, ../scss/_768up.scss */
   .sidebar .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2438,7 +2549,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 411, ../scss/_768up.scss */
+  /* line 424, ../scss/_768up.scss */
   #footer .nav li {
     /*
     be careful with the depth of your menus.
@@ -2446,12 +2557,34 @@ you can add resource intensive styles.
     the footer.
     */
   }
-  /* line 420, ../scss/_768up.scss */
+  /* line 433, ../scss/_768up.scss */
   #footer .nav li ul {
     display: none;
   }
 
   /* end .footer-links */
+  /* line 438, ../scss/_768up.scss */
+  .accreditation {
+    max-width: none;
+    width: 40%;
+  }
+
+  /* line 443, ../scss/_768up.scss */
+  #footer-locations {
+    font-size: 0.8em;
+  }
+  /* line 446, ../scss/_768up.scss */
+  #footer-locations li {
+    width: 16.66667%;
+  }
+  /* line 449, ../scss/_768up.scss */
+  #footer-locations li:nth-child(3n+1) {
+    clear: none;
+  }
+  /* line 453, ../scss/_768up.scss */
+  #footer-locations li:nth-child(6n+1) {
+    clear: left;
+  }
 }
 /*
 DESKTOP

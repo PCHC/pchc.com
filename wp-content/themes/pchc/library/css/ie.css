@@ -187,7 +187,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 222, ../scss/_mixins.scss */
+/* line 232, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #1e2154;
@@ -211,7 +211,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #2f3485, #282d72);
   background-image: linear-gradient(to bottom, #2f3485, #282d72);
 }
-/* line 241, ../scss/_mixins.scss */
+/* line 251, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid #1e2154;
@@ -224,7 +224,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #282d72, #22255f);
   background-image: linear-gradient(to bottom, #282d72, #22255f);
 }
-/* line 249, ../scss/_mixins.scss */
+/* line 259, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #2f3485;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#282d72), to(#2f3485));
@@ -234,7 +234,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #282d72, #2f3485);
 }
 
-/* line 254, ../scss/_mixins.scss */
+/* line 264, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #22255f;
   text-shadow: 0 1px 1px #22255f;
@@ -246,7 +246,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #2f3485, #282d72);
   box-shadow: inset 0 0 3px #474ebe;
 }
-/* line 260, ../scss/_mixins.scss */
+/* line 270, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #1b1e4c;
   background-color: #22255f;
@@ -256,7 +256,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #2a2e76, #22255f);
   background-image: linear-gradient(to bottom, #2a2e76, #22255f);
 }
-/* line 264, ../scss/_mixins.scss */
+/* line 274, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #2f3485;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#282d72), to(#2f3485));
@@ -501,16 +501,36 @@ POSTS & CONTENT STYLES
 /* line 123, ../scss/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
+  margin-left: 0;
   display: inline;
   float: left;
+  max-width: 45%;
 }
-/* line 128, ../scss/_481up.scss */
+/* line 130, ../scss/_481up.scss */
+.entry-content .alignleft.polaroid, .entry-content img.alignleft.polaroid {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+/* line 134, ../scss/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
+  margin-right: 0;
   display: inline;
   float: right;
+  max-width: 45%;
 }
-/* line 133, ../scss/_481up.scss */
+/* line 141, ../scss/_481up.scss */
+.entry-content .alignright.polaroid, .entry-content img.alignright.polaroid {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+/* line 145, ../scss/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -527,6 +547,28 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
+/* line 168, ../scss/_481up.scss */
+.copyright {
+  float: left;
+  width: 60%;
+}
+
+/* line 173, ../scss/_481up.scss */
+.accreditation {
+  float: right;
+  text-align: center;
+  font-size: 0.8em;
+  color: #FFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  max-width: 30%;
+  margin: 30px 0 0;
+}
+/* line 183, ../scss/_481up.scss */
+.accreditation img {
+  height: 60px;
+}
+
 /******************************************************************
 Site Name: PCHC
 Author: Chris Violette
@@ -765,26 +807,41 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
+/* line 228, ../scss/_768up.scss */
+.related-posts .sixcol {
+  background: #f0f0f6;
+  padding: 0.5em;
+  border: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.25) inset;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 233, ../scss/_768up.scss */
+/* line 246, ../scss/_768up.scss */
 .sidebar .widgettitle {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-weight: bold;
   color: #2f3485;
   margin-top: 0;
 }
-/* line 240, ../scss/_768up.scss */
+/* line 253, ../scss/_768up.scss */
 .sidebar .widget {
   margin: 0 0 1.5em;
 }
-/* line 245, ../scss/_768up.scss */
+/* line 258, ../scss/_768up.scss */
 .sidebar .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 253, ../scss/_768up.scss */
+/* line 266, ../scss/_768up.scss */
 .sidebar .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -812,7 +869,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 411, ../scss/_768up.scss */
+/* line 424, ../scss/_768up.scss */
 #footer .nav li {
   /*
   be careful with the depth of your menus.
@@ -820,12 +877,35 @@ mobile. Make sure to double check these!
   the footer.
   */
 }
-/* line 420, ../scss/_768up.scss */
+/* line 433, ../scss/_768up.scss */
 #footer .nav li ul {
   display: none;
 }
 
 /* end .footer-links */
+/* line 438, ../scss/_768up.scss */
+.accreditation {
+  max-width: none;
+  width: 40%;
+}
+
+/* line 443, ../scss/_768up.scss */
+#footer-locations {
+  font-size: 0.8em;
+}
+/* line 446, ../scss/_768up.scss */
+#footer-locations li {
+  width: 16.66667%;
+}
+/* line 449, ../scss/_768up.scss */
+#footer-locations li:nth-child(3n+1) {
+  clear: none;
+}
+/* line 453, ../scss/_768up.scss */
+#footer-locations li:nth-child(6n+1) {
+  clear: left;
+}
+
 /******************************************************************
 Site Name: PCHC
 Author: Chris Violette
