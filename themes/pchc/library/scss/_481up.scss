@@ -119,37 +119,39 @@ POSTS & CONTENT STYLES
 .entry-content {
 			
 	
-	/* at this larger size, we can start to align images */
-	.alignleft, img.alignleft { 
-		margin-right: 1.5em;
-		margin-left: 0;
-		display: inline; 
-		float: left;
-		max-width: 45%;
-		
-		&.polaroid {
-			@include transform(rotate(2deg));
-		} 
-	}
-	.alignright, img.alignright { 
-		margin-left: 1.5em;
-		margin-right: 0;
-		display: inline; 
-		float: right; 
-		max-width: 45%;
-		
-		&.polaroid {
-			@include transform(rotate(-2deg));
-		} 
-	}
-	.aligncenter, img.aligncenter { 
-		margin-right: auto; 
-		margin-left: auto; 
-		display: block; 
-		clear: both; 
-	}
+	
 			
 } /* end .entry-content */
+
+/* at this larger size, we can start to align images */
+.alignleft, img.alignleft { 
+	margin-right: 1.5em;
+	margin-left: 0;
+	display: inline; 
+	float: left;
+	max-width: 45%;
+	
+	&.polaroid {
+		@include transform(rotate(2deg));
+	} 
+}
+.alignright, img.alignright { 
+	margin-left: 1.5em;
+	margin-right: 0;
+	display: inline; 
+	float: right; 
+	max-width: 45%;
+	
+	&.polaroid {
+		@include transform(rotate(-2deg));
+	} 
+}
+.aligncenter, img.aligncenter { 
+	margin-right: auto; 
+	margin-left: auto; 
+	display: block; 
+	clear: both; 
+}
 
 /*********************
 FOOTER STYLES

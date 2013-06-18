@@ -67,11 +67,14 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
-	$('.nav-toggle').toggle(function(){
-		$('~ .nav', this).slideDown();
+	$('.toggle').toggle(function(){
+		$('~ .nav, ~ ul', this).slideDown();
 	}, function(){
-		$('~ .nav', this).slideUp();
+		$('~ .nav, ~ ul', this).slideUp();
 	});
+	
+	$('.pchcrelatedposts ul').hide();
+	
 	
  
 }); /* end of as page load scripts */

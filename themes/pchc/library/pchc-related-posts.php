@@ -93,6 +93,11 @@ class PCHC_Related_Posts extends WP_Widget {
 		
 				// Display the widget title 
 				if ( $title )
+					echo '<button type="button" class="toggle">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>';
 					echo $before_title . $title . $after_title;
 	
 			
@@ -110,7 +115,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		
 		        if( $the_posts->have_posts() ) { 
 		        
-			        echo '<ul>';
+			        echo '<ul class="allservices">';
 			      
 			        while( $the_posts->have_posts() ) { $the_posts->the_post(); ?>
 	                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

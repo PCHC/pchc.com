@@ -1,3 +1,5 @@
+<pre class="alert alert-help">comments.php</pre>
+
 <?php
 /*
 The comments page for Bones
