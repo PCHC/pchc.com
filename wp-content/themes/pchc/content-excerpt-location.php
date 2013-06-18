@@ -1,13 +1,19 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt'); ?> role="article">
+<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt content-excerpt-location'); ?> role="article">
 
-	<pre class="alert alert-help">content-excerpt.php</pre>
+	<pre class="alert alert-help">content-excerpt-location.php</pre>
+	
+	<?php $the_meta = get_post_meta( $post->ID ); ?>
 
 	<header class="article-header">
 
 		<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-		<p class="byline vcard"><?php
-			printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link(), get_the_category_list(', '));
-		?></p>
+		
+		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+			<?php the_post_thumbnail( 'pchc-thumb-300w', array(
+					'class'	=>	'aligncenter polaroid',
+				)
+			); ?>
+		</a>
 
 	</header> <!-- end article header -->
 
