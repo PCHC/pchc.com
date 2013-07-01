@@ -25,7 +25,7 @@ function custom_locations() {
 	register_post_type( 'location', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Location', 'bonestheme'), /* This is the Title of the Group */
+			'name' => __('Locations', 'bonestheme'), /* This is the Title of the Group */
 			'singular_name' => __('Location', 'bonestheme'), /* This is the individual type */
 			'all_items' => __('All Locations', 'bonestheme'), /* the all items menu item */
 			'add_new' => __('Add New', 'bonestheme'), /* The add new menu item */

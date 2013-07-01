@@ -237,6 +237,34 @@ MAIN CONTENT
 	}
 }
 
+
+/******************************************************************
+POST TYPE STYLES
+******************************************************************/
+
+.type-provider {
+	
+}
+
+.type-service {
+	
+}
+
+.type-location {
+	&.content-excerpt {
+		width: (100% / 3);
+		
+		&:nth-child(2n+1) {
+			clear: none;
+		}
+		
+		&:nth-child(3n+1) {
+			clear: left;
+		}
+	}
+}
+		
+
 /*********************
 SIDEBARS & ASIDES
 *********************/

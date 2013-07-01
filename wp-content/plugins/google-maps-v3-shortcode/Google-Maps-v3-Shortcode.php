@@ -17,7 +17,7 @@ function gmaps_header() {
 	?>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<style type="text/css">
-        .entry-content img {max-width: 100000%; /* override */}
+        #map1 img {max-width: 100000%; /* override */}
     </style> 
 	<?php
 }

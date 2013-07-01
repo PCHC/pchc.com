@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost:8888/web.pchc.local/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.1" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost:8888/web.pchc.local/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="June 18, 2013 7:11 pm" -->
+<!-- generated-on="July 1, 2013 9:05 pm" -->
 <!-- Debug: Total comment count: 1 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://localhost:8888/web.pchc.local/</loc>
@@ -9,15 +9,28 @@
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 1: Comments: 1 of 1 = 1 points -->
 	<url>
-		<loc>http://localhost:8888/web.pchc.local/?page_id=64</loc>
-		<lastmod>2013-06-11T17:07:47+00:00</lastmod>
+		<loc>http://localhost:8888/web.pchc.local/?p=1</loc>
+		<lastmod>2013-07-01T21:05:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://localhost:8888/web.pchc.local/?page_id=61</loc>
+		<lastmod>2013-07-01T21:04:56+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://localhost:8888/web.pchc.local/?page_id=61</loc>
-		<lastmod>2013-06-11T17:07:37+00:00</lastmod>
+		<loc>http://localhost:8888/web.pchc.local/?page_id=52</loc>
+		<lastmod>2013-07-01T20:44:47+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost:8888/web.pchc.local/?page_id=64</loc>
+		<lastmod>2013-06-11T17:07:47+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -32,19 +45,6 @@
 		<lastmod>2013-06-11T17:07:11+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://localhost:8888/web.pchc.local/?page_id=52</loc>
-		<lastmod>2013-06-11T17:06:58+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-<!-- Debug: Priority report of postID 1: Comments: 1 of 1 = 1 points -->
-	<url>
-		<loc>http://localhost:8888/web.pchc.local/?p=1</loc>
-		<lastmod>2013-04-29T17:55:00+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?page_id=19</loc>
@@ -64,13 +64,13 @@
 <!-- Debug: Start additional URLs -->
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?jcat=non-provider-positions</loc>
-		<lastmod>2013-06-18T19:11:20+00:00</lastmod>
+		<lastmod>2013-07-01T21:05:32+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?jcat=provider-positions</loc>
-		<lastmod>2013-06-18T19:11:20+00:00</lastmod>
+		<lastmod>2013-07-01T21:05:32+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
 	</url>
