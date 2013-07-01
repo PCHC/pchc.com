@@ -251,7 +251,10 @@ SIDEBARS & ASIDES
 	}
 
 	.widget {
-		@extend #main; // Inherit styles from #main
+		background: #FFF;
+		border: 1px solid rgba($pchc-blue, 0.25);
+		padding: 10px;
+		@include border-radius(3px);
 		margin: 0 0 1.5em;
 
 		ul {
