@@ -18,6 +18,25 @@
 	</header> <!-- end article header -->
 
 	<section class="entry-content clearfix" itemprop="articleBody">
+		<?php if( has_post_thumbnail() ) {
+			$image_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+			$imgwidth = $image_data[1];
+			$imgheight = $image_data[2];
+			
+			if( $imgwidth / $imgheight < 1.7 ) {
+				the_post_thumbnail( 'pchc-thumb-300w', array(
+						'class'	=>	'rounded alignright',
+					)
+				);
+			} else {
+				the_post_thumbnail( 'pchc-thumb-750w', array(
+						'class'	=>	'rounded',
+					)
+				);
+			}
+		
+		} ?>
+	
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 

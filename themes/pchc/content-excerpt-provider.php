@@ -4,12 +4,14 @@
 
 	<header class="article-header">
 	
+		<?php if( has_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 			<?php the_post_thumbnail( 'pchc-thumb-128w', array(
 					'class'	=>	'alignright polaroid',
 				)
 			); ?>
 		</a>
+		<?php endif; ?>
 
 		<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 		<?php foreach( (array)$the_meta['_cmb_provider_title'] as $provider_title ) : ?>

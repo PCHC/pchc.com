@@ -3,6 +3,8 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
+				
+						<pre class="alert alert-help">archive.php</pre>
 
 						<div id="main" class="eightcol first clearfix archive" role="main">
 
@@ -39,13 +41,24 @@
 									<h1 class="archive-title h2">
 										<span><?php _e("Yearly Archives:", "bonestheme"); ?></span> <?php the_time('Y'); ?>
 									</h1>
+							
+							<?php } elseif ( is_post_type_archive() ) { ?>
+								<h1 class="archive-title h2">
+									<span><?php post_type_archive_title(); ?></span>
+								</h1>
 							<?php } ?>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-								<?php get_template_part( 'content-excerpt', get_post_type() ); ?>
-
-							<?php endwhile; ?>
+							<?php if (have_posts()) : ?>
+							
+								<div class="archive-posts clearfix">
+							
+								<?php while (have_posts()) : the_post(); ?>
+	
+										<?php get_template_part( 'content-excerpt', get_post_type() ); ?>
+	
+								<?php endwhile; ?>
+							
+								</div>
 
 									<?php if (function_exists('bones_page_navi')) { ?>
 										<?php bones_page_navi(); ?>

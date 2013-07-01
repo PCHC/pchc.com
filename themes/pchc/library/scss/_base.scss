@@ -515,8 +515,19 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+
 #content {
 	margin-top: 2.2em;
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+.rounded {
+	@include border-radius(3px);
 }
 
 		.hentry {
@@ -725,7 +736,18 @@ POSTS & CONTENT STYLES
 		}
 		
 		.type-location {
-			
+			&.content-excerpt {
+				width: 50%;
+				float: left;
+				padding: 1em;
+				margin: 0;
+				border-top: 1px solid lighten($pchc-brown, 35%);
+				border-bottom: none;
+				
+				&:nth-child(2n+1) {
+					clear: left;
+				}
+			}
 		}
 
 /******************************************************************

@@ -50,6 +50,9 @@ require_once('library/custom-posts.php'); // you can disable this if you like
 // Thumbnail sizes
 add_image_size( 'pchc-thumb-128w', 128, 9999 );
 add_image_size( 'pchc-thumb-300w', 300, 9999 );
+add_image_size( 'pchc-thumb-750w', 750, 9999 );
+add_image_size( 'pchc-location', 750, 420, true );
+add_image_size( 'pchc-location-thumb', 350, 195, true );
 add_image_size( 'pchc-feature-thumbnail', 350, 350, true );
 /*
 to add more sizes, simply copy a line from above
