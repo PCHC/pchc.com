@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost:8888/web.pchc.local/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="July 1, 2013 9:05 pm" -->
+<!-- generated-on="July 11, 2013 7:13 pm" -->
 <!-- Debug: Total comment count: 1 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://localhost:8888/web.pchc.local/</loc>
@@ -9,6 +9,13 @@
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 99: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://localhost:8888/web.pchc.local/?p=99</loc>
+		<lastmod>2013-07-01T21:10:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
 <!-- Debug: Priority report of postID 1: Comments: 1 of 1 = 1 points -->
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?p=1</loc>
@@ -64,13 +71,13 @@
 <!-- Debug: Start additional URLs -->
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?jcat=non-provider-positions</loc>
-		<lastmod>2013-07-01T21:05:32+00:00</lastmod>
+		<lastmod>2013-07-11T19:13:21+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>http://localhost:8888/web.pchc.local/?jcat=provider-positions</loc>
-		<lastmod>2013-07-01T21:05:32+00:00</lastmod>
+		<lastmod>2013-07-11T19:13:21+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
 	</url>
