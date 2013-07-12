@@ -107,6 +107,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		            'post_status'       =>  'publish',
 		            'posts_per_page'    =>  -1,
 		            'orderby'           =>  'title',
+		            'order'				=>	'ASC',
 		        );
 		
 		        $the_posts = new WP_Query( $args );

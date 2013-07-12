@@ -48,7 +48,13 @@
 								</h1>
 							<?php } ?>
 
-							<?php if (have_posts()) : ?>
+							<?php 
+							// Show all posts if we're looking at a service, location or provider
+							if( get_post_type() == 'service' || get_post_type() == 'location' || get_post_type() == 'providers' ) {
+								global $query_string;
+								query_posts( $query_string . '&orderby=title&order=ASC&posts_per_page=-1' );
+							}
+							if (have_posts()) : ?>
 							
 								<div class="archive-posts clearfix">
 							
