@@ -67,13 +67,22 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
-	$('.toggle').toggle(function(){
-		$('~ .nav, ~ ul', this).slideDown();
-	}, function(){
-		$('~ .nav, ~ ul', this).slideUp();
+//	$('.toggle').toggle(function(){
+//		$('~ .nav, ~ ul', this).slideDown();
+//	}, function(){
+//		$('~ .nav, ~ ul', this).slideUp();
+//	});
+	
+	$('.toggle').each(function(){
+		var toggleTarget = $(this).data('toggleTarget');
+		$(this).toggle(function(){
+			$(toggleTarget, this).slideDown();
+		}, function(){
+			$(toggleTarget, this).slideUp();
+		});
 	});
 	
-	$('.pchcrelatedposts .allservices').hide();
+	$('.pchcrelatedposts .allservices, .providers-filter').hide();
 	
  
 }); /* end of as page load scripts */
