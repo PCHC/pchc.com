@@ -224,17 +224,15 @@ MAIN CONTENT
 	@include border-radius(3px);
 }
 
-.related-posts {
-	.sixcol {
-		background: #f0f0f6;
-		padding: 0.5em;
-		border: none;
-		@include box-shadow(
-			0 1px 3px rgba(#000, 0.1) inset,
-			0 -1px 0 rgba(#FFF, 0.25) inset
-		);
-		@include border-radius(3px);
-	}
+.well {
+	background: #f0f0f6;
+	padding: 0.5em;
+	border: none;
+	@include box-shadow(
+		0 1px 3px rgba(#000, 0.1) inset,
+		0 -1px 0 rgba(#FFF, 0.25) inset
+	);
+	@include border-radius(3px);
 }
 
 

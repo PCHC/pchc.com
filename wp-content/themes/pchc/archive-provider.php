@@ -13,13 +13,13 @@
 							</h1>
 							
 							<form name="providers-filter" method="post">
-							<div class="alert alert-info">
+							<div class="well">
 								<button type="button" class="toggle" data-toggle-target="~ .providers-filter">
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<h3>Filter Results</h3>
+								<h3 class="nomargin">Filter Results</h3>
 								<div class="providers-filter">
 									<div class="sixcol first clearfix">
 										<p><strong>Filter Locations</strong></p>
@@ -69,14 +69,12 @@
 									
 									<div class="clearfix"></div>
 									
-									<button class="btn" type="submit">Filter</button>
-									<button class="btn" type="reset">Reset</button>
+									<button class="button alignright" type="submit">Filter Providers</button>
+									<button class="button alignright" type="reset">Clear</button>
 								</div>
 								
 								</div>
 							</form>
-							
-							<pre><?php print_r($_POST); ?></pre>
 
 							<?php
 							
@@ -116,8 +114,6 @@
 								<div class="archive-posts clearfix">
 							
 								<?php while ($provider_query->have_posts()) : $provider_query->the_post(); ?>
-								
-										<pre><?php // print_r(get_post_meta( $post->ID )); ?></pre>
 	
 										<?php get_template_part( 'content-excerpt', get_post_type() ); ?>
 	

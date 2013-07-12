@@ -84,6 +84,12 @@ jQuery(document).ready(function($) {
 	
 	$('.pchcrelatedposts .allservices, .providers-filter').hide();
 	
+	$('button[type=reset]').click(function(){
+		var $form = $(this).parents('form');
+		$form.find('input').removeAttr('checked');
+		$form.submit();
+	});
+	
  
 }); /* end of as page load scripts */
 
