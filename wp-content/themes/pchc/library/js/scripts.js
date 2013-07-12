@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
 		$('~ .nav, ~ ul', this).slideUp();
 	});
 	
-	$('.pchcrelatedposts ul').hide();
+	$('.pchcrelatedposts .allservices').hide();
 	
  
 }); /* end of as page load scripts */
