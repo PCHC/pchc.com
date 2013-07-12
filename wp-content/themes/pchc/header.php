@@ -109,7 +109,7 @@
 				
 						<nav role="navigation">
 							<span class="hidden-desktop nav-title">Main Menu</span>
-							<button type="button" class="hidden-desktop nav-toggle toggle">
+							<button type="button" class="hidden-desktop nav-toggle toggle" data-toggle-target="~ .nav">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>

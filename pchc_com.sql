@@ -191,7 +191,7 @@ CREATE TABLE `pchc_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=853 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=855 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,7 +298,7 @@ INSERT INTO `pchc_options` VALUES (95,'widget_recent-comments','a:1:{s:12:\"_mul
 INSERT INTO `pchc_options` VALUES (96,'widget_archives','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `pchc_options` VALUES (97,'widget_meta','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `pchc_options` VALUES (98,'sidebars_widgets','a:7:{s:19:\"wp_inactive_widgets\";a:1:{i:0;s:6:\"text-2\";}s:11:\"sidebar_top\";a:3:{i:0;s:20:\"pchc-related-posts-5\";i:1;s:20:\"pchc-related-posts-3\";i:2;s:20:\"pchc-related-posts-4\";}s:14:\"sidebar_middle\";a:1:{i:0;s:6:\"text-3\";}s:14:\"sidebar_bottom\";a:0:{}s:21:\"sidebar_above_content\";a:0:{}s:21:\"sidebar_below_content\";a:0:{}s:13:\"array_version\";i:3;}','yes');
-INSERT INTO `pchc_options` VALUES (99,'cron','a:5:{i:1373652292;a:1:{s:20:\"jetpack_clean_nonces\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1373686499;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1373729791;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1373733425;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
+INSERT INTO `pchc_options` VALUES (99,'cron','a:5:{i:1373663092;a:1:{s:20:\"jetpack_clean_nonces\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1373686499;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1373729791;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1373733425;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
 INSERT INTO `pchc_options` VALUES (105,'_site_transient_update_themes','O:8:\"stdClass\":3:{s:12:\"last_checked\";i:1373632895;s:7:\"checked\";a:3:{s:4:\"pchc\";s:3:\"1.3\";s:12:\"twentyeleven\";s:3:\"1.5\";s:12:\"twentytwelve\";s:3:\"1.1\";}s:8:\"response\";a:0:{}}','yes');
 INSERT INTO `pchc_options` VALUES (108,'dashboard_widget_options','a:4:{s:25:\"dashboard_recent_comments\";a:1:{s:5:\"items\";i:5;}s:24:\"dashboard_incoming_links\";a:5:{s:4:\"home\";s:36:\"http://localhost:8888/web.pchc.local\";s:4:\"link\";s:112:\"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://localhost:8888/web.pchc.local/\";s:3:\"url\";s:145:\"http://blogsearch.google.com/blogsearch_feeds?scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:http://localhost:8888/web.pchc.local/\";s:5:\"items\";i:10;s:9:\"show_date\";b:0;}s:17:\"dashboard_primary\";a:7:{s:4:\"link\";s:26:\"http://wordpress.org/news/\";s:3:\"url\";s:31:\"http://wordpress.org/news/feed/\";s:5:\"title\";s:14:\"WordPress Blog\";s:5:\"items\";i:2;s:12:\"show_summary\";i:1;s:11:\"show_author\";i:0;s:9:\"show_date\";i:1;}s:19:\"dashboard_secondary\";a:7:{s:4:\"link\";s:28:\"http://planet.wordpress.org/\";s:3:\"url\";s:33:\"http://planet.wordpress.org/feed/\";s:5:\"title\";s:20:\"Other WordPress News\";s:5:\"items\";i:5;s:12:\"show_summary\";i:0;s:11:\"show_author\";i:0;s:9:\"show_date\";i:0;}}','yes');
 INSERT INTO `pchc_options` VALUES (146,'current_theme','PCHC Bones','yes');
@@ -465,7 +465,7 @@ CREATE TABLE `pchc_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=537 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=543 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -607,7 +607,7 @@ INSERT INTO `pchc_postmeta` VALUES (182,39,'_name','contributor');
 INSERT INTO `pchc_postmeta` VALUES (183,39,'_props','a:2:{s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";}');
 INSERT INTO `pchc_postmeta` VALUES (184,39,'_last_contacted','2013-04-16 16:22:39');
 INSERT INTO `pchc_postmeta` VALUES (185,47,'_edit_last','1');
-INSERT INTO `pchc_postmeta` VALUES (186,47,'_edit_lock','1371497522:1');
+INSERT INTO `pchc_postmeta` VALUES (186,47,'_edit_lock','1373653743:1');
 INSERT INTO `pchc_postmeta` VALUES (191,48,'_edit_last','1');
 INSERT INTO `pchc_postmeta` VALUES (192,48,'_edit_lock','1372702648:1');
 INSERT INTO `pchc_postmeta` VALUES (193,48,'_cmb_location_map','1');
@@ -718,7 +718,6 @@ INSERT INTO `pchc_postmeta` VALUES (316,87,'_wp_attached_file','2013/06/Violette
 INSERT INTO `pchc_postmeta` VALUES (317,87,'_wp_attachment_metadata','a:6:{s:5:\"width\";i:1400;s:6:\"height\";i:1750;s:14:\"hwstring_small\";s:22:\"height=\'96\' width=\'76\'\";s:4:\"file\";s:29:\"2013/06/VioletteChris1219.jpg\";s:5:\"sizes\";a:10:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:6:\"medium\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-240x300.jpg\";s:5:\"width\";i:240;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:30:\"VioletteChris1219-819x1024.jpg\";s:5:\"width\";i:819;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:23:\"jtd_anythingslide_thumb\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-960x280.jpg\";s:5:\"width\";i:960;s:6:\"height\";i:280;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:15:\"pchc-thumb-128w\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-128x160.jpg\";s:5:\"width\";i:128;s:6:\"height\";i:160;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:15:\"pchc-thumb-300w\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-300x375.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:375;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:22:\"pchc-feature-thumbnail\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-350x350.jpg\";s:5:\"width\";i:350;s:6:\"height\";i:350;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:14:\"post-thumbnail\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-125x125.jpg\";s:5:\"width\";i:125;s:6:\"height\";i:125;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:15:\"pchc-thumb-250w\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-250x312.jpg\";s:5:\"width\";i:250;s:6:\"height\";i:312;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:18:\"pchc-feature-thumb\";a:4:{s:4:\"file\";s:29:\"VioletteChris1219-285x285.jpg\";s:5:\"width\";i:285;s:6:\"height\";i:285;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:10:{s:8:\"aperture\";d:8;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:13:\"FinePix S5Pro\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:1320311423;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:2:\"80\";s:3:\"iso\";s:3:\"160\";s:13:\"shutter_speed\";s:7:\"0.00625\";s:5:\"title\";s:0:\"\";}}');
 INSERT INTO `pchc_postmeta` VALUES (318,87,'_wp_attachment_image_alt','Chris Violette');
 INSERT INTO `pchc_postmeta` VALUES (319,47,'_thumbnail_id','87');
-INSERT INTO `pchc_postmeta` VALUES (320,47,'_cmb_locations_list','12');
 INSERT INTO `pchc_postmeta` VALUES (321,89,'_edit_last','1');
 INSERT INTO `pchc_postmeta` VALUES (322,89,'_edit_lock','1372702638:1');
 INSERT INTO `pchc_postmeta` VALUES (323,89,'_cmb_location_address','1012 Union Street,\r\nBangor, Maine,  04401');
@@ -932,6 +931,12 @@ INSERT INTO `pchc_postmeta` VALUES (533,102,'_cmb_location_address','103 Maine A
 INSERT INTO `pchc_postmeta` VALUES (534,102,'_cmb_location_primary_phone','207-992-9200');
 INSERT INTO `pchc_postmeta` VALUES (535,115,'_cmb_location_hours','Monday – Friday:\r\n7:00am – 6:00pm\r\n(Walk-In Care 8am – 8pm)\r\n\r\nSaturday – Sunday:\r\n9:00am - 4:00pm');
 INSERT INTO `pchc_postmeta` VALUES (536,116,'_cmb_location_hours','Monday - Friday:\r\n7:00am - 7:30pm\r\n\r\nSaturday - Sunday:\r\n9:00am - 2:00pm\r\n\r\nWalk-in Emergency Care\r\nMonday - Friday \r\n7:00 am - 8:00 am');
+INSERT INTO `pchc_postmeta` VALUES (537,47,'_cmb_locations_list','116');
+INSERT INTO `pchc_postmeta` VALUES (538,47,'_cmb_locations_list','113');
+INSERT INTO `pchc_postmeta` VALUES (539,47,'_cmb_locations_list','106');
+INSERT INTO `pchc_postmeta` VALUES (540,47,'_cmb_services_list','136');
+INSERT INTO `pchc_postmeta` VALUES (541,47,'_cmb_services_list','127');
+INSERT INTO `pchc_postmeta` VALUES (542,47,'_cmb_services_list','123');
 /*!40000 ALTER TABLE `pchc_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1013,7 +1018,7 @@ INSERT INTO `pchc_posts` VALUES (38,1,'2013-04-16 16:22:17','2013-04-16 20:22:17
 INSERT INTO `pchc_posts` VALUES (39,1,'2013-04-16 16:22:39','2013-04-16 20:22:39','contributor@example.com\ncontributor','contributor@example.com','','publish','open','open','','contributor-example-com','','','2013-04-16 16:22:39','2013-04-16 20:22:39','',0,'http://localhost:8888/web.pchc.local/?post_type=flamingo_contact&p=39',0,'flamingo_contact','',0);
 INSERT INTO `pchc_posts` VALUES (44,1,'2013-04-16 16:14:32','2013-04-16 20:14:32','Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!\r\n\r\n[contact-form-7 id=\"32\" title=\"Test Form\"]','Hello world!','','inherit','closed','open','','1-revision-2','','','2013-04-16 16:14:32','2013-04-16 20:14:32','',1,'http://localhost:8888/web.pchc.local/?p=44',0,'revision','',0);
 INSERT INTO `pchc_posts` VALUES (45,1,'2013-04-29 13:56:01','2013-04-29 17:56:01','Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!\n\nFOO!\n\n[contact-form-7 id=\"32\" title=\"Test Form\"]','Hello world!','','inherit','closed','open','','1-autosave','','','2013-04-29 13:56:01','2013-04-29 17:56:01','',1,'http://localhost:8888/web.pchc.local/?p=45',0,'revision','',0);
-INSERT INTO `pchc_posts` VALUES (47,1,'2013-06-03 16:25:23','2013-06-03 20:25:23','Lorem Ipsum','Another Test Provider','','publish','closed','closed','','another-test-provider','','','2013-06-17 15:33:51','2013-06-17 19:33:51','',0,'http://localhost:8888/web.pchc.local/?post_type=provider&#038;p=47',0,'provider','',0);
+INSERT INTO `pchc_posts` VALUES (47,1,'2013-06-03 16:25:23','2013-06-03 20:25:23','Lorem Ipsum','Another Test Provider','','publish','closed','closed','','another-test-provider','','','2013-07-12 14:30:54','2013-07-12 18:30:54','',0,'http://localhost:8888/web.pchc.local/?post_type=provider&#038;p=47',0,'provider','',0);
 INSERT INTO `pchc_posts` VALUES (48,1,'2013-06-04 15:16:29','2013-06-04 19:16:29','Lorem ipsum!','Awesome Location','','trash','closed','closed','','awesome-location','','','2013-07-11 16:16:02','2013-07-11 20:16:02','',0,'http://localhost:8888/web.pchc.local/?post_type=location&#038;p=48',0,'location','',0);
 INSERT INTO `pchc_posts` VALUES (49,1,'2013-06-04 15:17:30','2013-06-04 19:17:30','Lorem ipsum!','Awesome Location','','inherit','closed','open','','48-autosave','','','2013-06-04 15:17:30','2013-06-04 19:17:30','',48,'http://localhost:8888/web.pchc.local/?p=49',0,'revision','',0);
 INSERT INTO `pchc_posts` VALUES (52,1,'2013-06-11 13:06:58','2013-06-11 17:06:58','Lorem ipsum','About PCHC','','publish','closed','open','','about-pchc','','','2013-07-01 16:44:47','2013-07-01 20:44:47','',0,'http://localhost:8888/web.pchc.local/?page_id=52',0,'page','',0);
@@ -1405,4 +1410,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-07-12 13:35:02
+-- Dump completed on 2013-07-12 16:57:09

@@ -93,7 +93,7 @@ class PCHC_Related_Posts extends WP_Widget {
 		
 				// Display the widget title 
 				if ( $title )
-					echo '<button type="button" class="toggle">
+					echo '<button type="button" class="toggle" data-toggle-target="~ .allservices">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>

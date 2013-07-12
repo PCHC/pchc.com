@@ -127,6 +127,8 @@ TOGGLE BUTTONS
 	border: none;
 	background: none;
 	padding: 0.3em 0.4em;
+	position: relative;
+	z-index: 1;
 	@include border-radius(3px);
 //	@include box-shadow(rgba(#FFF, 0.0980392) 0px 1px 0px 0px inset, rgba(#FFF, 0.0745098) 0px 1px 0px 0px);
 	
@@ -148,6 +150,18 @@ TOGGLE BUTTONS
 	&:active {
 //		background: $pchc-darkblue;
 //		@include background-image(linear-gradient($pchc-blue, $toggle-light-blue));
+	}
+	
+	&.toggle:before {
+		display: block;
+		content: 'Click to Expand';
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		font-size: 0.7em;
+		line-height: 1em;
+		opacity: 0.8;
+		@include transform(translate(0, -50%));
 	}
 }
 
@@ -379,6 +393,13 @@ and more scalable.
 
 #header-nav {
 	background: $pchc-darkblue;
+	
+	.toggle {
+		&:before {
+			color: #FFF;
+		}
+		
+	}
 }
 
 .nav {
