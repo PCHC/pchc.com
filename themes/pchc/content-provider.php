@@ -54,6 +54,7 @@
 	<footer class="article-footer">
 		<?php the_tags('<p class="tags"><span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', '</p>'); ?>
 		
+		<?php MRP_show_related_posts(); ?>
 		
 	</footer> <!-- end article footer -->
 

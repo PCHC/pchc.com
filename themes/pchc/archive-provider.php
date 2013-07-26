@@ -1,5 +1,45 @@
 <?php get_header(); ?>
 
+<?php
+							
+function pchc_MRP_get_related_posts( $related_post_ids = array() ) {
+	
+	$rel_posts = array();
+
+	foreach( $related_post_ids as $post_id ) {
+		array_push( $rel_posts, MRP_get_related_posts( $post_id, false, true, 'provider' ) );
+	}
+	
+	return $rel_posts;
+	
+}
+
+if( !empty( $_POST ) ) {
+	$related_posts = array();
+	$filter_posts =  $_POST['providers_filter'];
+	
+	$related_posts = pchc_MRP_get_related_posts( $filter_posts );
+	
+	$filtered_providers = array();
+	
+	if( !empty( $related_posts ) ) {
+	
+		foreach( $related_posts as $k => $v ) {
+			if( !empty( $v ) ) {
+				foreach( $v as $key => $value ) {
+					array_push( $filtered_providers, $key );
+				}
+			}
+		}
+	
+	}
+	
+	$filtered_providers_unique = array_unique( $filtered_providers );
+	
+}
+
+?>
+							
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
@@ -20,7 +60,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								<h3 class="nomargin">Filter Results</h3>
-								<div class="providers-filter toggle-init-hide">
+								<div class="providers-filter <?php echo ($_POST) ? '' : 'toggle-init-hide'; ?>">
 									<div class="sixcol first clearfix">
 										<p><strong>Filter Locations</strong></p>
 										<?php
@@ -37,7 +77,7 @@
 											
 												while( $loc_query->have_posts()) : $loc_query->the_post(); ?>
 												
-													<label><input <?php echo ( in_array($post->ID, (array)$_POST['locations_filter']) ) ? 'checked' : ''; ?> type="checkbox" name="locations_filter[]" value="<?php echo $post->ID; ?>"> <?php the_title() ?></label><br>
+													<label><input <?php echo ( in_array($post->ID, (array)$_POST['providers_filter']) ) ? 'checked' : ''; ?> type="checkbox" name="providers_filter[]" value="<?php echo $post->ID; ?>"> <?php the_title() ?></label><br>
 												
 												<?php endwhile;
 											endif;
@@ -60,7 +100,7 @@
 											
 												while( $serv_query->have_posts()) : $serv_query->the_post(); ?>
 												
-													<label><input <?php echo ( in_array($post->ID, (array)$_POST['services_filter']) ) ? 'checked' : ''; ?> type="checkbox" name="services_filter[]" value="<?php echo $post->ID; ?>"> <?php the_title() ?></label><br>
+													<label><input <?php echo ( in_array($post->ID, (array)$_POST['providers_filter']) ) ? 'checked' : ''; ?> type="checkbox" name="providers_filter[]" value="<?php echo $post->ID; ?>"> <?php the_title() ?></label><br>
 												
 												<?php endwhile;
 											endif;
@@ -71,40 +111,42 @@
 									
 									<button class="button alignright" type="submit">Filter Providers</button>
 									<button class="button alignright" type="reset">Clear</button>
-								</div>
+									
+									<div class="clearfix"></div>
+								</div><!-- /.well -->
 								
-								</div>
+								</div><!-- /.providers-filter -->
 							</form>
+							
+							<div class="clearfix"></div>
 
 							<?php
 							
-							$location_ids = $_POST['locations_filter'];
-							$service_ids = $_POST['services_filter'];
-							
-							if( !empty($location_ids)) {
-								$locations_list = array(
-									'key'			=>	'_cmb_locations_list',
-									'compare'		=>	'IN',
-									'value'			=>	$location_ids,
-								);
-							}
-							
-							if( !empty($service_ids)) {
-								$services_list = array(
-									'key'			=>	'_cmb_services_list',
-									'compare'		=>	'IN',
-									'value'			=>	$service_ids,
-								);
-							}
+							// $location_ids = $_POST['locations_filter'];
+							// $service_ids = $_POST['services_filter'];
+							// 
+							// if( !empty($location_ids)) {
+							// 	$locations_list = array(
+							// 		'key'			=>	'_cmb_locations_list',
+							// 		'compare'		=>	'IN',
+							// 		'value'			=>	$location_ids,
+							// 	);
+							// }
+							// 
+							// if( !empty($service_ids)) {
+							// 	$services_list = array(
+							// 		'key'			=>	'_cmb_services_list',
+							// 		'compare'		=>	'IN',
+							// 		'value'			=>	$service_ids,
+							// 	);
+							// }
 							
 							$args = array(
 								'post_type'			=>	'provider',
 								'posts_per_page'	=>	-1,
 								'orderby'			=>	'title',
 								'order'				=>	'ASC',
-								'meta_query'		=>	array(
-									$locations_list, $services_list
-								),
+								'post__in'			=>	$filtered_providers_unique,
 							);
 							
 							$provider_query = new WP_Query( $args );
