@@ -75,10 +75,6 @@ you like. Enjoy!
 */
 
 
-/************* RELATED POSTS WIDGET *************/
-require_once( 'library/pchc-related-posts.php' );
-
-//require_once( 'library/pchc-crosslink.php' );
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -213,31 +209,5 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
-/************* GET RELATED POSTS *************/
-// Querys the database and gets the linked custom posts
-function pchc_get_related_posts($type, $post_id) {
-
-    $post_ids = get_post_meta( $post_id, '_cmb_' . $type . '_list', false );
-    
-    $args = null;
-
-    if(!empty($post_ids)) {
-
-	    $args = array(
-	        'post__in'          =>  $post_ids,
-	        'post_type'         =>  'any',
-	        'post_status'       =>  'publish',
-	        'posts_per_page'    =>  -1,
-	        'orderby'           =>  'title',
-	    );
-	    
-    }
-	
-	$posts = new WP_Query( $args );
-	
-	return $posts;
-	
-    
-} // don't remove this bracket!
 
 ?>
