@@ -235,6 +235,17 @@ MAIN CONTENT
 	@include border-radius(3px);
 }
 
+.related-posts {
+	.related-posts-type {
+		width: 48%;
+		margin-left: 4%;
+		float: left;
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
 
 /******************************************************************
 POST TYPE STYLES

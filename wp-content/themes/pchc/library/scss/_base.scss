@@ -562,6 +562,12 @@ img {
 	@include border-radius(3px);
 }
 
+.related-posts {
+	.related-posts-type {
+		@extend .well;
+	}
+}
+
 .nomargin {
 	margin: 0;
 }
@@ -610,17 +616,22 @@ img {
 
 			ul, ol {
 
-				li {}
+				li {
+					margin-left: 2em;
+				}
 
 			}
 
 			ul {
+			
+				list-style-type: disc;
 
 				li {}
 
 			}
 
 			ol {
+				list-style-type: decimal;
 
 				li {}
 
