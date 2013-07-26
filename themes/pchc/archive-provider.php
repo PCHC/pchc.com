@@ -20,7 +20,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								<h3 class="nomargin">Filter Results</h3>
-								<div class="providers-filter">
+								<div class="providers-filter toggle-init-hide">
 									<div class="sixcol first clearfix">
 										<p><strong>Filter Locations</strong></p>
 										<?php

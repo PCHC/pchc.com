@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
-	$('.pchcrelatedposts .allservices, .providers-filter').hide();
+	$('.toggle-init-hide').hide();
 	
 	$('button[type=reset]').click(function(){
 		var $form = $(this).parents('form');
