@@ -1,6 +1,4 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt content-excerpt-location'); ?> role="article">
-
-	<pre class="alert alert-help">content-excerpt-location.php</pre>
 	
 	<?php $the_meta = get_post_meta( $post->ID ); ?>
 

@@ -2,8 +2,6 @@
 
 	<?php $the_meta = get_post_meta( $post->ID ); ?>
 
-	<pre class="alert alert-help">content-provider.php</pre>
-
 	<header class="article-header">
 
 		<h1 class="entry-title single-title" itemprop="headline">

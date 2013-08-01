@@ -1,7 +1,5 @@
 <article id="post-not-found" class="hentry clearfix">
 
-	<pre class="alert alert-help">no-results-search.php</pre>
-
 	<header class="article-header">
 		<h1><?php _e("Sorry, No Results.", "bonestheme"); ?></h1>
 	</header>
