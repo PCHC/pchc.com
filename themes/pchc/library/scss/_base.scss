@@ -166,6 +166,14 @@ TOGGLE BUTTONS
 }
 
 /******************************************************************
+TYPOGRAPHY
+******************************************************************/
+
+p {
+	margin: 0 0 1em;
+}
+
+/******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
@@ -174,6 +182,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: bold;
 	margin-top: 0;
+	margin-bottom: 0.3em;
+	line-height: 1.1em;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -183,31 +193,32 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	a {
 		text-decoration: none;
 	}
+	
+	color: $pchc-blue;
 }
 
 h1, .h1 {
-	font-size: 2.5em;
-	line-height: 1.333em;
+	font-size: 1.75em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
-	margin-bottom: 0.375em;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: $pchc-brown;
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1.2em;
 }
 
 h4, .h4 {
+	@extend h2;
 	font-size: 1.1em;
 	font-weight: 700;
 }
 
 h5, .h5 {
 	font-size: 0.846em;
-	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
