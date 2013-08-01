@@ -10,25 +10,31 @@
 
 							<header class="article-header">
 
-								<h1><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h1>
+								<h1><?php _e("404 - Page Not Found!", "bonestheme"); ?></h1>
 
 							</header> <!-- end article header -->
 
 							<section class="entry-content">
 
-								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
+								<p><?php _e("You found the home of excellent medical care, but we didn't find that page!", "bonestheme"); ?></p>
 
 							</section> <!-- end article section -->
 
 							<section class="search">
+							
+									<h3>Try a Search:</h3>
 
 									<p><?php get_search_form(); ?></p>
+									
+									<h3>Still can't find what you're looking for?</h3>
+									
+									<p><a href="?page_id=64">Contact us</a> anytime at 207-404-8000.</p>
 
 							</section> <!-- end search section -->
 
 							<footer class="article-footer">
 
-									<p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
+									
 
 							</footer> <!-- end article footer -->
 
