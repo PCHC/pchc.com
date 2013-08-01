@@ -43,8 +43,6 @@ if( !empty( $_POST ) ) {
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
-				
-						<pre class="alert alert-help">archive-provider.php</pre>
 
 						<div id="main" class="eightcol first clearfix archive" role="main">
 							

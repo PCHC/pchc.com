@@ -1,4 +1,3 @@
-<pre class="alert alert-help">comments.php</pre>
 
 <?php
 /*

@@ -1,8 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt'); ?> role="article">
 
 	<div class="tencol post-column last">
-	
-	<pre class="alert alert-help">content-excerpt.php</pre>
 
 	<header class="article-header">
 		<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
