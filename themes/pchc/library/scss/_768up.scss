@@ -55,6 +55,12 @@ HEADER STYLES
 	padding-bottom: 0;
 	background-position: 50% -700px;
 	margin-bottom: 0;
+	
+	.searchform {
+		width: 50%;
+		margin-top: 65px;
+		float: right;
+	}
 }
 
 	#logo {
@@ -64,25 +70,52 @@ HEADER STYLES
 			margin: 40px 0 0;
 		}
 	}
-	
+
 .searchform {
-	float: right;
-	margin-top: 65px;
-	
-	.button {
-		display: none;
-	}
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 0;
+	margin-top: 0;
+	@include border-radius(3px);
 	
 	.s {
-		float: right;
-		border: 1px solid #CCC;
-		margin: 0;
-		width: 50%;
+		float: none;
+		border: none;
+		width: 85%;
 		@include box-shadow(none);
 		
 		&:focus {
-			border: 1px solid #CCC;
-			margin: 0;
+			border: none;
+			margin-top: 0;
+			@include box-shadow(none);
+		}
+	}
+
+	.button {
+		display: block;
+		float: right;
+		background: none;
+		width: auto;
+		border: none;
+		@include box-shadow(none);
+		
+		.icon-search {
+			color: #555;
+			@include text-shadow(0 1px 1px #CCC);
+		}
+		
+		&:hover {
+			background: none;
+			border: none;
+			
+			.icon-search {
+				color: $pchc-red;
+			}
+		}
+		
+		&:active {
+			margin-top: 0;
+			@include transform(translateY(1px));
 			@include box-shadow(none);
 		}
 	}
