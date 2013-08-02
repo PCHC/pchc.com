@@ -4,7 +4,7 @@
  * Description: A widget that displays all the services PCHC offers.
  * Version: 0.1
  * Author: Chris Violette
- * Author URI: 
+ * Author URI: http://www.cv-designs.com/
  */
 
 add_action( 'widgets_init', 'pchc_services_list' );
