@@ -3,7 +3,7 @@
 Plugin Name: PCHC's Subpage Listing
 Description: Displays the subpages of the current page.
 Author: Chris Violette
-Version: 0.1
+Version: 0.2
 Author URI: http://www.cv-designs.com
 */
 
@@ -16,7 +16,7 @@ add_action("widgets_init", "PCHC_subpage_load_widget");
 # Include the widget class
 require( "pchc-subpages-widget.php" );
 
-function PCHC_subpage_peek( $order = 'DESC', $orderby = 'date', $excerpt = 'true', $titletag = 'h4' ) {
+function PCHC_subpage_peek( $order = 'DESC', $orderby = 'date', $excerpt = 'true', $titletag = 'h4', $page = 'false' ) {
 	global $post;
 	
 	if( $orderby != 'date' && $orderby != 'modified' ) {
@@ -30,6 +30,11 @@ function PCHC_subpage_peek( $order = 'DESC', $orderby = 'date', $excerpt = 'true
 		'order'			=> $order,
 		'orderby'		=> $orderby,
 	);
+	
+	if( $page != 'false' ) {
+		$args['post_parent'] = $page;
+	}
+	
 	$subpages = new WP_query($args);
 	
 	// create output
