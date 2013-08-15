@@ -18,8 +18,8 @@
 					<div id="inner-footer-top" class="inner-footer wrap clearfix">
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 						<p class="accreditation hidden-phone">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/ncqa-2011.png">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/joint-commission.png"><br>
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/ncqa-2011.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/joint-commission.png"><br>
 							PCHC is nationally accredited for quality.
 						</p>
 					</div>
