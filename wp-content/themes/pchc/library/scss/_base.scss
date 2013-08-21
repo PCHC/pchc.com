@@ -736,18 +736,54 @@ img {
 		.gallery {
 
 			dl {
+				padding: 3%;
+				margin: 0;
 
-				a {}
+				a {
+					
+				}
 
-				img {}
+				img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+					height: auto;
+					padding: 3px;
+					border: 1px solid #DDD;
+					background: #EEE;
+					@include border-radius(3px);
+					@include transition(all .15s ease-out);
+				}
+				
+				a:hover {
+					img {
+						background: #FCFCFC;
+					}
+				}
 
 			}
 
-			dt {}
+			dt {
+			}
 
-			dd {}
+			dd {
+				margin: 0;
+				font-style: italic;
+				font-size: 0.9em;
+			}
 
 		} /* end .gallery */
+		
+		@for $i from 1 to 8 {
+			.gallery-columns-#{$i} {
+				.gallery-item {
+					@if $i > 1 {
+						float: left;
+					}
+					width: 100% / $i;
+				}
+			}
+		}
 
 		/* gallery caption styles */
 		.gallery-caption {}
