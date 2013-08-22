@@ -2044,26 +2044,34 @@ view.
   border-radius: 3px;
 }
 /* line 1392, ../scss/_base.scss */
+.wpfilebase-file-default .filetitle {
+  max-width: 50%;
+}
+/* line 1395, ../scss/_base.scss */
+.wpfilebase-file-default .filetitle a {
+  line-height: 1.1em;
+}
+/* line 1400, ../scss/_base.scss */
 .wpfilebase-file-default .info {
   margin: 0 10px;
   height: auto;
   background: url(../images/download-sprite.png) 100% 0 no-repeat;
 }
-/* line 1399, ../scss/_base.scss */
+/* line 1407, ../scss/_base.scss */
 .wpfilebase-file-default:hover .info {
   background-position: 100% -200px;
 }
 
-/* line 1406, ../scss/_base.scss */
+/* line 1414, ../scss/_base.scss */
 ul.treeview li {
   margin-left: 0;
 }
-/* line 1410, ../scss/_base.scss */
+/* line 1418, ../scss/_base.scss */
 ul.treeview img {
   max-height: 16px;
   margin: 0;
 }
-/* line 1415, ../scss/_base.scss */
+/* line 1423, ../scss/_base.scss */
 ul.treeview .last {
   float: none;
 }

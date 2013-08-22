@@ -1389,6 +1389,14 @@ FOOTER STYLES
 		}
 	}
 	
+	.filetitle {
+		max-width: 50%;
+		
+		a {
+			line-height: 1.1em;
+		}
+	}
+	
 	.info {
 		margin: 0 10px;
 		height: auto;
