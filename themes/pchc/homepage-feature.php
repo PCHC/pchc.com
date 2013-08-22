@@ -1,5 +1,7 @@
 						<?php $args = array(
 							'post_type' 		=>	'homefeature',
+							'order'				=>	'ASC',
+							'order_by'			=>	'menu_order',
 						);
 						
 						$feature_query = new WP_Query( $args );
@@ -16,8 +18,12 @@
 							<?php endif; ?>
 						
 								<article class="homepage-feature">
+								
+									<div class="thumbnail">
 									
-									<?php the_post_thumbnail( 'pchc-feature-thumbnail' ); ?>
+										<?php the_post_thumbnail( 'pchc-feature-thumbnail' ); ?>
+										
+									</div>
 									
 									<h3><?php the_title(); ?></h3>
 									<div class="content">
