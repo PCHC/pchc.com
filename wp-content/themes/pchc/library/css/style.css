@@ -2014,6 +2014,68 @@ view.
 }
 
 /* end .footer-links */
+/* line 1372, ../scss/_base.scss */
+.wpfilebase-file-default {
+  width: auto;
+  background: none;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 1379, ../scss/_base.scss */
+.wpfilebase-file-default:nth-child(2n) {
+  background: #F3F3F3;
+}
+/* line 1384, ../scss/_base.scss */
+.wpfilebase-file-default .icon img {
+  height: 32px;
+  padding: 1px;
+  border: 1px solid #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 1392, ../scss/_base.scss */
+.wpfilebase-file-default .filetitle {
+  max-width: 50%;
+}
+/* line 1395, ../scss/_base.scss */
+.wpfilebase-file-default .filetitle a {
+  line-height: 1.1em;
+}
+/* line 1400, ../scss/_base.scss */
+.wpfilebase-file-default .info {
+  margin: 0 10px;
+  height: auto;
+  background: url(../images/download-sprite.png) 100% 0 no-repeat;
+}
+/* line 1407, ../scss/_base.scss */
+.wpfilebase-file-default:hover .info {
+  background-position: 100% -200px;
+}
+
+/* line 1414, ../scss/_base.scss */
+ul.treeview li {
+  margin-left: 0;
+}
+/* line 1418, ../scss/_base.scss */
+ul.treeview img {
+  max-height: 16px;
+  margin: 0;
+}
+/* line 1423, ../scss/_base.scss */
+ul.treeview .last {
+  float: none;
+}
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
