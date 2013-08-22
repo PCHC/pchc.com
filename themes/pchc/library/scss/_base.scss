@@ -736,18 +736,54 @@ img {
 		.gallery {
 
 			dl {
+				padding: 3%;
+				margin: 0;
 
-				a {}
+				a {
+					
+				}
 
-				img {}
+				img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+					height: auto;
+					padding: 3px;
+					border: 1px solid #DDD;
+					background: #EEE;
+					@include border-radius(3px);
+					@include transition(all .15s ease-out);
+				}
+				
+				a:hover {
+					img {
+						background: #FCFCFC;
+					}
+				}
 
 			}
 
-			dt {}
+			dt {
+			}
 
-			dd {}
+			dd {
+				margin: 0;
+				font-style: italic;
+				font-size: 0.9em;
+			}
 
 		} /* end .gallery */
+		
+		@for $i from 1 to 8 {
+			.gallery-columns-#{$i} {
+				.gallery-item {
+					@if $i > 1 {
+						float: left;
+					}
+					width: 100% / $i;
+				}
+			}
+		}
 
 		/* gallery caption styles */
 		.gallery-caption {}
@@ -1369,3 +1405,58 @@ FOOTER STYLES
 
 	.copyright {}
 
+.wpfilebase-file-default {
+	width: auto;
+	background: none;
+	border: none;
+	@include border-radius(3px);
+	@include box-shadow(none);
+	
+	&:nth-child(2n) {
+		background: #F3F3F3;
+	}
+	
+	.icon {
+		img {
+			height: 32px;
+			padding: 1px;
+			border: 1px solid #CCC;
+			@include border-radius(3px);
+		}
+	}
+	
+	.filetitle {
+		max-width: 50%;
+		
+		a {
+			line-height: 1.1em;
+		}
+	}
+	
+	.info {
+		margin: 0 10px;
+		height: auto;
+		background: url(../images/download-sprite.png) 100% 0 no-repeat;
+	}
+	
+	&:hover {
+		.info {
+			background-position: 100% -200px; 
+		}
+	}
+}
+
+ul.treeview {
+	li {
+		margin-left: 0;
+	}
+	
+	img {
+		max-height: 16px;
+		margin: 0;
+	}
+	
+	.last {
+		float: none;
+	}
+}
