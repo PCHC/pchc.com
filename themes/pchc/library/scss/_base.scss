@@ -1369,3 +1369,50 @@ FOOTER STYLES
 
 	.copyright {}
 
+.wpfilebase-file-default {
+	width: auto;
+	background: none;
+	border: none;
+	@include border-radius(3px);
+	@include box-shadow(none);
+	
+	&:nth-child(2n) {
+		background: #F3F3F3;
+	}
+	
+	.icon {
+		img {
+			height: 32px;
+			padding: 1px;
+			border: 1px solid #CCC;
+			@include border-radius(3px);
+		}
+	}
+	
+	.info {
+		margin: 0 10px;
+		height: auto;
+		background: url(../images/download-sprite.png) 100% 0 no-repeat;
+	}
+	
+	&:hover {
+		.info {
+			background-position: 100% -200px; 
+		}
+	}
+}
+
+ul.treeview {
+	li {
+		margin-left: 0;
+	}
+	
+	img {
+		max-height: 16px;
+		margin: 0;
+	}
+	
+	.last {
+		float: none;
+	}
+}
