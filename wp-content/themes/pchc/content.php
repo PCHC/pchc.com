@@ -41,7 +41,26 @@
 	<footer class="article-footer">
 		<?php the_tags('<p class="tags"><span class="tags-title">' . __('Tagged:', 'bonestheme') . '</span> ', ', ', '</p>'); ?>
 		
+		<?php
+		$next = get_next_post();
+		$prev = get_adjacent_post();
+ 
+		if ( !empty($next) || !empty($prev) ) {
+			echo '
+			<nav class="wp-prev-next">
+				<ul class="clearfix">';
 		
+			if (!empty($next)) echo '
+					<li class="next-link"><a href="'.get_permalink( $next->ID ).'">'.$next->post_title.'</a></li>';
+			
+			if (!empty($prev)) echo '
+					<li class="prev-link"><a href="'.get_permalink( $prev->ID ).'">'.$prev->post_title.'</a></li>';
+			
+			echo '
+				</ul>
+			</nav>';
+		}
+		?>
 	</footer> <!-- end article footer -->
 
 	<?php comments_template(); ?>
