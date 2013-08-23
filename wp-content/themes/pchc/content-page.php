@@ -35,24 +35,28 @@
 		<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
 		
 		<?php
-		$nextPage = next_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
-		$prevPage = previous_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
- 
-		if ( !empty($nextPage) || !empty($prevPage) ) {
-			echo '
-			<nav class="wp-prev-next">
-				<ul class="clearfix">';
-		
-			if (!empty($nextPage)) echo '
-					<li class="next-link">'.$nextPage.'</li>';
+		if( !is_front_page() ) :
+			if( function_exists('next_page_not_post') && function_exists('next_page_not_post') ) {
+				$nextPage = next_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
+				$prevPage = previous_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
+			}
+	 
+			if ( !empty($nextPage) || !empty($prevPage) ) {
+				echo '
+				<nav class="wp-prev-next">
+					<ul class="clearfix">';
 			
-			if (!empty($prevPage)) echo '
-					<li class="prev-link">'.$prevPage.'</li>';
-			
-			echo '
-				</ul>
-			</nav>';
-		}
+				if (!empty($nextPage)) echo '
+						<li class="next-link">'.$nextPage.'</li>';
+				
+				if (!empty($prevPage)) echo '
+						<li class="prev-link">'.$prevPage.'</li>';
+				
+				echo '
+					</ul>
+				</nav>';
+			}
+		endif;
 		?>
 
 	</footer> <!-- end article footer -->
