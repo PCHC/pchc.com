@@ -35,8 +35,10 @@
 		<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
 		
 		<?php
-		$nextPage = next_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
-		$prevPage = previous_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
+		if( function_exists('next_page_not_post') && function_exists('next_page_not_post') ) {
+			$nextPage = next_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
+			$prevPage = previous_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
+		}
  
 		if ( !empty($nextPage) || !empty($prevPage) ) {
 			echo '
