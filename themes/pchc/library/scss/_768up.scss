@@ -143,6 +143,12 @@ NAVIGATION STYLES
 
 #header-nav {
 	background: none;
+	
+	&.fixed {
+		.wrap {
+			background: #FFF;
+		}
+	}
 }
 
 .nav {
