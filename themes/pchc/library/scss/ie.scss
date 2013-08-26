@@ -53,6 +53,14 @@ header.php file to see what they are:
 
 */
 
+#header-icons a {
+	color: mix($pchc-blue, #FFF, 25%);
+	
+	&:hover {
+		color: #FFF;
+	}
+}
+
 .lt-ie8 {
 	@import "font-awesome-ie7";
 }
