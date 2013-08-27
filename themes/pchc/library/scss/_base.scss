@@ -432,6 +432,16 @@ and more scalable.
 	}
 }
 
+.admin-bar {
+	#header-nav {
+		&.fixed {
+			.wrap  {
+				margin-top: 28px;	
+			}
+		}
+	}
+}
+
 .nav {
 	font-family: $avenir;
 	font-weight: 300;
