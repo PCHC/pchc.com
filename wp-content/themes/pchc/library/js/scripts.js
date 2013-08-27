@@ -90,6 +90,30 @@ jQuery(document).ready(function($) {
 		$form.submit();
 	});
 	
+	
+	// fix the main navigation to the top of the window if you scroll below.
+	
+	var headerHeight = 206;
+	
+	function headerNavScroll( scrollTop ){
+	
+		if( responsive_viewport < 481 ) {
+			headerHeight = 145;
+		}
+		
+		if( scrollTop > headerHeight ) {
+			$('#header-nav').addClass('fixed');
+		} else {
+			$('#header-nav').removeClass('fixed');
+		}
+	}
+	
+	headerNavScroll( $(document).scrollTop() );
+	
+	$(document).scroll(function(){
+		headerNavScroll( $(this).scrollTop() );
+	});
+	
  
 }); /* end of as page load scripts */
 
