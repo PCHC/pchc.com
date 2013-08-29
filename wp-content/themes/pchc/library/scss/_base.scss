@@ -298,7 +298,7 @@ HEADER STYLES
 	padding-left: 5%;
 	margin-top: 1em;
 	
-	.button, .s {
+	.button.btn, .s {
 		margin: 0 1%;
 		font-size: 1.1em;
 		line-height: 2em;
@@ -308,7 +308,7 @@ HEADER STYLES
 		@include border-radius(3px);
 	}
 	
-	.button {
+	.button.btn {
 		float: right;
 		width: 15%;
 		padding: 0;
