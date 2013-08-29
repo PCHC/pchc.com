@@ -35,7 +35,7 @@
 		<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
 		
 		<?php
-		if( !is_front_page() ) :
+		if( is_page() && $post->post_parent ) :
 			if( function_exists('next_page_not_post') && function_exists('next_page_not_post') ) {
 				$nextPage = next_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
 				$prevPage = previous_page_not_post('%title', 'true', 'sort_column=menu_order&sort_order=asc');
