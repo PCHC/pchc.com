@@ -93,7 +93,7 @@
 						<?php get_search_form( ); ?>
 						
 						<p class="header-contact clearfix">
-							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="#">Locations &amp; Hours</a>
+							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="<?php echo home_url(); ?>/?post_type=location">Locations &amp; Hours</a>
 						</p>
 					
 					</div>
