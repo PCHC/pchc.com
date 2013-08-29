@@ -60,22 +60,22 @@
 						<?php endif; ?>
 
 						<div id="header-icons" class="visible-desktop clearfix">
-							<a href="#">
+							<a href="<?php echo home_url(); ?>/?post_type=provider">
 									<i class="icon-user-md"></i>
 								<span>Find a Physician</span>
 							</a>
 							
-							<a href="#">
+							<a href="<?php echo home_url(); ?>/?page_id=308">
 								<i class="icon-medkit"></i>
 								<span>eHealth Login</span>
 							</a>
 							
-							<a href="#">
+							<a href="<?php echo home_url(); ?>/?product=online-billpay">
 								<i class="icon-money"></i>
 								<span>Online Billpay</span>
 							</a>
 							
-							<a href="#">
+							<a href="<?php echo home_url(); ?>/?product=donate-online">
 								<i class="icon-gift"></i>
 								<span>Donate Online</span>
 							</a>

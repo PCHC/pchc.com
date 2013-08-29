@@ -1164,7 +1164,7 @@ HEADER STYLES
   margin-top: 1em;
 }
 /* line 301, ../scss/_base.scss */
-.searchform .button, .searchform .s {
+.searchform .button.btn, .searchform .s {
   margin: 0 1%;
   font-size: 1.1em;
   line-height: 2em;
@@ -1178,7 +1178,7 @@ HEADER STYLES
   border-radius: 3px;
 }
 /* line 311, ../scss/_base.scss */
-.searchform .button {
+.searchform .button.btn {
   float: right;
   width: 15%;
   padding: 0;
@@ -1194,12 +1194,12 @@ HEADER STYLES
   box-shadow: 0 4px 0 #212058;
 }
 /* line 320, ../scss/_base.scss */
-.searchform .button:hover {
+.searchform .button.btn:hover {
   background: #363b98;
   border-color: #363b98;
 }
 /* line 325, ../scss/_base.scss */
-.searchform .button:active {
+.searchform .button.btn:active {
   margin-top: 2px;
   -webkit-box-shadow: 0 2px 0 #212058;
   -moz-box-shadow: 0 2px 0 #212058;
@@ -2809,7 +2809,7 @@ you can add resource intensive styles.
     box-shadow: none;
   }
   /* line 94, ../scss/_768up.scss */
-  .searchform .button {
+  .searchform .button.btn {
     display: block;
     float: right;
     background: none;
@@ -2820,21 +2820,21 @@ you can add resource intensive styles.
     box-shadow: none;
   }
   /* line 102, ../scss/_768up.scss */
-  .searchform .button .icon-search {
+  .searchform .button.btn .icon-search {
     color: #555;
     text-shadow: 0 1px 1px #cccccc;
   }
   /* line 107, ../scss/_768up.scss */
-  .searchform .button:hover {
+  .searchform .button.btn:hover {
     background: none;
     border: none;
   }
   /* line 111, ../scss/_768up.scss */
-  .searchform .button:hover .icon-search {
+  .searchform .button.btn:hover .icon-search {
     color: #be1e2d;
   }
   /* line 116, ../scss/_768up.scss */
-  .searchform .button:active {
+  .searchform .button.btn:active {
     margin-top: 0;
     -webkit-transform: translateY(1px);
     -moz-transform: translateY(1px);
