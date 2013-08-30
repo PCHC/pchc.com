@@ -966,6 +966,12 @@ PAGE NAVI STYLES
 			background: $navbg;
 			@include border-radius(3px);
 			@include box-shadow(0 1px 1px rgba(#000,0.2));
+			min-height: 32px;
+			
+			li {
+				list-style-type: none;
+				margin: 0;
+			}
 		}
 		
 		a {
