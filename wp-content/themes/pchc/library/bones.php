@@ -433,5 +433,44 @@ function modify_post_mime_types( $post_mime_types ) {
 // Add Filter Hook
 add_filter( 'post_mime_types', 'modify_post_mime_types' );
 
+function pchc_posts_category($atts){ // [posts_category name="category" num="numbertodisplay"]
+	extract(shortcode_atts(array(
+		'name' => 'news',
+		'num' => '10',
+	), $atts));
+	
+	$catID = get_cat_id( $name );
+	
+	$loop = new WP_Query( array( 
+	    'post_type' => 'post', 
+	    'category_name' => $name,
+	    'posts_per_page' => $num,
+	));
+	
+	if( $loop->have_posts() ) :
+		
+		while( $loop->have_posts() ) : $loop->the_post();
+		
+			ob_start();
+			get_template_part( 'content-excerpt', 'index' );
+			$content .= ob_get_contents();
+			ob_end_clean();
+		
+		endwhile;
+		
+		$content .= '<nav class="wp-prev-next">';
+		$content .= '<ul class="clearfix">';
+		$content .= '<li class="next-link">';
+		$content .= '<a href="' . get_category_link( $catID ) . '">More ' . get_category( $catID )->name . '</a>';
+		$content .= '</li></ul></nav>';
+		
+	endif;
+	
+	wp_reset_postdata();
+	
+	return $content;
+}
+
+add_shortcode('posts_category', 'pchc_posts_category');
 
 ?>
