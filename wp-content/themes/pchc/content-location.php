@@ -23,59 +23,50 @@
 
 	<section class="entry-content clearfix" itemprop="articleBody">
 	
-		<?php if( get_post_meta( $post->ID, '_cmb_location_map', true ) && $the_meta['_cmb_location_address'] ) {
+		<?php if( get_field('show_map') ) {
 			$the_map = true;
 		} ?>
 	
 		<section class="<?php echo ($the_map) ? 'sevencol' : 'twelvecol'; ?> first">
 		
-			<?php foreach( (array)$the_meta['_cmb_location_address'] as $location_address ) : ?>
-				<div class="byline vcard" itemprop="about"><?php echo wpautop( $location_address ); ?></div>
-			<?php endforeach; ?>
+			<?php if( get_field('address') ) { ?>
+				<div class="byline vcard" itemprop="about"><?php echo wpautop( get_field( 'address' ) ); ?></div>
+			<?php } ?>
 	
 			<?php the_content(); ?>
 			
-			<?php foreach( (array)$the_meta['_cmb_location_primary_phone'] as $location_primary_phone ) : ?>
-				<section class="entry-details">
-					<h3>Primary Phone</h3>
-					<?php echo wpautop( $location_primary_phone ); ?>
-				</section>
-			<?php endforeach; ?>
+			<?php
+			$fields = get_fields();
 			
-			<?php foreach( (array)$the_meta['_cmb_location_secondary_phone'] as $location_secondary_phone ) : ?>
-				<section class="entry-details">
-					<h3>Secondary Phone</h3>
-					<?php echo wpautop( $location_secondary_phone ); ?>
-				</section>
-			<?php endforeach; ?>
-			
-			<?php foreach( (array)$the_meta['_cmb_location_fax'] as $location_fax ) : ?>
-				<section class="entry-details">
-					<h3>Fax</h3>
-					<?php echo wpautop( $location_fax ); ?>
-				</section>
-			<?php endforeach; ?>
-			
-			<?php foreach( (array)$the_meta['_cmb_location_email'] as $location_email ) : ?>
-				<section class="entry-details">
-					<h3>Email</h3>
-					<?php echo wpautop( '<a href="mailto:'.$location_email.'">'.$location_email.'</a>' ); ?>
-				</section>
-			<?php endforeach; ?>
-			
-			<?php foreach( (array)$the_meta['_cmb_location_hours'] as $location_hours ) : ?>
-				<section class="entry-details">
-					<h3>Hours</h3>
-					<?php echo wpautop( $location_hours ); ?>
-				</section>
-			<?php endforeach; ?>
+			if( $fields )
+			{
+				foreach( $fields as $field_name => $value )
+				{
+					// get_field_object( $field_name, $post_id, $options )
+					// - $value has already been loaded for us, no point to load it again in the get_field_object function
+					if( $value && $field_name != 'address' && $field_name != 'show_map' ) {
+					
+						$field = get_field_object($field_name, false, array('load_value' => false));
+						
+						?>
+						
+						<section class="entry-details">
+							<h3><?php echo $field['label']; ?></h3>
+							<?php echo wpautop( $value ); ?>
+						</section>
+						
+						<?php
+					}
+				}
+			}
+			?>
 		
 		</section>
 		
 		<section class="fivecol last">
 		
 			<?php if( $the_map ) {
-				foreach( (array)$the_meta['_cmb_location_address'] as $location_address ) : ?>
+				$location_address = get_field('address'); ?>
 					<section class="entry-details">
 						<h3>Map</h3>
 						<?php 
@@ -91,8 +82,7 @@
 						?>
 						
 					</section>
-			<?php endforeach;
-			
+			<?php
 			}
 			
 			?>
