@@ -132,7 +132,8 @@
 
 					<div id="inner-above-content" class="wrap clearfix">
 					
-						<?php get_template_part( 'homepage', 'feature' ); ?>
+						<?php //get_template_part( 'homepage', 'feature' ); ?>
+						<?php echo do_shortcode("[metaslider id=73]"); ?>
 
 						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
 				
