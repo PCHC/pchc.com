@@ -278,7 +278,7 @@ function custom_homefeatures() {
 } 
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'custom_homefeatures');
+//	add_action( 'init', 'custom_homefeatures');
 	
 
 /************************************************************
