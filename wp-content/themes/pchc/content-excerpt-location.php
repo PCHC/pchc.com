@@ -19,19 +19,19 @@
 
 	<section class="entry-content">
 	
-		<?php foreach( (array)$the_meta['_cmb_location_address'] as $location_address ) : ?>
+		<?php if( get_field('address') ) : ?>
 			<section class="entry-details">
 				<h4>Address</h4>
-				<?php echo wpautop( $location_address ); ?>
+				<?php echo wpautop( get_field('address') ); ?>
 			</section>
-		<?php endforeach; ?>
+		<?php endif; ?>
 
-		<?php foreach( (array)$the_meta['_cmb_location_primary_phone'] as $location_primary_phone ) : ?>
+		<?php if( get_field('primary_phone_number') ) : ?>
 			<section class="entry-details">
 				<h4>Primary Phone</h4>
-				<?php echo wpautop( $location_primary_phone ); ?>
+				<?php echo wpautop( get_field('primary_phone_number') ); ?>
 			</section>
-		<?php endforeach; ?>
+		<?php endif; ?>
 
 	</section> <!-- end article section -->
 
