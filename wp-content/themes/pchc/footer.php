@@ -56,19 +56,13 @@
 							
 								<li class="footer-location">
 									<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-									<?php $location_meta = get_post_meta( $post->ID );
+									<?php 
 										
-										foreach( (array)$location_meta['_cmb_location_address'] as $address ) {
-											echo wpautop($address);
-										}
+										echo wpautop( get_field('address') );
 										
-										foreach( (array)$location_meta['_cmb_location_primary_phone'] as $primary_phone ) {
-											echo wpautop($primary_phone);
-										}
+										echo wpautop( get_field('primary_phone_number') );
 										
-										foreach( (array)$location_meta['_cmb_location_secondary_phone'] as $secondary_phone ) {
-											echo wpautop($secondary_phone);
-										}
+										echo wpautop( get_field('secondary_phone_number') );
 										
 									?>
 									
