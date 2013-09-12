@@ -11,9 +11,9 @@
 				<?php the_title(); ?>
 			<?php endif; ?>
 		</h1>
-		<?php foreach( (array)$the_meta['_cmb_provider_title'] as $provider_title ) : ?>
-			<p class="byline vcard" itemprop="about"><?php echo $provider_title; ?></p>
-		<?php endforeach; ?>
+		<?php if( get_field('title') ) : ?>
+			<p class="byline vcard" itemprop="about"><?php echo get_field('title'); ?></p>
+		<?php endif; ?>
 
 	</header> <!-- end article header -->
 
@@ -26,26 +26,31 @@
 	
 		<?php the_content(); ?>
 		
-		<?php foreach( (array)$the_meta['_cmb_provider_education'] as $provider_education ) : ?>
-			<section class="entry-details">
-				<h3>Education</h3>
-				<?php echo wpautop( $provider_education ); ?>
-			</section>
-		<?php endforeach; ?>
-		
-		<?php foreach( (array)$the_meta['_cmb_provider_affiliations'] as $provider_affiliations ) : ?>
-			<section class="entry-details">
-				<h3>Affiliations</h3>
-				<?php echo wpautop( $provider_affiliations ); ?>
-			</section>
-		<?php endforeach; ?>
-		
-		<?php foreach( (array)$the_meta['_cmb_provider_credentials'] as $provider_credentials ) : ?>
-			<section class="entry-details">
-				<h3>Credentials</h3>
-				<?php echo wpautop( $provider_credentials ); ?>
-			</section>
-		<?php endforeach; ?>
+		<?php
+			$fields = get_fields();
+			
+			if( $fields )
+			{
+				foreach( $fields as $field_name => $value )
+				{
+					// get_field_object( $field_name, $post_id, $options )
+					// - $value has already been loaded for us, no point to load it again in the get_field_object function
+					if( $value && $field_name != 'title' ) {
+					
+						$field = get_field_object($field_name, false, array('load_value' => false));
+						
+						?>
+						
+						<section class="entry-details">
+							<h3><?php echo $field['label']; ?></h3>
+							<?php echo wpautop( $value ); ?>
+						</section>
+						
+						<?php
+					}
+				}
+			}
+			?>
 		
 	</section> <!-- end article section -->
 
