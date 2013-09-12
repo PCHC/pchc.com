@@ -14,9 +14,9 @@
 		<?php endif; ?>
 
 		<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-		<?php foreach( (array)$the_meta['_cmb_provider_title'] as $provider_title ) : ?>
-			<p class="byline vcard" itemprop="about"><?php echo $provider_title; ?></p>
-		<?php endforeach; ?>
+		<?php if( get_field('title') ) : ?>
+			<p class="byline vcard" itemprop="about"><?php echo get_field('title'); ?></p>
+		<?php endif; ?>
 
 	</header> <!-- end article header -->
 
