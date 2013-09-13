@@ -3091,6 +3091,47 @@ you can add resource intensive styles.
     margin-top: 0.75em;
     padding-left: 1em;
   }
+  /* line 361, ../scss/_768up.scss */
+  .sidebar .widget_simpleimage {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  /* line 366, ../scss/_768up.scss */
+  .sidebar .widget_simpleimage .simple-image {
+    margin: 0;
+  }
+  /* line 370, ../scss/_768up.scss */
+  .sidebar .widget_simpleimage img {
+    display: block;
+    max-width: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+  /* line 380, ../scss/_768up.scss */
+  .sidebar .widget_simpleimage a img {
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  /* line 385, ../scss/_768up.scss */
+  .sidebar .widget_simpleimage a:hover img {
+    -webkit-filter: brightness(125%);
+    -moz-filter: brightness(125%);
+    filter: brightness(125%);
+  }
 
   /* links widget */
   /* meta widget */
@@ -3114,7 +3155,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 511, ../scss/_768up.scss */
+  /* line 541, ../scss/_768up.scss */
   #footer .nav li {
     /*
     be careful with the depth of your menus.
@@ -3122,31 +3163,31 @@ you can add resource intensive styles.
     the footer.
     */
   }
-  /* line 520, ../scss/_768up.scss */
+  /* line 550, ../scss/_768up.scss */
   #footer .nav li ul {
     display: none;
   }
 
   /* end .footer-links */
-  /* line 525, ../scss/_768up.scss */
+  /* line 555, ../scss/_768up.scss */
   .accreditation {
     max-width: none;
     width: 40%;
   }
 
-  /* line 530, ../scss/_768up.scss */
+  /* line 560, ../scss/_768up.scss */
   #footer-locations {
     font-size: 0.8em;
   }
-  /* line 533, ../scss/_768up.scss */
+  /* line 563, ../scss/_768up.scss */
   #footer-locations li {
     width: 16.66667%;
   }
-  /* line 536, ../scss/_768up.scss */
+  /* line 566, ../scss/_768up.scss */
   #footer-locations li:nth-child(3n+1) {
     clear: none;
   }
-  /* line 540, ../scss/_768up.scss */
+  /* line 570, ../scss/_768up.scss */
   #footer-locations li:nth-child(6n+1) {
     clear: left;
   }

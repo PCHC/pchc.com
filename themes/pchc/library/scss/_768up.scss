@@ -358,6 +358,36 @@ SIDEBARS & ASIDES
 		}
 	}
 	
+	.widget_simpleimage {
+		background: none;
+		border: none;
+		padding: 0;
+		
+		.simple-image {
+			margin: 0;
+		}
+		
+		img {
+			display: block;
+			max-width: 100%;
+			border-top: 1px solid rgba(#FFF, 1);
+			border-bottom: 1px solid rgba(#000, 0.3);
+			@include transition(all 0.2s ease-in);
+			@include border-radius(3px);
+		}
+		
+		a {
+			img {
+				@include transition(all 0.2s ease-in);
+			}
+			
+			&:hover {
+				img {
+					@include filter(brightness(125%));
+				}
+			}
+		}
+	}
 }
 
 
