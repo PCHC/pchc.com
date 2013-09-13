@@ -2052,26 +2052,27 @@ FEATURE STYLES
 #above-content {
   background: #2f3485;
   color: #FFF;
+  overflow: hidden;
 }
-/* line 1366, ../scss/_base.scss */
+/* line 1367, ../scss/_base.scss */
 #above-content a {
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 1369, ../scss/_base.scss */
+/* line 1370, ../scss/_base.scss */
 #above-content a:hover {
   color: #FFF;
 }
-/* line 1374, ../scss/_base.scss */
+/* line 1375, ../scss/_base.scss */
 #above-content .widget, #above-content #homepage-features {
   padding: 1.5em 0;
 }
-/* line 1378, ../scss/_base.scss */
+/* line 1379, ../scss/_base.scss */
 #above-content .homepage-feature {
   width: 33.33333%;
   float: left;
   padding: 0 20px;
 }
-/* line 1383, ../scss/_base.scss */
+/* line 1384, ../scss/_base.scss */
 #above-content .homepage-feature img {
   max-width: 100%;
   height: auto;
@@ -2090,13 +2091,13 @@ FEATURE STYLES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 1391, ../scss/_base.scss */
+/* line 1392, ../scss/_base.scss */
 #above-content .homepage-feature img:hover {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-/* line 1396, ../scss/_base.scss */
+/* line 1397, ../scss/_base.scss */
 #above-content .homepage-feature h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
@@ -2105,17 +2106,17 @@ FEATURE STYLES
   color: #FFF;
   font-weight: 200;
 }
-/* line 1405, ../scss/_base.scss */
+/* line 1406, ../scss/_base.scss */
 #above-content .homepage-feature .content {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1.2em;
 }
-/* line 1410, ../scss/_base.scss */
+/* line 1411, ../scss/_base.scss */
 #above-content .homepage-feature .content p {
   margin: 0 0 1em;
 }
-/* line 1413, ../scss/_base.scss */
+/* line 1414, ../scss/_base.scss */
 #above-content .homepage-feature .content p:last-child {
   margin-bottom: 0;
 }
@@ -2123,7 +2124,7 @@ FEATURE STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1425, ../scss/_base.scss */
+/* line 1426, ../scss/_base.scss */
 .footer-top {
   clear: both;
   background-image: url("../images/footer-swoosh.png");
@@ -2134,18 +2135,18 @@ FOOTER STYLES
   overflow: hidden;
 }
 
-/* line 1434, ../scss/_base.scss */
+/* line 1435, ../scss/_base.scss */
 .footer-bottom {
   background: #8d7167;
   min-height: 1px;
 }
 
-/* line 1439, ../scss/_base.scss */
+/* line 1440, ../scss/_base.scss */
 .footer-mid {
   background: #6e4c39;
 }
 
-/* line 1443, ../scss/_base.scss */
+/* line 1444, ../scss/_base.scss */
 .copyright {
   color: #FFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2153,7 +2154,7 @@ FOOTER STYLES
   margin: 85px 0 0;
 }
 
-/* line 1450, ../scss/_base.scss */
+/* line 1451, ../scss/_base.scss */
 #footer-locations {
   color: #FFF;
   margin: 0;
@@ -2161,29 +2162,29 @@ FOOTER STYLES
   font-size: 0.8em;
   padding: 2em 0;
 }
-/* line 1457, ../scss/_base.scss */
+/* line 1458, ../scss/_base.scss */
 #footer-locations li {
   margin: 0 0 20px 0;
   padding: 0 20px 0 0;
   width: 33.33333%;
   float: left;
 }
-/* line 1463, ../scss/_base.scss */
+/* line 1464, ../scss/_base.scss */
 #footer-locations li h4 {
   font-size: 1em;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: bold;
   margin: 0;
 }
-/* line 1470, ../scss/_base.scss */
+/* line 1471, ../scss/_base.scss */
 #footer-locations li p {
   margin: 0;
 }
-/* line 1474, ../scss/_base.scss */
+/* line 1475, ../scss/_base.scss */
 #footer-locations li a {
   color: #FFF;
 }
-/* line 1478, ../scss/_base.scss */
+/* line 1479, ../scss/_base.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: left;
 }
@@ -2197,23 +2198,23 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 1500, ../scss/_base.scss */
+/* line 1501, ../scss/_base.scss */
 #footer .nav {
   margin: 0;
 }
-/* line 1504, ../scss/_base.scss */
+/* line 1505, ../scss/_base.scss */
 #footer .nav li a {
   padding: 10px;
   color: #FFF;
   border: none;
 }
-/* line 1509, ../scss/_base.scss */
+/* line 1510, ../scss/_base.scss */
 #footer .nav li a:hover {
   background: #8d7167;
 }
 
 /* end .footer-links */
-/* line 1522, ../scss/_base.scss */
+/* line 1523, ../scss/_base.scss */
 .wpfilebase-file-default {
   width: auto;
   background: none;
@@ -2227,11 +2228,11 @@ view.
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1529, ../scss/_base.scss */
+/* line 1530, ../scss/_base.scss */
 .wpfilebase-file-default:nth-child(2n) {
   background: #F3F3F3;
 }
-/* line 1534, ../scss/_base.scss */
+/* line 1535, ../scss/_base.scss */
 .wpfilebase-file-default .icon img {
   height: 32px;
   padding: 1px;
@@ -2242,40 +2243,40 @@ view.
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1542, ../scss/_base.scss */
+/* line 1543, ../scss/_base.scss */
 .wpfilebase-file-default .filetitle {
   max-width: 50%;
 }
-/* line 1545, ../scss/_base.scss */
+/* line 1546, ../scss/_base.scss */
 .wpfilebase-file-default .filetitle a {
   line-height: 1.1em;
 }
-/* line 1550, ../scss/_base.scss */
+/* line 1551, ../scss/_base.scss */
 .wpfilebase-file-default .info {
   margin: 0 10px;
   height: auto;
   background: url(../images/download-sprite.png) 100% 0 no-repeat;
 }
-/* line 1557, ../scss/_base.scss */
+/* line 1558, ../scss/_base.scss */
 .wpfilebase-file-default:hover .info {
   background-position: 100% -200px;
 }
 
-/* line 1564, ../scss/_base.scss */
+/* line 1565, ../scss/_base.scss */
 ul.treeview li {
   margin-left: 0;
 }
-/* line 1568, ../scss/_base.scss */
+/* line 1569, ../scss/_base.scss */
 ul.treeview img {
   max-height: 16px;
   margin: 0;
 }
-/* line 1573, ../scss/_base.scss */
+/* line 1574, ../scss/_base.scss */
 ul.treeview .last {
   float: none;
 }
 
-/* line 1578, ../scss/_base.scss */
+/* line 1579, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail {
   display: inline-block;
   font-size: 45px;
@@ -2300,7 +2301,7 @@ ul.treeview .last {
   -transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
 }
-/* line 1596, ../scss/_base.scss */
+/* line 1597, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail img {
   display: block;
   margin: 0;
@@ -2308,7 +2309,7 @@ ul.treeview .last {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1602, ../scss/_base.scss */
+/* line 1603, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:before {
   speak: none;
   font-size: 48px;
@@ -2329,7 +2330,7 @@ ul.treeview .last {
   -moz-transition: -moz-transform 0.2s, opacity0.2s;
   transition: transform 0.2s, opacity0.2s;
 }
-/* line 1621, ../scss/_base.scss */
+/* line 1622, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:after {
   pointer-events: none;
   position: absolute;
@@ -2358,11 +2359,11 @@ ul.treeview .last {
   -moz-transition: opacity 0.2s, -moz-transform 0.2s;
   transition: opacity 0.2s, transform 0.2s;
 }
-/* line 1645, ../scss/_base.scss */
+/* line 1646, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover {
   color: #fff;
 }
-/* line 1648, ../scss/_base.scss */
+/* line 1649, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover:before {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -2371,7 +2372,7 @@ ul.treeview .last {
   transform: scale(1);
   opacity: 1;
 }
-/* line 1653, ../scss/_base.scss */
+/* line 1654, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover:after {
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -2381,11 +2382,11 @@ ul.treeview .last {
   transform: rotate(0deg);
 }
 
-/* line 1663, ../scss/_base.scss */
+/* line 1664, ../scss/_base.scss */
 .metaslider .slider-wrapper.theme-light {
   background: #2f3485;
 }
-/* line 1668, ../scss/_base.scss */
+/* line 1669, ../scss/_base.scss */
 .metaslider .nivo-caption {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
