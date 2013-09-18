@@ -3,6 +3,26 @@
 					<?php if ( is_active_sidebar( 'sidebar_top' ) ) : ?>
 					
 						<div id="sidebar-top">
+						
+							<?php if( is_search() ) : ?>
+								<div class="widget" id="refine-search">
+									<h4 class="widgettitle">Refine Search Results</h4>
+									<ul>
+										<?php $post_types = get_post_types( array(
+												'public'	=>	true,
+												'exclude_from_search'	=>	false,
+											), 'objects'
+										);
+										foreach( $post_types as $post_type ) : ?>
+										<li>
+											<label class="type-<?php echo $post_type->name; ?>">
+												<input type="checkbox" name="refine-search-<?php echo $post_type->name; ?>" data-posttype="type-<?php echo $post_type->name; ?>" checked> <?php echo $post_type->label; ?>
+											</label>
+										</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							<?php endif; ?>
 
 							<?php dynamic_sidebar( 'sidebar_top' ); ?>
 						
