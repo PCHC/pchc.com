@@ -891,23 +891,23 @@ MAIN CONTENT
 /******************************************************************
 POST TYPE STYLES
 ******************************************************************/
-/* line 309, ../scss/_768up.scss */
-.type-location.content-excerpt {
+/* line 311, ../scss/_768up.scss */
+.post-type-archive .type-location.content-excerpt {
   width: 33.33333%;
 }
-/* line 312, ../scss/_768up.scss */
-.type-location.content-excerpt:nth-child(2n+1) {
+/* line 314, ../scss/_768up.scss */
+.post-type-archive .type-location.content-excerpt:nth-child(2n+1) {
   clear: none;
 }
-/* line 316, ../scss/_768up.scss */
-.type-location.content-excerpt:nth-child(3n+1) {
+/* line 318, ../scss/_768up.scss */
+.post-type-archive .type-location.content-excerpt:nth-child(3n+1) {
   clear: left;
 }
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 329, ../scss/_768up.scss */
+/* line 333, ../scss/_768up.scss */
 .sidebar .widgettitle {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-weight: bold;
@@ -915,7 +915,7 @@ SIDEBARS & ASIDES
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 337, ../scss/_768up.scss */
+/* line 341, ../scss/_768up.scss */
 .sidebar .widget {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -927,27 +927,27 @@ SIDEBARS & ASIDES
   border-radius: 3px;
   margin: 0 0 1.5em;
 }
-/* line 345, ../scss/_768up.scss */
+/* line 349, ../scss/_768up.scss */
 .sidebar .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 353, ../scss/_768up.scss */
+/* line 357, ../scss/_768up.scss */
 .sidebar .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
 }
-/* line 361, ../scss/_768up.scss */
+/* line 365, ../scss/_768up.scss */
 .sidebar .widget_simpleimage {
   background: none;
   border: none;
   padding: 0;
 }
-/* line 366, ../scss/_768up.scss */
+/* line 370, ../scss/_768up.scss */
 .sidebar .widget_simpleimage .simple-image {
   margin: 0;
 }
-/* line 370, ../scss/_768up.scss */
+/* line 374, ../scss/_768up.scss */
 .sidebar .widget_simpleimage img {
   display: block;
   max-width: 100%;
@@ -964,7 +964,7 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 380, ../scss/_768up.scss */
+/* line 384, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a img {
   -webkit-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -972,7 +972,7 @@ SIDEBARS & ASIDES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 385, ../scss/_768up.scss */
+/* line 389, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a:hover img {
   -webkit-filter: brightness(125%);
   -moz-filter: brightness(125%);
@@ -990,6 +990,51 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
+/* line 486, ../scss/_768up.scss */
+#refine-search {
+  position: fixed;
+  width: auto;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  -webkit-box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+/* line 502, ../scss/_768up.scss */
+#refine-search .widgettitle {
+  margin: 0;
+  float: left;
+  line-height: 32px;
+}
+/* line 508, ../scss/_768up.scss */
+#refine-search ul {
+  margin: 0;
+  float: right;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  -o-column-count: 1;
+  column-count: 1;
+}
+/* line 513, ../scss/_768up.scss */
+#refine-search ul li {
+  display: inline-block;
+  margin: 0;
+}
+
 /*********************
 FEATURE STYLES
 *********************/
@@ -1001,7 +1046,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 541, ../scss/_768up.scss */
+/* line 580, ../scss/_768up.scss */
 #footer .nav li {
   /*
   be careful with the depth of your menus.
@@ -1009,31 +1054,31 @@ mobile. Make sure to double check these!
   the footer.
   */
 }
-/* line 550, ../scss/_768up.scss */
+/* line 589, ../scss/_768up.scss */
 #footer .nav li ul {
   display: none;
 }
 
 /* end .footer-links */
-/* line 555, ../scss/_768up.scss */
+/* line 594, ../scss/_768up.scss */
 .accreditation {
   max-width: none;
   width: 40%;
 }
 
-/* line 560, ../scss/_768up.scss */
+/* line 599, ../scss/_768up.scss */
 #footer-locations {
   font-size: 0.8em;
 }
-/* line 563, ../scss/_768up.scss */
+/* line 602, ../scss/_768up.scss */
 #footer-locations li {
   width: 16.66667%;
 }
-/* line 566, ../scss/_768up.scss */
+/* line 605, ../scss/_768up.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: none;
 }
-/* line 570, ../scss/_768up.scss */
+/* line 609, ../scss/_768up.scss */
 #footer-locations li:nth-child(6n+1) {
   clear: left;
 }
