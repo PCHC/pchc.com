@@ -114,6 +114,18 @@ jQuery(document).ready(function($) {
 		headerNavScroll( $(this).scrollTop() );
 	});
 	
+	$('#refine-search input').change(function(){
+		
+		var posttype = $(this).data('posttype');
+		
+		if($(this).is(':checked')) {
+			$('#main .' + posttype).fadeIn();
+		} else {
+			$('#main .' + posttype).fadeOut();
+		}
+		
+	});
+	
  
 }); /* end of as page load scripts */
 
