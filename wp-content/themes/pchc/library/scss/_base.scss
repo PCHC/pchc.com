@@ -838,28 +838,154 @@ img {
 		POST TYPE STYLES
 		******************************************************************/
 		
-		.type-provider {
-			
-		}
+		.post-type-archive {
 		
-		.type-service {
-			
-		}
-		
-		.type-location {
-			&.content-excerpt {
-				width: 50%;
-				float: left;
-				padding: 1em;
-				margin: 0;
-				border-top: 1px solid lighten($pchc-brown, 35%);
-				border-bottom: none;
+			.type-provider {
 				
-				&:nth-child(2n+1) {
-					clear: left;
+			}
+			
+			.type-service {
+				
+			}
+			
+			.type-location {
+				&.content-excerpt {
+					width: 50%;
+					float: left;
+					padding: 1em;
+					margin: 0;
+					border-top: 1px solid lighten($pchc-brown, 35%);
+					border-bottom: none;
+					
+					&:nth-child(2n+1) {
+						clear: left;
+					}
 				}
 			}
+		
 		}
+		
+		
+/******************************************************************
+SEARCH RESULTS STYLES
+******************************************************************/
+$search-mix: 7%;
+$search-label-mix: 80%;
+
+.search-results {
+
+	.content-excerpt {
+		padding-top: 1em;
+	}
+	
+	.type-post {
+		$post-color: #000;
+		background: mix($post-color, #FFF, $search-mix/2);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-page {
+		$post-color: #1F7FBF;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-attachment {
+		$post-color: #BF1FB5;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-product {
+		$post-color: #49BF1F;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-jobman_job {
+		$post-color: #000000;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-location {
+		$post-color: $pchc-brown;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-service {
+		$post-color: $pchc-red;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.type-provider {
+		$post-color: $pchc-blue;
+		background: mix($post-color, #FFF, $search-mix);
+		
+		.post-type-label {
+			background: mix($post-color, #FFF, $search-label-mix);
+		}
+	}
+	
+	.post-type-label {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		padding: 0.25em 0.5em;
+		line-height: 1em;
+		font-size: 0.7em;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		border-bottom: 1px solid rgba(#FFF, 0.9);
+		font-family: $sans-serif;
+		font-weight: 100;
+		color: #FFF;
+		@include border-radius(3px);
+	}
+}
+
+#refine-search {
+	display: none;
+	@extend .search-results;
+	
+	.js & {
+		display: block;
+	}
+	
+	ul {
+		margin-bottom: 0;
+		@include column-count(2);
+	}
+	
+	label {
+		display: block;
+		padding: 0.25em;
+		cursor: pointer;
+	}
+}
 
 /******************************************************************
 PAGE NAVI STYLES
