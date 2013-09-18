@@ -297,26 +297,30 @@ MAIN CONTENT
 POST TYPE STYLES
 ******************************************************************/
 
-.type-provider {
-	
-}
+.post-type-archive {
 
-.type-service {
+	.type-provider {
+		
+	}
 	
-}
-
-.type-location {
-	&.content-excerpt {
-		width: (100% / 3);
+	.type-service {
 		
-		&:nth-child(2n+1) {
-			clear: none;
-		}
-		
-		&:nth-child(3n+1) {
-			clear: left;
+	}
+	
+	.type-location {
+		&.content-excerpt {
+			width: (100% / 3);
+			
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-child(3n+1) {
+				clear: left;
+			}
 		}
 	}
+
 }
 		
 
@@ -478,6 +482,41 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 
+
+#refine-search {
+	position: fixed;
+	width: auto;
+	z-index: 1001;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 5px 10px;
+	background: rgba(#FFF, 0.9);
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	@include box-shadow(0 -5px 15px rgba(#000,0.2));
+	@include border-radius(3px 3px 0 0);
+	
+	.widgettitle {
+		margin: 0;
+		float: left;
+		line-height: 32px;
+	}
+	
+	ul {
+		margin: 0;
+		float: right;
+		@include column-count(1);
+		
+		li {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	
+}
 
 /*********************
 FEATURE STYLES
