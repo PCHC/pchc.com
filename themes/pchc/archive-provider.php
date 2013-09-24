@@ -50,14 +50,14 @@ if( !empty( $_POST ) ) {
 								<span><?php post_type_archive_title(); ?></span>
 							</h1>
 							
-							<form name="providers-filter" method="post">
+							<form name="providers-filter" method="post" action="">
 							<div class="well">
 								<button type="button" class="toggle" data-toggle-target="~ .providers-filter">
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<h3 class="nomargin">Filter Results</h3>
+								<h3 class="nomargin">Filter Providers</h3>
 								<div class="providers-filter <?php echo ($_POST) ? '' : 'toggle-init-hide'; ?>">
 									<div class="sixcol first clearfix">
 										<p><strong>Filter Locations</strong></p>
@@ -139,9 +139,14 @@ if( !empty( $_POST ) ) {
 							// 	);
 							// }
 							
+							$posts_per_page = $_POST ? -1 : 20;
+							$nopaging = $_POST ? true : false;
+							
 							$args = array(
 								'post_type'			=>	'provider',
-								'posts_per_page'	=>	-1,
+								'posts_per_page'	=>	$posts_per_page,
+								'nopaging'			=>	$nopaging,
+								'paged'				=>	get_query_var('paged'),
 								'orderby'			=>	'title',
 								'order'				=>	'ASC',
 								'post__in'			=>	$filtered_providers_unique,
