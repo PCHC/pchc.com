@@ -145,8 +145,21 @@ NAVIGATION STYLES
 	background: none;
 	
 	&.fixed {
+		height: 34px;
+		
 		.wrap {
+			max-width: none;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			margin: 0;
 			background: #FFF;
+			@include box-shadow(0 0 10px 5px rgba($pchc-blue, 0.5));
+		}
+		
+		.nav {
+			max-width: 1140px;
+			margin: 0 auto;
 		}
 	}
 }
