@@ -752,12 +752,29 @@ NAVIGATION STYLES
 #header-nav {
   background: none;
 }
-/* line 148, ../scss/_768up.scss */
+/* line 147, ../scss/_768up.scss */
+#header-nav.fixed {
+  height: 34px;
+}
+/* line 150, ../scss/_768up.scss */
 #header-nav.fixed .wrap {
+  max-width: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
   background: #FFF;
+  -webkit-box-shadow: 0 0 10px 5px rgba(47, 52, 133, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(47, 52, 133, 0.5);
+  box-shadow: 0 0 10px 5px rgba(47, 52, 133, 0.5);
+}
+/* line 160, ../scss/_768up.scss */
+#header-nav.fixed .nav {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-/* line 154, ../scss/_768up.scss */
+/* line 167, ../scss/_768up.scss */
 .nav {
   text-align: center;
   display: block;
@@ -765,7 +782,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 158, ../scss/_768up.scss */
+/* line 171, ../scss/_768up.scss */
 .nav li {
   display: inline-block;
   position: relative;
@@ -774,7 +791,7 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 162, ../scss/_768up.scss */
+/* line 175, ../scss/_768up.scss */
 .nav li a {
   border-bottom: 0;
   padding: 5px 6px;
@@ -788,15 +805,15 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 175, ../scss/_768up.scss */
+/* line 188, ../scss/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #be1e2d;
 }
-/* line 181, ../scss/_768up.scss */
+/* line 194, ../scss/_768up.scss */
 .nav li:first-child a {
   border-left: none;
 }
-/* line 191, ../scss/_768up.scss */
+/* line 204, ../scss/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -810,7 +827,7 @@ NAVIGATION STYLES
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   /* highlight sub-menu current page */
 }
-/* line 200, ../scss/_768up.scss */
+/* line 213, ../scss/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -819,7 +836,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 202, ../scss/_768up.scss */
+/* line 215, ../scss/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding: 10px;
@@ -829,18 +846,18 @@ NAVIGATION STYLES
   border-bottom: 1px solid #ddd;
   border-left: none;
 }
-/* line 211, ../scss/_768up.scss */
+/* line 224, ../scss/_768up.scss */
 .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
 .nav li ul.children li a:hover,
 .nav li ul.children li a:focus {
   background: #f7f5f4;
 }
-/* line 222, ../scss/_768up.scss */
+/* line 235, ../scss/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 244, ../scss/_768up.scss */
+/* line 257, ../scss/_768up.scss */
 .nav li:hover ul {
   top: auto;
   display: block;
@@ -850,7 +867,7 @@ NAVIGATION STYLES
 /*********************
 MAIN CONTENT
 *********************/
-/* line 266, ../scss/_768up.scss */
+/* line 279, ../scss/_768up.scss */
 #main {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -862,7 +879,7 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 273, ../scss/_768up.scss */
+/* line 286, ../scss/_768up.scss */
 .well {
   background: #f0f0f6;
   padding: 0.5em;
@@ -877,13 +894,13 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 285, ../scss/_768up.scss */
+/* line 298, ../scss/_768up.scss */
 .related-posts .related-posts-type {
   width: 48%;
   margin-left: 4%;
   float: left;
 }
-/* line 290, ../scss/_768up.scss */
+/* line 303, ../scss/_768up.scss */
 .related-posts .related-posts-type:first-child {
   margin-left: 0;
 }
@@ -891,15 +908,15 @@ MAIN CONTENT
 /******************************************************************
 POST TYPE STYLES
 ******************************************************************/
-/* line 311, ../scss/_768up.scss */
+/* line 324, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt {
   width: 33.33333%;
 }
-/* line 314, ../scss/_768up.scss */
+/* line 327, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(2n+1) {
   clear: none;
 }
-/* line 318, ../scss/_768up.scss */
+/* line 331, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(3n+1) {
   clear: left;
 }
@@ -907,7 +924,7 @@ POST TYPE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 333, ../scss/_768up.scss */
+/* line 346, ../scss/_768up.scss */
 .sidebar .widgettitle {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-weight: bold;
@@ -915,7 +932,7 @@ SIDEBARS & ASIDES
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 341, ../scss/_768up.scss */
+/* line 354, ../scss/_768up.scss */
 .sidebar .widget {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -927,27 +944,27 @@ SIDEBARS & ASIDES
   border-radius: 3px;
   margin: 0 0 1.5em;
 }
-/* line 349, ../scss/_768up.scss */
+/* line 362, ../scss/_768up.scss */
 .sidebar .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 357, ../scss/_768up.scss */
+/* line 370, ../scss/_768up.scss */
 .sidebar .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
 }
-/* line 365, ../scss/_768up.scss */
+/* line 378, ../scss/_768up.scss */
 .sidebar .widget_simpleimage {
   background: none;
   border: none;
   padding: 0;
 }
-/* line 370, ../scss/_768up.scss */
+/* line 383, ../scss/_768up.scss */
 .sidebar .widget_simpleimage .simple-image {
   margin: 0;
 }
-/* line 374, ../scss/_768up.scss */
+/* line 387, ../scss/_768up.scss */
 .sidebar .widget_simpleimage img {
   display: block;
   max-width: 100%;
@@ -964,7 +981,7 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 384, ../scss/_768up.scss */
+/* line 397, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a img {
   -webkit-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -972,7 +989,7 @@ SIDEBARS & ASIDES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 389, ../scss/_768up.scss */
+/* line 402, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a:hover img {
   -webkit-filter: brightness(125%);
   -moz-filter: brightness(125%);
@@ -990,7 +1007,7 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
-/* line 486, ../scss/_768up.scss */
+/* line 499, ../scss/_768up.scss */
 #refine-search {
   position: fixed;
   width: auto;
@@ -1013,13 +1030,13 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 502, ../scss/_768up.scss */
+/* line 515, ../scss/_768up.scss */
 #refine-search .widgettitle {
   margin: 0;
   float: left;
   line-height: 32px;
 }
-/* line 508, ../scss/_768up.scss */
+/* line 521, ../scss/_768up.scss */
 #refine-search ul {
   margin: 0;
   float: right;
@@ -1029,7 +1046,7 @@ SIDEBARS & ASIDES
   -o-column-count: 1;
   column-count: 1;
 }
-/* line 513, ../scss/_768up.scss */
+/* line 526, ../scss/_768up.scss */
 #refine-search ul li {
   display: inline-block;
   margin: 0;
@@ -1046,7 +1063,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 580, ../scss/_768up.scss */
+/* line 593, ../scss/_768up.scss */
 #footer .nav li {
   /*
   be careful with the depth of your menus.
@@ -1054,31 +1071,31 @@ mobile. Make sure to double check these!
   the footer.
   */
 }
-/* line 589, ../scss/_768up.scss */
+/* line 602, ../scss/_768up.scss */
 #footer .nav li ul {
   display: none;
 }
 
 /* end .footer-links */
-/* line 594, ../scss/_768up.scss */
+/* line 607, ../scss/_768up.scss */
 .accreditation {
   max-width: none;
   width: 40%;
 }
 
-/* line 599, ../scss/_768up.scss */
+/* line 612, ../scss/_768up.scss */
 #footer-locations {
   font-size: 0.8em;
 }
-/* line 602, ../scss/_768up.scss */
+/* line 615, ../scss/_768up.scss */
 #footer-locations li {
   width: 16.66667%;
 }
-/* line 605, ../scss/_768up.scss */
+/* line 618, ../scss/_768up.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: none;
 }
-/* line 609, ../scss/_768up.scss */
+/* line 622, ../scss/_768up.scss */
 #footer-locations li:nth-child(6n+1) {
   clear: left;
 }
