@@ -2677,6 +2677,23 @@ NINJA FORMS STYLES
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
 }
 
+/*********************
+WOOCOMMERCE STYLES
+*********************/
+/* line 1978, ../scss/_base.scss */
+.woocommerce div.product.no-thumbnail div.images, .woocommerce #content div.product.no-thumbnail div.images, .woocommerce-page #content div.product.no-thumbnail div.images, .woocommerce-page div.product.no-thumbnail div.images {
+  display: none;
+}
+/* line 1982, ../scss/_base.scss */
+.woocommerce div.product.no-thumbnail div.summary, .woocommerce #content div.product.no-thumbnail div.summary, .woocommerce-page #content div.product.no-thumbnail div.summary, .woocommerce-page div.product.no-thumbnail div.summary {
+  float: none;
+  width: auto;
+}
+/* line 1990, ../scss/_base.scss */
+.woocommerce div.product .woocommerce-tabs .panel h2, .woocommerce #content div.product .woocommerce-tabs .panel h2, .woocommerce-page #content div.product .woocommerce-tabs .panel h2, .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce #content div.product .woocommerce-tabs .panel h4, .woocommerce-page #content div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .h4, .woocommerce #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page div.product .woocommerce-tabs .panel h2, .woocommerce-page div.product .woocommerce-tabs .panel h4, .woocommerce-page div.product .woocommerce-tabs .panel .h4 {
+  display: none;
+}
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

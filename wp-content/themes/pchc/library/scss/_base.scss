@@ -1956,3 +1956,45 @@ NINJA FORMS STYLES
 	}
 	
 }
+
+
+/*********************
+WOOCOMMERCE STYLES
+*********************/
+
+.woocommerce, .woocommerce-page {
+	div.product {
+		
+		div.images {
+			
+		}
+		
+		div.summary {
+			
+		}
+		
+		&.no-thumbnail {
+			
+			div.images {
+				display: none;
+			}
+			
+			div.summary {
+				float: none;
+				width: auto;
+			}
+		}
+		
+		.woocommerce-tabs {
+			.panel {
+				h2 {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce #content, .woocommerce-page #content {
+	@extend .woocommerce;
+}
