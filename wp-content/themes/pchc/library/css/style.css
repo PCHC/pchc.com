@@ -2525,6 +2525,179 @@ ul.treeview .last {
   box-sizing: border-box;
 }
 
+/*********************
+NINJA FORMS STYLES
+*********************/
+/* line 1824, ../scss/_base.scss */
+#content .ninja-forms-form-wrap {
+  background: #FAFAFA;
+  border: 1px solid #F0F0F0;
+  padding: 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 1830, ../scss/_base.scss */
+#content .ninja-forms-form-wrap #ninja_forms_required_items {
+  color: #be1e2d;
+}
+/* line 1834, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .ninja-forms-response-msg {
+  padding: 1em;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 1841, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .ninja-forms-response-msg.ninja-forms-error-msg {
+  background: rgba(190, 30, 45, 0.075);
+  border-color: rgba(190, 30, 45, 0.3);
+  color: #be1e2d;
+}
+/* line 1847, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .ninja-forms-response-msg p:last-child {
+  margin-bottom: 0;
+}
+/* line 1852, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap {
+  padding: 0.5em;
+}
+/* line 1855, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap label {
+  display: block;
+  width: 30%;
+  line-height: 1.8em;
+  vertical-align: middle;
+}
+/* line 1861, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap label .ninja-forms-help-text {
+  margin: 0;
+}
+/* line 1866, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap .ninja-forms-field {
+  display: inline-block;
+  width: 65%;
+  line-height: 1.2em;
+  padding: 0.3em;
+  margin: 0;
+  border: 1px solid #CCC;
+  vertical-align: middle;
+  color: #555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  -transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+/* line 1881, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap .ninja-forms-field:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  border-color: rgba(47, 52, 133, 0.5);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+}
+/* line 1888, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap .ninja-forms-field.ninja-forms-req:focus {
+  border-color: rgba(190, 30, 45, 0.5);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
+}
+/* line 1894, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-description {
+  font-size: 0.8em;
+  color: #555;
+}
+/* line 1899, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-error {
+  clear: both;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #be1e2d;
+}
+/* line 1907, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-above label, #content .ninja-forms-form-wrap .field-wrap.label-below label {
+  display: block;
+  width: 100%;
+}
+/* line 1912, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-above .ninja-forms-field, #content .ninja-forms-form-wrap .field-wrap.label-below .ninja-forms-field {
+  display: block;
+  width: 100%;
+}
+/* line 1919, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-left label {
+  float: left;
+}
+/* line 1923, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-left .ninja-forms-field {
+  float: right;
+}
+/* line 1929, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-right label {
+  float: right;
+}
+/* line 1933, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-right .ninja-forms-field {
+  float: left;
+}
+/* line 1943, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.label-inside .ninja-forms-field {
+  width: 100%;
+}
+/* line 1948, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap:nth-child(2n) {
+  background: #F5F5F5;
+}
+/* line 1952, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.submit-wrap {
+  padding: 0;
+  background: none;
+}
+/* line 1956, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field {
+  width: auto;
+  float: right;
+  border: 1px solid #6e4c39;
+  background: #8d7167;
+  color: #FFF;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+/* line 1965, ../scss/_base.scss */
+#content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field:hover {
+  border-color: #212058;
+  background: #2f3485;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
+}
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
