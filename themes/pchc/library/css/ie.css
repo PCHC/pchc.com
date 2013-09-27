@@ -793,6 +793,17 @@ NAVIGATION STYLES
 }
 /* line 175, ../scss/_768up.scss */
 .nav li a {
+  background: none;
+  line-height: normal;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   border-bottom: 0;
   padding: 5px 6px;
   text-align: left;
@@ -805,17 +816,26 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 188, ../scss/_768up.scss */
+/* line 196, ../scss/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #be1e2d;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
-/* line 194, ../scss/_768up.scss */
+/* line 205, ../scss/_768up.scss */
+.nav li.has-dropdown a .toggle {
+  display: none !important;
+}
+/* line 212, ../scss/_768up.scss */
 .nav li:first-child a {
   border-left: none;
 }
-/* line 204, ../scss/_768up.scss */
+/* line 222, ../scss/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
+  font-size: 1em;
   margin-top: 0;
   border-top: 0;
   position: absolute;
@@ -827,7 +847,7 @@ NAVIGATION STYLES
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   /* highlight sub-menu current page */
 }
-/* line 213, ../scss/_768up.scss */
+/* line 232, ../scss/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -836,7 +856,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 215, ../scss/_768up.scss */
+/* line 234, ../scss/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding: 10px;
@@ -846,18 +866,18 @@ NAVIGATION STYLES
   border-bottom: 1px solid #ddd;
   border-left: none;
 }
-/* line 224, ../scss/_768up.scss */
+/* line 243, ../scss/_768up.scss */
 .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
 .nav li ul.children li a:hover,
 .nav li ul.children li a:focus {
   background: #f7f5f4;
 }
-/* line 235, ../scss/_768up.scss */
+/* line 254, ../scss/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 257, ../scss/_768up.scss */
+/* line 276, ../scss/_768up.scss */
 .nav li:hover ul {
   top: auto;
   display: block;
@@ -867,7 +887,7 @@ NAVIGATION STYLES
 /*********************
 MAIN CONTENT
 *********************/
-/* line 279, ../scss/_768up.scss */
+/* line 298, ../scss/_768up.scss */
 #main {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -879,7 +899,7 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 286, ../scss/_768up.scss */
+/* line 305, ../scss/_768up.scss */
 .well {
   background: #f0f0f6;
   padding: 0.5em;
@@ -894,13 +914,13 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 298, ../scss/_768up.scss */
+/* line 317, ../scss/_768up.scss */
 .related-posts .related-posts-type {
   width: 48%;
   margin-left: 4%;
   float: left;
 }
-/* line 303, ../scss/_768up.scss */
+/* line 322, ../scss/_768up.scss */
 .related-posts .related-posts-type:first-child {
   margin-left: 0;
 }
@@ -908,15 +928,15 @@ MAIN CONTENT
 /******************************************************************
 POST TYPE STYLES
 ******************************************************************/
-/* line 324, ../scss/_768up.scss */
+/* line 343, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt {
   width: 33.33333%;
 }
-/* line 327, ../scss/_768up.scss */
+/* line 346, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(2n+1) {
   clear: none;
 }
-/* line 331, ../scss/_768up.scss */
+/* line 350, ../scss/_768up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(3n+1) {
   clear: left;
 }
@@ -924,7 +944,7 @@ POST TYPE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 346, ../scss/_768up.scss */
+/* line 365, ../scss/_768up.scss */
 .sidebar .widgettitle {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-weight: bold;
@@ -932,7 +952,7 @@ SIDEBARS & ASIDES
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 354, ../scss/_768up.scss */
+/* line 373, ../scss/_768up.scss */
 .sidebar .widget {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -944,27 +964,27 @@ SIDEBARS & ASIDES
   border-radius: 3px;
   margin: 0 0 1.5em;
 }
-/* line 362, ../scss/_768up.scss */
+/* line 381, ../scss/_768up.scss */
 .sidebar .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 370, ../scss/_768up.scss */
+/* line 389, ../scss/_768up.scss */
 .sidebar .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
 }
-/* line 378, ../scss/_768up.scss */
+/* line 397, ../scss/_768up.scss */
 .sidebar .widget_simpleimage {
   background: none;
   border: none;
   padding: 0;
 }
-/* line 383, ../scss/_768up.scss */
+/* line 402, ../scss/_768up.scss */
 .sidebar .widget_simpleimage .simple-image {
   margin: 0;
 }
-/* line 387, ../scss/_768up.scss */
+/* line 406, ../scss/_768up.scss */
 .sidebar .widget_simpleimage img {
   display: block;
   max-width: 100%;
@@ -981,7 +1001,7 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 397, ../scss/_768up.scss */
+/* line 416, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a img {
   -webkit-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -989,7 +1009,7 @@ SIDEBARS & ASIDES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 402, ../scss/_768up.scss */
+/* line 421, ../scss/_768up.scss */
 .sidebar .widget_simpleimage a:hover img {
   -webkit-filter: brightness(125%);
   -moz-filter: brightness(125%);
@@ -1007,7 +1027,7 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
-/* line 499, ../scss/_768up.scss */
+/* line 518, ../scss/_768up.scss */
 #refine-search {
   position: fixed;
   width: auto;
@@ -1030,13 +1050,13 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 515, ../scss/_768up.scss */
+/* line 534, ../scss/_768up.scss */
 #refine-search .widgettitle {
   margin: 0;
   float: left;
   line-height: 32px;
 }
-/* line 521, ../scss/_768up.scss */
+/* line 540, ../scss/_768up.scss */
 #refine-search ul {
   margin: 0;
   float: right;
@@ -1046,7 +1066,7 @@ SIDEBARS & ASIDES
   -o-column-count: 1;
   column-count: 1;
 }
-/* line 526, ../scss/_768up.scss */
+/* line 545, ../scss/_768up.scss */
 #refine-search ul li {
   display: inline-block;
   margin: 0;
@@ -1063,7 +1083,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 593, ../scss/_768up.scss */
+/* line 612, ../scss/_768up.scss */
 #footer .nav li {
   /*
   be careful with the depth of your menus.
@@ -1071,31 +1091,31 @@ mobile. Make sure to double check these!
   the footer.
   */
 }
-/* line 602, ../scss/_768up.scss */
+/* line 621, ../scss/_768up.scss */
 #footer .nav li ul {
   display: none;
 }
 
 /* end .footer-links */
-/* line 607, ../scss/_768up.scss */
+/* line 626, ../scss/_768up.scss */
 .accreditation {
   max-width: none;
   width: 40%;
 }
 
-/* line 612, ../scss/_768up.scss */
+/* line 631, ../scss/_768up.scss */
 #footer-locations {
   font-size: 0.8em;
 }
-/* line 615, ../scss/_768up.scss */
+/* line 634, ../scss/_768up.scss */
 #footer-locations li {
   width: 16.66667%;
 }
-/* line 618, ../scss/_768up.scss */
+/* line 637, ../scss/_768up.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: none;
 }
-/* line 622, ../scss/_768up.scss */
+/* line 641, ../scss/_768up.scss */
 #footer-locations li:nth-child(6n+1) {
   clear: left;
 }

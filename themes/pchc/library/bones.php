@@ -232,7 +232,11 @@ function bones_main_nav() {
     	'before' => '',                                 // before the menu
         'after' => '',                                  // after the menu
         'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
+        'link_after' => '<button type="button" class="hidden-desktop nav-toggle toggle" data-toggle-target="~ .sub-menu">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>',                             // after each link
         'depth' => 0,                                   // limit the depth of the nav
     	'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
 	));
@@ -472,5 +476,20 @@ function pchc_posts_category($atts){ // [posts_category name="category" num="num
 }
 
 add_shortcode('posts_category', 'pchc_posts_category');
+
+function menu_set_dropdown( $sorted_menu_items, $args ) {
+    $last_top = 0;
+    foreach ( $sorted_menu_items as $key => $obj ) {
+        // it is a top lv item?
+        if ( 0 == $obj->menu_item_parent ) {
+            // set the key of the parent
+            $last_top = $key;
+        } else {
+            $sorted_menu_items[$last_top]->classes['dropdown'] = 'has-dropdown';
+        }
+    }
+    return $sorted_menu_items;
+}
+add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
 
 ?>
