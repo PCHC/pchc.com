@@ -584,7 +584,7 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
-/* line 20, ../scss/_768up.scss */
+/* line 20, ../scss/_770up.scss */
 body {
   background: #f0f0f6;
 }
@@ -592,7 +592,7 @@ body {
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 28, ../scss/_768up.scss */
+/* line 28, ../scss/_770up.scss */
 .wrap {
   max-width: 1140px;
 }
@@ -601,33 +601,33 @@ LAYOUT & GRID STYLES
 RESPONSIVE DISPLAY CLASSES
 *********************/
 /* Show ONLY on this device */
-/* line 37, ../scss/_768up.scss */
+/* line 37, ../scss/_770up.scss */
 .visible-phone {
   display: none !important;
 }
 
-/* line 38, ../scss/_768up.scss */
+/* line 38, ../scss/_770up.scss */
 .visible-tablet {
   display: none !important;
 }
 
-/* line 39, ../scss/_768up.scss */
+/* line 39, ../scss/_770up.scss */
 .visible-desktop {
   display: inherit !important;
 }
 
 /* Hidden ONLY on this device */
-/* line 42, ../scss/_768up.scss */
+/* line 42, ../scss/_770up.scss */
 .hidden-phone {
   display: inherit !important;
 }
 
-/* line 43, ../scss/_768up.scss */
+/* line 43, ../scss/_770up.scss */
 .hidden-tablet {
   display: inherit !important;
 }
 
-/* line 44, ../scss/_768up.scss */
+/* line 44, ../scss/_770up.scss */
 .hidden-desktop {
   display: none !important;
 }
@@ -635,7 +635,7 @@ RESPONSIVE DISPLAY CLASSES
 /*********************
 HEADER STYLES
 *********************/
-/* line 50, ../scss/_768up.scss */
+/* line 50, ../scss/_770up.scss */
 .header {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -647,21 +647,21 @@ HEADER STYLES
   background-position: 50% -700px;
   margin-bottom: 0;
 }
-/* line 59, ../scss/_768up.scss */
+/* line 59, ../scss/_770up.scss */
 .header .searchform {
   width: 50%;
   margin-top: 65px;
   float: right;
 }
 
-/* line 67, ../scss/_768up.scss */
+/* line 67, ../scss/_770up.scss */
 #logo a {
   width: 250px;
   height: 166px;
   margin: 40px 0 0;
 }
 
-/* line 74, ../scss/_768up.scss */
+/* line 74, ../scss/_770up.scss */
 .searchform {
   background: #FFF;
   border: 1px solid #CCC;
@@ -673,7 +673,7 @@ HEADER STYLES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 81, ../scss/_768up.scss */
+/* line 81, ../scss/_770up.scss */
 .searchform .s {
   float: none;
   border: none;
@@ -682,7 +682,7 @@ HEADER STYLES
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 87, ../scss/_768up.scss */
+/* line 87, ../scss/_770up.scss */
 .searchform .s:focus {
   border: none;
   margin-top: 0;
@@ -690,7 +690,7 @@ HEADER STYLES
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 94, ../scss/_768up.scss */
+/* line 94, ../scss/_770up.scss */
 .searchform .button.btn {
   display: block;
   float: right;
@@ -701,21 +701,21 @@ HEADER STYLES
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 102, ../scss/_768up.scss */
+/* line 102, ../scss/_770up.scss */
 .searchform .button.btn .icon-search {
   color: #555;
   text-shadow: 0 1px 1px #cccccc;
 }
-/* line 107, ../scss/_768up.scss */
+/* line 107, ../scss/_770up.scss */
 .searchform .button.btn:hover {
   background: none;
   border: none;
 }
-/* line 111, ../scss/_768up.scss */
+/* line 111, ../scss/_770up.scss */
 .searchform .button.btn:hover .icon-search {
   color: #be1e2d;
 }
-/* line 116, ../scss/_768up.scss */
+/* line 116, ../scss/_770up.scss */
 .searchform .button.btn:active {
   margin-top: 0;
   -webkit-transform: translateY(1px);
@@ -728,19 +728,19 @@ HEADER STYLES
   box-shadow: none;
 }
 
-/* line 124, ../scss/_768up.scss */
+/* line 124, ../scss/_770up.scss */
 .header-contact {
   float: right;
   text-align: right;
   color: #2f3485;
   font-size: 1.2em;
 }
-/* line 130, ../scss/_768up.scss */
+/* line 130, ../scss/_770up.scss */
 .header-contact a {
   color: #2f3485;
   text-decoration: none;
 }
-/* line 134, ../scss/_768up.scss */
+/* line 134, ../scss/_770up.scss */
 .header-contact a:hover {
   color: #be1e2d;
 }
@@ -748,15 +748,15 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 144, ../scss/_768up.scss */
+/* line 144, ../scss/_770up.scss */
 #header-nav {
   background: none;
 }
-/* line 147, ../scss/_768up.scss */
+/* line 147, ../scss/_770up.scss */
 #header-nav.fixed {
   height: 34px;
 }
-/* line 150, ../scss/_768up.scss */
+/* line 150, ../scss/_770up.scss */
 #header-nav.fixed .wrap {
   max-width: none;
   position: fixed;
@@ -768,13 +768,13 @@ NAVIGATION STYLES
   -moz-box-shadow: 0 0 10px 5px rgba(47, 52, 133, 0.5);
   box-shadow: 0 0 10px 5px rgba(47, 52, 133, 0.5);
 }
-/* line 160, ../scss/_768up.scss */
+/* line 160, ../scss/_770up.scss */
 #header-nav.fixed .nav {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-/* line 167, ../scss/_768up.scss */
+/* line 167, ../scss/_770up.scss */
 .nav {
   text-align: center;
   display: block;
@@ -782,7 +782,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 171, ../scss/_768up.scss */
+/* line 171, ../scss/_770up.scss */
 .nav li {
   display: inline-block;
   position: relative;
@@ -791,7 +791,7 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 175, ../scss/_768up.scss */
+/* line 175, ../scss/_770up.scss */
 .nav li a {
   background: none;
   line-height: normal;
@@ -816,7 +816,7 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 196, ../scss/_768up.scss */
+/* line 196, ../scss/_770up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #be1e2d;
   background: none;
@@ -824,15 +824,15 @@ NAVIGATION STYLES
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 205, ../scss/_768up.scss */
+/* line 205, ../scss/_770up.scss */
 .nav li.has-dropdown a .toggle {
   display: none !important;
 }
-/* line 212, ../scss/_768up.scss */
+/* line 212, ../scss/_770up.scss */
 .nav li:first-child a {
   border-left: none;
 }
-/* line 222, ../scss/_768up.scss */
+/* line 222, ../scss/_770up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   font-size: 1em;
@@ -847,7 +847,7 @@ NAVIGATION STYLES
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   /* highlight sub-menu current page */
 }
-/* line 232, ../scss/_768up.scss */
+/* line 232, ../scss/_770up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -856,7 +856,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 234, ../scss/_768up.scss */
+/* line 234, ../scss/_770up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding: 10px;
@@ -866,18 +866,18 @@ NAVIGATION STYLES
   border-bottom: 1px solid #ddd;
   border-left: none;
 }
-/* line 243, ../scss/_768up.scss */
+/* line 243, ../scss/_770up.scss */
 .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
 .nav li ul.children li a:hover,
 .nav li ul.children li a:focus {
   background: #f7f5f4;
 }
-/* line 254, ../scss/_768up.scss */
+/* line 254, ../scss/_770up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 276, ../scss/_768up.scss */
+/* line 276, ../scss/_770up.scss */
 .nav li:hover ul {
   top: auto;
   display: block;
@@ -887,7 +887,7 @@ NAVIGATION STYLES
 /*********************
 MAIN CONTENT
 *********************/
-/* line 298, ../scss/_768up.scss */
+/* line 298, ../scss/_770up.scss */
 #main {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -899,7 +899,7 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 305, ../scss/_768up.scss */
+/* line 305, ../scss/_770up.scss */
 .well {
   background: #f0f0f6;
   padding: 0.5em;
@@ -914,13 +914,13 @@ MAIN CONTENT
   border-radius: 3px;
 }
 
-/* line 317, ../scss/_768up.scss */
+/* line 317, ../scss/_770up.scss */
 .related-posts .related-posts-type {
   width: 48%;
   margin-left: 4%;
   float: left;
 }
-/* line 322, ../scss/_768up.scss */
+/* line 322, ../scss/_770up.scss */
 .related-posts .related-posts-type:first-child {
   margin-left: 0;
 }
@@ -928,15 +928,15 @@ MAIN CONTENT
 /******************************************************************
 POST TYPE STYLES
 ******************************************************************/
-/* line 343, ../scss/_768up.scss */
+/* line 343, ../scss/_770up.scss */
 .post-type-archive .type-location.content-excerpt {
   width: 33.33333%;
 }
-/* line 346, ../scss/_768up.scss */
+/* line 346, ../scss/_770up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(2n+1) {
   clear: none;
 }
-/* line 350, ../scss/_768up.scss */
+/* line 350, ../scss/_770up.scss */
 .post-type-archive .type-location.content-excerpt:nth-child(3n+1) {
   clear: left;
 }
@@ -944,7 +944,7 @@ POST TYPE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 365, ../scss/_768up.scss */
+/* line 365, ../scss/_770up.scss */
 .sidebar .widgettitle {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-weight: bold;
@@ -952,7 +952,7 @@ SIDEBARS & ASIDES
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 373, ../scss/_768up.scss */
+/* line 373, ../scss/_770up.scss */
 .sidebar .widget {
   background: #FFF;
   border: 1px solid rgba(47, 52, 133, 0.25);
@@ -964,27 +964,27 @@ SIDEBARS & ASIDES
   border-radius: 3px;
   margin: 0 0 1.5em;
 }
-/* line 381, ../scss/_768up.scss */
+/* line 381, ../scss/_770up.scss */
 .sidebar .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 389, ../scss/_768up.scss */
+/* line 389, ../scss/_770up.scss */
 .sidebar .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
 }
-/* line 397, ../scss/_768up.scss */
+/* line 397, ../scss/_770up.scss */
 .sidebar .widget_simpleimage {
   background: none;
   border: none;
   padding: 0;
 }
-/* line 402, ../scss/_768up.scss */
+/* line 402, ../scss/_770up.scss */
 .sidebar .widget_simpleimage .simple-image {
   margin: 0;
 }
-/* line 406, ../scss/_768up.scss */
+/* line 406, ../scss/_770up.scss */
 .sidebar .widget_simpleimage img {
   display: block;
   max-width: 100%;
@@ -1001,7 +1001,7 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 416, ../scss/_768up.scss */
+/* line 416, ../scss/_770up.scss */
 .sidebar .widget_simpleimage a img {
   -webkit-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -1009,7 +1009,7 @@ SIDEBARS & ASIDES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 421, ../scss/_768up.scss */
+/* line 421, ../scss/_770up.scss */
 .sidebar .widget_simpleimage a:hover img {
   -webkit-filter: brightness(125%);
   -moz-filter: brightness(125%);
@@ -1027,7 +1027,7 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
-/* line 518, ../scss/_768up.scss */
+/* line 518, ../scss/_770up.scss */
 #refine-search {
   position: fixed;
   width: auto;
@@ -1050,13 +1050,13 @@ SIDEBARS & ASIDES
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 534, ../scss/_768up.scss */
+/* line 534, ../scss/_770up.scss */
 #refine-search .widgettitle {
   margin: 0;
   float: left;
   line-height: 32px;
 }
-/* line 540, ../scss/_768up.scss */
+/* line 540, ../scss/_770up.scss */
 #refine-search ul {
   margin: 0;
   float: right;
@@ -1066,7 +1066,7 @@ SIDEBARS & ASIDES
   -o-column-count: 1;
   column-count: 1;
 }
-/* line 545, ../scss/_768up.scss */
+/* line 545, ../scss/_770up.scss */
 #refine-search ul li {
   display: inline-block;
   margin: 0;
@@ -1083,7 +1083,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 612, ../scss/_768up.scss */
+/* line 612, ../scss/_770up.scss */
 #footer .nav li {
   /*
   be careful with the depth of your menus.
@@ -1091,31 +1091,31 @@ mobile. Make sure to double check these!
   the footer.
   */
 }
-/* line 621, ../scss/_768up.scss */
+/* line 621, ../scss/_770up.scss */
 #footer .nav li ul {
   display: none;
 }
 
 /* end .footer-links */
-/* line 626, ../scss/_768up.scss */
+/* line 626, ../scss/_770up.scss */
 .accreditation {
   max-width: none;
   width: 40%;
 }
 
-/* line 631, ../scss/_768up.scss */
+/* line 631, ../scss/_770up.scss */
 #footer-locations {
   font-size: 0.8em;
 }
-/* line 634, ../scss/_768up.scss */
+/* line 634, ../scss/_770up.scss */
 #footer-locations li {
   width: 16.66667%;
 }
-/* line 637, ../scss/_768up.scss */
+/* line 637, ../scss/_770up.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: none;
 }
-/* line 641, ../scss/_768up.scss */
+/* line 641, ../scss/_770up.scss */
 #footer-locations li:nth-child(6n+1) {
   clear: left;
 }

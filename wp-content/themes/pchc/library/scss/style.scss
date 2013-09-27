@@ -53,13 +53,13 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 770px) {
 
 	// import grids
 	@import "grid";
 
 	// styles in 768up.scss
-	@import "768up";
+	@import "770up";
 
 } // end of media query
 
