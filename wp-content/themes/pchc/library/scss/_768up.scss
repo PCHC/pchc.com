@@ -173,6 +173,14 @@ NAVIGATION STYLES
 		position: relative;
 
 		a {
+			//display: block;
+			background: none;
+			line-height: normal;
+			// padding: 0.5em;
+			margin-bottom: 0;
+			@include border-radius(0);
+			@include box-shadow(none);
+		
 			border-bottom: 0;
 			padding: 5px 6px;
 			text-align: left;
@@ -187,6 +195,16 @@ NAVIGATION STYLES
 			*/
 			&:hover, &:focus {
 				color: $pchc-red;
+				background: none;
+				@include box-shadow(none);
+			}
+		}
+		
+		&.has-dropdown {
+			a {
+				.toggle {
+					display: none !important;
+				}
 			}
 		}
 
@@ -202,6 +220,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
+			font-size: 1em;
 			margin-top: 0;
 			border-top: 0;
 			position: absolute;

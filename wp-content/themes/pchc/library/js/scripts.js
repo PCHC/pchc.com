@@ -75,11 +75,19 @@ jQuery(document).ready(function($) {
 	
 	$('.toggle').each(function(){
 		var toggleTarget = $(this).data('toggleTarget');
-		$(this).toggle(function(){
-			$(toggleTarget, this).slideDown();
-		}, function(){
-			$(toggleTarget, this).slideUp();
-		});
+		if($(toggleTarget, this).length > 0) {
+			$(this).toggle(function(){
+				$(toggleTarget, this).slideDown();
+			}, function(){
+				$(toggleTarget, this).slideUp();
+			});
+		} else {
+			$(this).toggle(function(){
+				$(this).parent().find(toggleTarget).slideDown();
+			}, function(){
+				$(this).parent().find(toggleTarget).slideUp();
+			});
+		}
 	});
 	
 	$('.toggle-init-hide').hide();
