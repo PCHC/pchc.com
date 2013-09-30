@@ -53,6 +53,10 @@ header.php file to see what they are:
 
 */
 
+body {
+	background: mix($pchc-blue, #FFF, 7%);
+}
+
 #header-icons a {
 	color: mix($pchc-blue, #FFF, 25%);
 	

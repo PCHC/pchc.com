@@ -1175,15 +1175,20 @@ header.php file to see what they are:
 
 */
 /* line 56, ../scss/ie.scss */
+body {
+  background: #f0f0f6;
+}
+
+/* line 60, ../scss/ie.scss */
 #header-icons a {
   color: #cbcce0;
 }
-/* line 59, ../scss/ie.scss */
+/* line 63, ../scss/ie.scss */
 #header-icons a:hover {
   color: #FFF;
 }
 
-/* line 64, ../scss/ie.scss */
+/* line 68, ../scss/ie.scss */
 .lt-ie8 {
   /*
    *  Font Awesome 3.2.0
