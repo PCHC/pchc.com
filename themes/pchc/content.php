@@ -51,10 +51,10 @@
 				<ul class="clearfix">';
 		
 			if (!empty($next)) echo '
-					<li class="next-link"><a href="'.get_permalink( $next->ID ).'">'.$next->post_title.'</a></li>';
+					<li class="next-link"><a href="'.get_permalink( $next->ID ).'">'.$next->post_title.'</a> <i class="icon-chevron-right"></i></li>';
 			
 			if (!empty($prev)) echo '
-					<li class="prev-link"><a href="'.get_permalink( $prev->ID ).'">'.$prev->post_title.'</a></li>';
+					<li class="prev-link"><i class="icon-chevron-left"></i> <a href="'.get_permalink( $prev->ID ).'">'.$prev->post_title.'</a></li>';
 			
 			echo '
 				</ul>

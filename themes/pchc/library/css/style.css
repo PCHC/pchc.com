@@ -1862,7 +1862,11 @@ PAGE NAVI STYLES
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 1109, ../scss/_base.scss */
+/* line 1106, ../scss/_base.scss */
+.wp-prev-next {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 1110, ../scss/_base.scss */
 .wp-prev-next ul {
   padding: 0.5em;
   background: #f3f3f3;
@@ -1874,92 +1878,32 @@ PAGE NAVI STYLES
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  min-height: 32px;
 }
 /* line 1116, ../scss/_base.scss */
 .wp-prev-next ul li {
   list-style-type: none;
   margin: 0;
-}
-/* line 1122, ../scss/_base.scss */
-.wp-prev-next a {
-  margin: 0.25 0;
-  display: block;
-  background: #8d7167;
-  color: #FFF;
-  font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  max-width: 33%;
   font-size: 0.8em;
-  line-height: 32px;
-  padding: 0 16px;
-  position: relative;
-  z-index: 1;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  color: #2f3485;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
-/* line 1138, ../scss/_base.scss */
-.wp-prev-next a:hover {
-  background: #2f3485;
-  color: #FFF;
+/* line 1124, ../scss/_base.scss */
+.wp-prev-next ul li a {
+  text-decoration: none;
 }
-/* line 1143, ../scss/_base.scss */
-.wp-prev-next a:before, .wp-prev-next a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 2;
-  width: 0px;
-  height: 0px;
-  border: 8px solid #f3f3f3;
+/* line 1129, ../scss/_base.scss */
+.wp-prev-next ul li a:hover ~ i {
+  color: #be1e2d;
 }
-/* line 1154, ../scss/_base.scss */
-.wp-prev-next .prev-link {
-  float: left;
-}
-/* line 1157, ../scss/_base.scss */
-.wp-prev-next .prev-link a {
-  padding-right: 8px;
-}
-/* line 1160, ../scss/_base.scss */
-.wp-prev-next .prev-link a:before {
-  top: 0;
-  left: 0;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-}
-/* line 1167, ../scss/_base.scss */
-.wp-prev-next .prev-link a:after {
-  bottom: 0;
-  left: 0;
-  border-right-color: transparent;
-  border-top-color: transparent;
-}
-/* line 1176, ../scss/_base.scss */
-.wp-prev-next .next-link {
+/* line 1136, ../scss/_base.scss */
+.wp-prev-next ul .next-link {
   float: right;
+  text-align: right;
 }
-/* line 1179, ../scss/_base.scss */
-.wp-prev-next .next-link a {
-  padding-left: 8px;
-}
-/* line 1182, ../scss/_base.scss */
-.wp-prev-next .next-link a:before {
-  top: 0;
-  right: 0;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-}
-/* line 1189, ../scss/_base.scss */
-.wp-prev-next .next-link a:after {
-  bottom: 0;
-  right: 0;
-  border-left-color: transparent;
-  border-top-color: transparent;
+/* line 1141, ../scss/_base.scss */
+.wp-prev-next ul .prev-link {
+  float: left;
 }
 
 /* end .wp-prev-next */
@@ -1967,12 +1911,12 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 1205, ../scss/_base.scss */
+/* line 1153, ../scss/_base.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 1222, ../scss/_base.scss */
+/* line 1170, ../scss/_base.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -1983,7 +1927,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 1224, ../scss/_base.scss */
+/* line 1172, ../scss/_base.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -1993,63 +1937,63 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 1232, ../scss/_base.scss */
+/* line 1180, ../scss/_base.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 1236, ../scss/_base.scss */
+/* line 1184, ../scss/_base.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 1254, ../scss/_base.scss */
+/* line 1202, ../scss/_base.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 1258, ../scss/_base.scss */
+/* line 1206, ../scss/_base.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 1263, ../scss/_base.scss */
+/* line 1211, ../scss/_base.scss */
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
   margin-left: -10px;
   margin-top: 0;
   padding-bottom: 0;
 }
-/* line 1277, ../scss/_base.scss */
+/* line 1225, ../scss/_base.scss */
 .commentlist .odd {
   background: #eee;
 }
-/* line 1280, ../scss/_base.scss */
+/* line 1228, ../scss/_base.scss */
 .commentlist .even {
   background: #fefefe;
 }
-/* line 1295, ../scss/_base.scss */
+/* line 1243, ../scss/_base.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 1298, ../scss/_base.scss */
+/* line 1246, ../scss/_base.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 1306, ../scss/_base.scss */
+/* line 1254, ../scss/_base.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 1309, ../scss/_base.scss */
+/* line 1257, ../scss/_base.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 1313, ../scss/_base.scss */
+/* line 1261, ../scss/_base.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 1323, ../scss/_base.scss */
+/* line 1271, ../scss/_base.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -2057,17 +2001,17 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 1348, ../scss/_base.scss */
+/* line 1296, ../scss/_base.scss */
 .commentlist .comment_content {
   margin-left: 50px;
 }
-/* line 1351, ../scss/_base.scss */
+/* line 1299, ../scss/_base.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 1360, ../scss/_base.scss */
+/* line 1308, ../scss/_base.scss */
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
@@ -2079,7 +2023,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 1372, ../scss/_base.scss */
+/* line 1320, ../scss/_base.scss */
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -2088,27 +2032,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 1384, ../scss/_base.scss */
+/* line 1332, ../scss/_base.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 1388, ../scss/_base.scss */
+/* line 1336, ../scss/_base.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 1391, ../scss/_base.scss */
+/* line 1339, ../scss/_base.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 1397, ../scss/_base.scss */
+/* line 1345, ../scss/_base.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 1405, ../scss/_base.scss */
+/* line 1353, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -2119,14 +2063,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 1411, ../scss/_base.scss */
+/* line 1359, ../scss/_base.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 1416, ../scss/_base.scss */
+/* line 1364, ../scss/_base.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -2139,14 +2083,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 1429, ../scss/_base.scss */
+/* line 1377, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 1434, ../scss/_base.scss */
+/* line 1382, ../scss/_base.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -2155,7 +2099,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 1447, ../scss/_base.scss */
+/* line 1395, ../scss/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -2163,13 +2107,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 1460, ../scss/_base.scss */
+/* line 1408, ../scss/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 1465, ../scss/_base.scss */
+/* line 1413, ../scss/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -2177,7 +2121,7 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1481, ../scss/_base.scss */
+/* line 1429, ../scss/_base.scss */
 .widget ul li {
   /* deep nesting */
 }
@@ -2185,31 +2129,31 @@ SIDEBARS & ASIDES
 /*********************
 FEATURE STYLES
 *********************/
-/* line 1503, ../scss/_base.scss */
+/* line 1451, ../scss/_base.scss */
 #above-content {
   background: #2f3485;
   color: #FFF;
   overflow: hidden;
 }
-/* line 1512, ../scss/_base.scss */
+/* line 1460, ../scss/_base.scss */
 #above-content a {
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 1515, ../scss/_base.scss */
+/* line 1463, ../scss/_base.scss */
 #above-content a:hover {
   color: #FFF;
 }
-/* line 1520, ../scss/_base.scss */
+/* line 1468, ../scss/_base.scss */
 #above-content .widget, #above-content #homepage-features {
   padding: 1.5em 0;
 }
-/* line 1524, ../scss/_base.scss */
+/* line 1472, ../scss/_base.scss */
 #above-content .homepage-feature {
   width: 33.33333%;
   float: left;
   padding: 0 20px;
 }
-/* line 1529, ../scss/_base.scss */
+/* line 1477, ../scss/_base.scss */
 #above-content .homepage-feature img {
   max-width: 100%;
   height: auto;
@@ -2228,13 +2172,13 @@ FEATURE STYLES
   -transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 1537, ../scss/_base.scss */
+/* line 1485, ../scss/_base.scss */
 #above-content .homepage-feature img:hover {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-/* line 1542, ../scss/_base.scss */
+/* line 1490, ../scss/_base.scss */
 #above-content .homepage-feature h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
@@ -2243,17 +2187,17 @@ FEATURE STYLES
   color: #FFF;
   font-weight: 200;
 }
-/* line 1551, ../scss/_base.scss */
+/* line 1499, ../scss/_base.scss */
 #above-content .homepage-feature .content {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1.2em;
 }
-/* line 1556, ../scss/_base.scss */
+/* line 1504, ../scss/_base.scss */
 #above-content .homepage-feature .content p {
   margin: 0 0 1em;
 }
-/* line 1559, ../scss/_base.scss */
+/* line 1507, ../scss/_base.scss */
 #above-content .homepage-feature .content p:last-child {
   margin-bottom: 0;
 }
@@ -2261,7 +2205,7 @@ FEATURE STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1571, ../scss/_base.scss */
+/* line 1519, ../scss/_base.scss */
 .footer-top {
   clear: both;
   background-image: url("../images/footer-swoosh.png");
@@ -2272,18 +2216,18 @@ FOOTER STYLES
   overflow: hidden;
 }
 
-/* line 1580, ../scss/_base.scss */
+/* line 1528, ../scss/_base.scss */
 .footer-bottom {
   background: #8d7167;
   min-height: 1px;
 }
 
-/* line 1585, ../scss/_base.scss */
+/* line 1533, ../scss/_base.scss */
 .footer-mid {
   background: #6e4c39;
 }
 
-/* line 1589, ../scss/_base.scss */
+/* line 1537, ../scss/_base.scss */
 .copyright {
   color: #FFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2291,7 +2235,7 @@ FOOTER STYLES
   margin: 85px 0 0;
 }
 
-/* line 1596, ../scss/_base.scss */
+/* line 1544, ../scss/_base.scss */
 #footer-locations {
   color: #FFF;
   margin: 0;
@@ -2299,29 +2243,29 @@ FOOTER STYLES
   font-size: 0.8em;
   padding: 2em 0;
 }
-/* line 1603, ../scss/_base.scss */
+/* line 1551, ../scss/_base.scss */
 #footer-locations li {
   margin: 0 0 20px 0;
   padding: 0 20px 0 0;
   width: 33.33333%;
   float: left;
 }
-/* line 1609, ../scss/_base.scss */
+/* line 1557, ../scss/_base.scss */
 #footer-locations li h4 {
   font-size: 1em;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: bold;
   margin: 0;
 }
-/* line 1616, ../scss/_base.scss */
+/* line 1564, ../scss/_base.scss */
 #footer-locations li p {
   margin: 0;
 }
-/* line 1620, ../scss/_base.scss */
+/* line 1568, ../scss/_base.scss */
 #footer-locations li a {
   color: #FFF;
 }
-/* line 1624, ../scss/_base.scss */
+/* line 1572, ../scss/_base.scss */
 #footer-locations li:nth-child(3n+1) {
   clear: left;
 }
@@ -2335,23 +2279,23 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 1646, ../scss/_base.scss */
+/* line 1594, ../scss/_base.scss */
 #footer .nav {
   margin: 0;
 }
-/* line 1650, ../scss/_base.scss */
+/* line 1598, ../scss/_base.scss */
 #footer .nav li a {
   padding: 10px;
   color: #FFF;
   border: none;
 }
-/* line 1655, ../scss/_base.scss */
+/* line 1603, ../scss/_base.scss */
 #footer .nav li a:hover {
   background: #8d7167;
 }
 
 /* end .footer-links */
-/* line 1668, ../scss/_base.scss */
+/* line 1616, ../scss/_base.scss */
 .wpfilebase-file-default {
   width: auto;
   background: none;
@@ -2365,11 +2309,11 @@ view.
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1675, ../scss/_base.scss */
+/* line 1623, ../scss/_base.scss */
 .wpfilebase-file-default:nth-child(2n) {
   background: #F3F3F3;
 }
-/* line 1680, ../scss/_base.scss */
+/* line 1628, ../scss/_base.scss */
 .wpfilebase-file-default .icon img {
   height: 32px;
   padding: 1px;
@@ -2380,40 +2324,40 @@ view.
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1688, ../scss/_base.scss */
+/* line 1636, ../scss/_base.scss */
 .wpfilebase-file-default .filetitle {
   max-width: 50%;
 }
-/* line 1691, ../scss/_base.scss */
+/* line 1639, ../scss/_base.scss */
 .wpfilebase-file-default .filetitle a {
   line-height: 1.1em;
 }
-/* line 1696, ../scss/_base.scss */
+/* line 1644, ../scss/_base.scss */
 .wpfilebase-file-default .info {
   margin: 0 10px;
   height: auto;
   background: url(../images/download-sprite.png) 100% 0 no-repeat;
 }
-/* line 1703, ../scss/_base.scss */
+/* line 1651, ../scss/_base.scss */
 .wpfilebase-file-default:hover .info {
   background-position: 100% -200px;
 }
 
-/* line 1710, ../scss/_base.scss */
+/* line 1658, ../scss/_base.scss */
 ul.treeview li {
   margin-left: 0;
 }
-/* line 1714, ../scss/_base.scss */
+/* line 1662, ../scss/_base.scss */
 ul.treeview img {
   max-height: 16px;
   margin: 0;
 }
-/* line 1719, ../scss/_base.scss */
+/* line 1667, ../scss/_base.scss */
 ul.treeview .last {
   float: none;
 }
 
-/* line 1724, ../scss/_base.scss */
+/* line 1672, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail {
   display: inline-block;
   font-size: 45px;
@@ -2438,7 +2382,7 @@ ul.treeview .last {
   -transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
 }
-/* line 1742, ../scss/_base.scss */
+/* line 1690, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail img {
   display: block;
   margin: 0;
@@ -2446,7 +2390,7 @@ ul.treeview .last {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1748, ../scss/_base.scss */
+/* line 1696, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:before {
   speak: none;
   font-size: 48px;
@@ -2467,7 +2411,7 @@ ul.treeview .last {
   -moz-transition: -moz-transform 0.2s, opacity0.2s;
   transition: transform 0.2s, opacity0.2s;
 }
-/* line 1767, ../scss/_base.scss */
+/* line 1715, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:after {
   pointer-events: none;
   position: absolute;
@@ -2496,11 +2440,11 @@ ul.treeview .last {
   -moz-transition: opacity 0.2s, -moz-transform 0.2s;
   transition: opacity 0.2s, transform 0.2s;
 }
-/* line 1791, ../scss/_base.scss */
+/* line 1739, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover {
   color: #fff;
 }
-/* line 1794, ../scss/_base.scss */
+/* line 1742, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover:before {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -2509,7 +2453,7 @@ ul.treeview .last {
   transform: scale(1);
   opacity: 1;
 }
-/* line 1799, ../scss/_base.scss */
+/* line 1747, ../scss/_base.scss */
 #above-content .homepage-feature .thumbnail:hover:after {
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -2519,11 +2463,11 @@ ul.treeview .last {
   transform: rotate(0deg);
 }
 
-/* line 1809, ../scss/_base.scss */
+/* line 1757, ../scss/_base.scss */
 .metaslider .slider-wrapper.theme-light {
   background: #2f3485;
 }
-/* line 1814, ../scss/_base.scss */
+/* line 1762, ../scss/_base.scss */
 .metaslider .nivo-caption {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
@@ -2546,7 +2490,7 @@ ul.treeview .last {
 /*********************
 NINJA FORMS STYLES
 *********************/
-/* line 1839, ../scss/_base.scss */
+/* line 1787, ../scss/_base.scss */
 #content .ninja-forms-form-wrap {
   background: #FAFAFA;
   border: 1px solid #F0F0F0;
@@ -2557,11 +2501,11 @@ NINJA FORMS STYLES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1845, ../scss/_base.scss */
+/* line 1793, ../scss/_base.scss */
 #content .ninja-forms-form-wrap #ninja_forms_required_items {
   color: #be1e2d;
 }
-/* line 1849, ../scss/_base.scss */
+/* line 1797, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg {
   padding: 1em;
   border: 1px solid white;
@@ -2573,32 +2517,32 @@ NINJA FORMS STYLES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1856, ../scss/_base.scss */
+/* line 1804, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg.ninja-forms-error-msg {
   background: rgba(190, 30, 45, 0.075);
   border-color: rgba(190, 30, 45, 0.3);
   color: #be1e2d;
 }
-/* line 1862, ../scss/_base.scss */
+/* line 1810, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg p:last-child {
   margin-bottom: 0;
 }
-/* line 1867, ../scss/_base.scss */
+/* line 1815, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap {
   padding: 0.5em;
 }
-/* line 1870, ../scss/_base.scss */
+/* line 1818, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap label {
   display: block;
   width: 30%;
   line-height: 1.8em;
   vertical-align: middle;
 }
-/* line 1876, ../scss/_base.scss */
+/* line 1824, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap label .ninja-forms-help-text {
   margin: 0;
 }
-/* line 1881, ../scss/_base.scss */
+/* line 1829, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field {
   display: inline-block;
   width: 65%;
@@ -2624,7 +2568,7 @@ NINJA FORMS STYLES
   -transition: all linear 0.2s;
   transition: all linear 0.2s;
 }
-/* line 1896, ../scss/_base.scss */
+/* line 1844, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field:focus {
   outline: 0;
   outline: thin dotted \9;
@@ -2633,65 +2577,65 @@ NINJA FORMS STYLES
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
 }
-/* line 1903, ../scss/_base.scss */
+/* line 1851, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field.ninja-forms-req:focus {
   border-color: rgba(190, 30, 45, 0.5);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
 }
-/* line 1909, ../scss/_base.scss */
+/* line 1857, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-description {
   font-size: 0.8em;
   color: #555;
 }
-/* line 1914, ../scss/_base.scss */
+/* line 1862, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-error {
   clear: both;
   font-size: 0.8em;
   font-style: italic;
   color: #be1e2d;
 }
-/* line 1922, ../scss/_base.scss */
+/* line 1870, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-above label, #content .ninja-forms-form-wrap .field-wrap.label-below label {
   display: block;
   width: 100%;
 }
-/* line 1927, ../scss/_base.scss */
+/* line 1875, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-above .ninja-forms-field, #content .ninja-forms-form-wrap .field-wrap.label-below .ninja-forms-field {
   display: block;
   width: 100%;
 }
-/* line 1934, ../scss/_base.scss */
+/* line 1882, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-left label {
   float: left;
 }
-/* line 1938, ../scss/_base.scss */
+/* line 1886, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-left .ninja-forms-field {
   float: right;
 }
-/* line 1944, ../scss/_base.scss */
+/* line 1892, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-right label {
   float: right;
 }
-/* line 1948, ../scss/_base.scss */
+/* line 1896, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-right .ninja-forms-field {
   float: left;
 }
-/* line 1958, ../scss/_base.scss */
+/* line 1906, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-inside .ninja-forms-field {
   width: 100%;
 }
-/* line 1963, ../scss/_base.scss */
+/* line 1911, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap:nth-child(2n) {
   background: #F5F5F5;
 }
-/* line 1967, ../scss/_base.scss */
+/* line 1915, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap {
   padding: 0;
   background: none;
 }
-/* line 1971, ../scss/_base.scss */
+/* line 1919, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field {
   width: auto;
   float: right;
@@ -2707,7 +2651,7 @@ NINJA FORMS STYLES
   -transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 1980, ../scss/_base.scss */
+/* line 1928, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field:hover {
   border-color: #212058;
   background: #2f3485;
@@ -2719,16 +2663,16 @@ NINJA FORMS STYLES
 /*********************
 WOOCOMMERCE STYLES
 *********************/
-/* line 2010, ../scss/_base.scss */
+/* line 1958, ../scss/_base.scss */
 .woocommerce div.product.no-thumbnail div.images, .woocommerce #content div.product.no-thumbnail div.images, .woocommerce-page #content div.product.no-thumbnail div.images, .woocommerce-page div.product.no-thumbnail div.images {
   display: none;
 }
-/* line 2014, ../scss/_base.scss */
+/* line 1962, ../scss/_base.scss */
 .woocommerce div.product.no-thumbnail div.summary, .woocommerce #content div.product.no-thumbnail div.summary, .woocommerce-page #content div.product.no-thumbnail div.summary, .woocommerce-page div.product.no-thumbnail div.summary {
   float: none;
   width: auto;
 }
-/* line 2022, ../scss/_base.scss */
+/* line 1970, ../scss/_base.scss */
 .woocommerce div.product .woocommerce-tabs .panel h2, .woocommerce #content div.product .woocommerce-tabs .panel h2, .woocommerce-page #content div.product .woocommerce-tabs .panel h2, .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce #content div.product .woocommerce-tabs .panel h4, .woocommerce-page #content div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .h4, .woocommerce #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page div.product .woocommerce-tabs .panel h2, .woocommerce-page div.product .woocommerce-tabs .panel h4, .woocommerce-page div.product .woocommerce-tabs .panel .h4 {
   display: none;
 }

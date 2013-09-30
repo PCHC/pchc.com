@@ -465,7 +465,7 @@ function pchc_posts_category($atts){ // [posts_category name="category" num="num
 		$content .= '<nav class="wp-prev-next">';
 		$content .= '<ul class="clearfix">';
 		$content .= '<li class="next-link">';
-		$content .= '<a href="' . get_category_link( $catID ) . '">More ' . get_category( $catID )->name . '</a>';
+		$content .= '<a href="' . get_category_link( $catID ) . '">More ' . get_category( $catID )->name . '</a> <i class="icon-chevron-right"></i>';
 		$content .= '</li></ul></nav>';
 		
 	endif;

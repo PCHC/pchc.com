@@ -47,10 +47,10 @@
 					<ul class="clearfix">';
 			
 				if (!empty($nextPage)) echo '
-						<li class="next-link">'.$nextPage.'</li>';
+						<li class="next-link">'.$nextPage.' <i class="icon-chevron-right"></i></li>';
 				
 				if (!empty($prevPage)) echo '
-						<li class="prev-link">'.$prevPage.'</li>';
+						<li class="prev-link"><i class="icon-chevron-left"></i> '.$prevPage.'</li>';
 				
 				echo '
 					</ul>
