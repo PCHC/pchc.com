@@ -4,6 +4,7 @@ wp-content/uploads/wpcf7_captcha/
 !wp-content/uploads/wpcf7_captcha/.htaccess
 sitemap.xml
 sitemap.xml.gz
+.htaccess
 
 # Update the stuff below when it's go-time.
 
