@@ -1105,93 +1105,41 @@ PAGE NAVI STYLES
 	/* fallback previous & next links */
 	.wp-prev-next {
 		$navbg: #F3F3F3;
+		font-family: $sans-serif;
 
 		ul {
 			padding: 0.5em;
 			background: $navbg;
 			@include border-radius(3px);
 			@include box-shadow(0 1px 1px rgba(#000,0.2));
-			min-height: 32px;
 			
 			li {
 				list-style-type: none;
 				margin: 0;
-			}
-		}
-		
-		a {
-			margin: 0.25 0;
-			display: block;
-			background: $pchc-brown;
-			color: #FFF;
-			font-weight: bold;
-			font-family: $sans-serif;
-			text-decoration: none;
-			@include text-shadow(0 2px 1px rgba(#000,0.3));
-			font-size: 0.8em;
-			line-height: 32px;
-			padding: 0 16px;
-			position: relative;
-			z-index: 1;
-			@include border-radius(3px);
-			
-			&:hover {
-				background: $pchc-blue;
-				color: #FFF;
-			}
-			
-			&:before, &:after {
-				content: '';
-				display: block;
-				position: absolute;
-				z-index: 2;
-				width: 0px;
-				height: 0px;
-				border: 8px solid $navbg;
-			}
-		}
-
-		.prev-link {
-			float: left;
-			
-			a {
-				padding-right: 8px;
+				max-width: 33%;
+				font-size: 0.8em;
+				color: $pchc-blue;
+				@include text-shadow(0 1px 0 rgba(#FFF, 0.8));
 				
-				&:before {
-					top: 0;
-					left: 0;
-					border-right-color: transparent;
-					border-bottom-color: transparent;
-				}
-				
-				&:after {
-					bottom: 0;
-					left: 0;
-					border-right-color: transparent;
-					border-top-color: transparent;
+				a {
+					text-decoration: none;
+					
+					&:hover {
+						
+						~ i {
+							color: $pchc-red;
+						}
+					}
 				}
 			}
-		}
-
-		.next-link {
-			float: right;
 			
-			a {
-				padding-left: 8px;
-				
-				&:before {
-					top: 0;
-					right: 0;
-					border-left-color: transparent;
-					border-bottom-color: transparent;
-				}
-				
-				&:after {
-					bottom: 0;
-					right: 0;
-					border-left-color: transparent;
-					border-top-color: transparent;
-				}
+			.next-link {
+				float: right;
+				text-align: right;
+			}
+			
+			.prev-link {
+				float: left;
 			}
 		}
 
