@@ -2539,17 +2539,14 @@ ul.treeview .last {
   opacity: 0.7;
   overflow: hidden;
   display: none;
-  -moz-opacity: 0.7;
-  filter: alpha(opacity=7);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
 }
 
 /*********************
 NINJA FORMS STYLES
 *********************/
-/* line 1843, ../scss/_base.scss */
+/* line 1839, ../scss/_base.scss */
 #content .ninja-forms-form-wrap {
   background: #FAFAFA;
   border: 1px solid #F0F0F0;
@@ -2560,11 +2557,11 @@ NINJA FORMS STYLES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1849, ../scss/_base.scss */
+/* line 1845, ../scss/_base.scss */
 #content .ninja-forms-form-wrap #ninja_forms_required_items {
   color: #be1e2d;
 }
-/* line 1853, ../scss/_base.scss */
+/* line 1849, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg {
   padding: 1em;
   border: 1px solid white;
@@ -2576,32 +2573,32 @@ NINJA FORMS STYLES
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1860, ../scss/_base.scss */
+/* line 1856, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg.ninja-forms-error-msg {
   background: rgba(190, 30, 45, 0.075);
   border-color: rgba(190, 30, 45, 0.3);
   color: #be1e2d;
 }
-/* line 1866, ../scss/_base.scss */
+/* line 1862, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .ninja-forms-response-msg p:last-child {
   margin-bottom: 0;
 }
-/* line 1871, ../scss/_base.scss */
+/* line 1867, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap {
   padding: 0.5em;
 }
-/* line 1874, ../scss/_base.scss */
+/* line 1870, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap label {
   display: block;
   width: 30%;
   line-height: 1.8em;
   vertical-align: middle;
 }
-/* line 1880, ../scss/_base.scss */
+/* line 1876, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap label .ninja-forms-help-text {
   margin: 0;
 }
-/* line 1885, ../scss/_base.scss */
+/* line 1881, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field {
   display: inline-block;
   width: 65%;
@@ -2627,7 +2624,7 @@ NINJA FORMS STYLES
   -transition: all linear 0.2s;
   transition: all linear 0.2s;
 }
-/* line 1900, ../scss/_base.scss */
+/* line 1896, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field:focus {
   outline: 0;
   outline: thin dotted \9;
@@ -2636,65 +2633,65 @@ NINJA FORMS STYLES
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(47, 52, 133, 0.5);
 }
-/* line 1907, ../scss/_base.scss */
+/* line 1903, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field.ninja-forms-req:focus {
   border-color: rgba(190, 30, 45, 0.5);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(190, 30, 45, 0.5);
 }
-/* line 1913, ../scss/_base.scss */
+/* line 1909, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-description {
   font-size: 0.8em;
   color: #555;
 }
-/* line 1918, ../scss/_base.scss */
+/* line 1914, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap .ninja-forms-field-error {
   clear: both;
   font-size: 0.8em;
   font-style: italic;
   color: #be1e2d;
 }
-/* line 1926, ../scss/_base.scss */
+/* line 1922, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-above label, #content .ninja-forms-form-wrap .field-wrap.label-below label {
   display: block;
   width: 100%;
 }
-/* line 1931, ../scss/_base.scss */
+/* line 1927, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-above .ninja-forms-field, #content .ninja-forms-form-wrap .field-wrap.label-below .ninja-forms-field {
   display: block;
   width: 100%;
 }
-/* line 1938, ../scss/_base.scss */
+/* line 1934, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-left label {
   float: left;
 }
-/* line 1942, ../scss/_base.scss */
+/* line 1938, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-left .ninja-forms-field {
   float: right;
 }
-/* line 1948, ../scss/_base.scss */
+/* line 1944, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-right label {
   float: right;
 }
-/* line 1952, ../scss/_base.scss */
+/* line 1948, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-right .ninja-forms-field {
   float: left;
 }
-/* line 1962, ../scss/_base.scss */
+/* line 1958, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.label-inside .ninja-forms-field {
   width: 100%;
 }
-/* line 1967, ../scss/_base.scss */
+/* line 1963, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap:nth-child(2n) {
   background: #F5F5F5;
 }
-/* line 1971, ../scss/_base.scss */
+/* line 1967, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap {
   padding: 0;
   background: none;
 }
-/* line 1975, ../scss/_base.scss */
+/* line 1971, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field {
   width: auto;
   float: right;
@@ -2710,7 +2707,7 @@ NINJA FORMS STYLES
   -transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 1984, ../scss/_base.scss */
+/* line 1980, ../scss/_base.scss */
 #content .ninja-forms-form-wrap .field-wrap.submit-wrap .ninja-forms-field:hover {
   border-color: #212058;
   background: #2f3485;
@@ -2722,16 +2719,16 @@ NINJA FORMS STYLES
 /*********************
 WOOCOMMERCE STYLES
 *********************/
-/* line 2014, ../scss/_base.scss */
+/* line 2010, ../scss/_base.scss */
 .woocommerce div.product.no-thumbnail div.images, .woocommerce #content div.product.no-thumbnail div.images, .woocommerce-page #content div.product.no-thumbnail div.images, .woocommerce-page div.product.no-thumbnail div.images {
   display: none;
 }
-/* line 2018, ../scss/_base.scss */
+/* line 2014, ../scss/_base.scss */
 .woocommerce div.product.no-thumbnail div.summary, .woocommerce #content div.product.no-thumbnail div.summary, .woocommerce-page #content div.product.no-thumbnail div.summary, .woocommerce-page div.product.no-thumbnail div.summary {
   float: none;
   width: auto;
 }
-/* line 2026, ../scss/_base.scss */
+/* line 2022, ../scss/_base.scss */
 .woocommerce div.product .woocommerce-tabs .panel h2, .woocommerce #content div.product .woocommerce-tabs .panel h2, .woocommerce-page #content div.product .woocommerce-tabs .panel h2, .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce #content div.product .woocommerce-tabs .panel h4, .woocommerce-page #content div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .h4, .woocommerce #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page #content div.product .woocommerce-tabs .panel .h4, .woocommerce-page div.product .woocommerce-tabs .panel h2, .woocommerce-page div.product .woocommerce-tabs .panel h4, .woocommerce-page div.product .woocommerce-tabs .panel .h4 {
   display: none;
 }
