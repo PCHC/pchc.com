@@ -1015,6 +1015,7 @@ $search-label-mix: 80%;
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
+	margin-bottom: 0;
 	@include box-shadow(0 -5px 15px rgba(#000,0.2));
 	@include border-radius(3px 3px 0 0);
 	
