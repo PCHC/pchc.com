@@ -6,7 +6,7 @@
 						
 							<?php if( is_search() ) : ?>
 								<div class="widget" id="refine-search">
-									<h4 class="widgettitle">Refine Search Results</h4>
+									<h4 class="widgettitle toggle toggle-link" data-toggle-target="#refine-search">Refine Search Results</h4>
 									<ul>
 										<?php $post_types = get_post_types( array(
 												'public'	=>	true,
@@ -32,7 +32,7 @@
 					
 					<?php if ( is_active_sidebar( 'sidebar_middle' ) ) : ?>
 					
-						<div id="sidebar-middle">
+						<div id="sidebar-middle" class="hidden-phone">
 
 							<?php dynamic_sidebar( 'sidebar_middle' ); ?>
 						
@@ -42,7 +42,7 @@
 					
 					<?php if ( is_active_sidebar( 'sidebar_bottom' ) ) : ?>
 					
-						<div id="sidebar-bottom">
+						<div id="sidebar-bottom" class="hidden-phone">
 
 							<?php dynamic_sidebar( 'sidebar_bottom' ); ?>
 						
