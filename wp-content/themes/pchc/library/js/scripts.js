@@ -77,20 +77,26 @@ jQuery(document).ready(function($) {
 		var toggleTarget = $(this).data('toggleTarget');
 		if($(toggleTarget, this).length > 0) {
 			$(this).toggle(function(){
-				$(toggleTarget, this).slideDown();
+				$(toggleTarget, this).addClass('toggle-show').removeClass('toggle-hide');
 			}, function(){
-				$(toggleTarget, this).slideUp();
+				$(toggleTarget, this).addClass('toggle-hide').removeClass('toggle-show');
+			});
+		} else if($(this).parent().find(toggleTarget).length > 0) {
+			$(this).toggle(function(){
+				$(this).parent().find(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
+			}, function(){
+				$(this).parent().find(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
 			});
 		} else {
 			$(this).toggle(function(){
-				$(this).parent().find(toggleTarget).slideDown();
+				$(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
 			}, function(){
-				$(this).parent().find(toggleTarget).slideUp();
+				$(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
 			});
 		}
 	});
 	
-	$('.toggle-init-hide').hide();
+	$('.toggle-init-hide').addClass('toggle-hide').removeClass('toggle-show');
 	
 	$('button[type=reset]').click(function(){
 		var $form = $(this).parents('form');

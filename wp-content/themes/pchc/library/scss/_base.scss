@@ -163,6 +163,18 @@ TOGGLE BUTTONS
 		opacity: 0.8;
 		@include transform(translate(0, -50%));
 	}
+	
+	&.toggle-link:before {
+		display: none;
+	}
+}
+
+.toggle-hide {
+	display: none;
+}
+
+.toggle-show {
+	display: inherit !important;
 }
 
 /******************************************************************
@@ -895,6 +907,8 @@ $search-label-mix: 80%;
 
 	.content-excerpt {
 		padding-top: 1em;
+		position: relative;
+		z-index: 1;
 	}
 	
 	.type-post {
@@ -987,11 +1001,60 @@ $search-label-mix: 80%;
 }
 
 #refine-search {
-	display: none;
 	@extend .search-results;
+	display: none;
+	position: fixed;
+	top: 100%;
+	bottom: auto;
+	right: 0;
+	left: 0;
+	width: auto;
+	z-index: 1002;
+	padding: 5px 10px;
+	background: rgba(#FFF, 0.9);
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	@include box-shadow(0 -5px 15px rgba(#000,0.2));
+	@include border-radius(3px 3px 0 0);
+	
+	&.toggle-hide {
+		top: 100%;
+		bottom: auto;
+	}
+	
+	&.toggle-show {
+		top: auto;
+		bottom: 0;
+		
+		.widgettitle {
+			&:after {
+				content: "\2193";
+			}
+		}
+	}
 	
 	.js & {
 		display: block;
+	}
+	
+	.widgettitle {
+		position: absolute;
+		right: 10%;
+		bottom: 100%;
+		white-space: nowrap;
+		background: rgba(#FFF, 0.9);
+		padding: 0.5em;
+		z-index: 1003;
+		margin-bottom: 0;
+		@include transform-origin(0,0);
+		@include border-radius(3px 3px 0 0);
+		
+		&:after {
+			content: "\2191";
+			display: inline;
+			padding-left: 0.5em;
+		}
 	}
 	
 	ul {
@@ -1418,11 +1481,18 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background: mix($pchc-blue, #FFF, 7%);
+	padding: 0.5em;
+	@include border-radius(3px);
+}
 
 	.widgettitle {}
 
 	.widget {
+		margin-bottom: 1em;
 
 		ul {
 

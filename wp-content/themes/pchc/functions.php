@@ -77,7 +77,7 @@ function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar_top',
 		'name' => __('Right Sidebar (top)', 'bonestheme'),
-		'description' => __('This area appears at the top of the right column.', 'bonestheme'),
+		'description' => __('This area appears at the top of the right column. Visible on mobile.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -87,7 +87,7 @@ function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar_middle',
 		'name' => __('Right Sidebar (middle)', 'bonestheme'),
-		'description' => __('This area appears in the middle of the right column.', 'bonestheme'),
+		'description' => __('This area appears in the middle of the right column. Hidden on mobile.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -97,7 +97,7 @@ function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar_bottom',
 		'name' => __('Right Sidebar (bottom)', 'bonestheme'),
-		'description' => __('This area appears at the bottom of the right column.', 'bonestheme'),
+		'description' => __('This area appears at the bottom of the right column. Hidden on mobile.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
