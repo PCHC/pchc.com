@@ -131,6 +131,10 @@ function bones_scripts_and_styles() {
 
     // ie-only style sheet
     wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
+    
+    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '' );
+    
+    wp_register_style( 'google-webfonts', '//fonts.googleapis.com/css?family=Quicksand:300,400|Nunito:400,300', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -141,6 +145,8 @@ function bones_scripts_and_styles() {
     wp_register_script( 'pchc-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
+    wp_enqueue_style('font-awesome');
+    wp_enqueue_style('google-webfonts');
     wp_enqueue_script( 'pchc-modernizr' );
     wp_enqueue_style( 'pchc-stylesheet' );
     wp_enqueue_style('pchc-ie-only');
