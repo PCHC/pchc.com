@@ -361,6 +361,10 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
+	padding: 0;
+	background: none;
+	margin-top: 0;
+	margin-bottom: 0;
 
 	.widgettitle {
 		font-family: $header;
@@ -520,21 +524,39 @@ SIDEBARS & ASIDES
 	width: auto;
 	z-index: 1001;
 	bottom: 0;
+	top: auto;
 	left: 0;
 	right: 0;
 	margin: 0;
-	padding: 5px 10px;
-	background: rgba(#FFF, 0.9);
-	border-bottom: none;
-	border-left: none;
-	border-right: none;
-	@include box-shadow(0 -5px 15px rgba(#000,0.2));
-	@include border-radius(3px 3px 0 0);
 	
 	.widgettitle {
 		margin: 0;
 		float: left;
 		line-height: 32px;
+		
+		position: static;
+		right: auto;
+		bottom: auto;
+		white-space: normal;
+		background: none;
+		padding: 0;
+		z-index: 1003;
+		@include border-radius(none);
+		
+		&:after {
+			content: "";
+			display: none;
+		}
+	}
+	
+	&.toggle-hide {
+		top: auto !important;
+		bottom: 0 !important;
+	}
+	
+	&.toggle-show {
+		top: auto !important;
+		bottom: 0 !important;
 	}
 	
 	ul {
