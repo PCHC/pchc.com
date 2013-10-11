@@ -1946,6 +1946,12 @@ NINJA FORMS STYLES
 				.ninja-forms-field {
 					display: block;
 					width: 100%;
+					
+					&[type=checkbox], &[type=radio] {
+						display: inline-block;
+						width: auto;
+						margin-right: 1em;
+					}
 				}
 			}
 			
