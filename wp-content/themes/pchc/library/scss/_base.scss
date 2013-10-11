@@ -1923,6 +1923,11 @@ NINJA FORMS STYLES
 					border-color: rgba($pchc-red, 0.5);
 					@include box-shadow(inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba($pchc-red, 0.5));
 				}
+				
+				&[type=checkbox], &[type=radio] {
+					width: auto;
+					@include box-shadow(none);
+				}
 			}
 			
 			.ninja-forms-field-description {
@@ -1946,6 +1951,12 @@ NINJA FORMS STYLES
 				.ninja-forms-field {
 					display: block;
 					width: 100%;
+					
+					&[type=checkbox], &[type=radio] {
+						display: inline-block;
+						width: auto;
+						margin-right: 1em;
+					}
 				}
 			}
 			
