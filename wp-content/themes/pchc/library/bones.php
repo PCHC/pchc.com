@@ -134,7 +134,7 @@ function bones_scripts_and_styles() {
     
     wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '' );
     
-    wp_register_style( 'google-webfonts', '//fonts.googleapis.com/css?family=Quicksand:300,400|Nunito:400,300', array(), '' );
+    wp_register_style( 'google-webfonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
