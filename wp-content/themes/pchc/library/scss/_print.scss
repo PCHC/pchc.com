@@ -12,71 +12,226 @@ though, go for it.
 
 
 
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
+	* {
+		background: transparent !important;
+		color: black !important;
+		text-shadow: none !important;
+		filter:none !important;
+		-ms-filter: none !important;
+	}
 
-  a, a:visited {
-    color: #444 !important;
-    text-decoration: underline;
+	a, a:visited {
+		color: #444 !important;
+		text-decoration: underline;
 
-    // show links on printed pages
-    &:after {
-      content: " (" attr(href) ")";
-    }
+		// show links on printed pages
+		&:after {
+			content: " (" attr(href) ")";
+			font-size: 0.75em;
+			color: #888 !important;
+			
+			.byline &, #footer-locations & {
+				content: "";
+			}
+		}
 
-    // show title too
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
-  }
+		// show title too
+//		abbr[title]:after {
+//			content: " (" attr(title) ")";
+//		}
+	}
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
 
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
 
-  thead {
-    display: table-header-group;
-  }
+	thead {
+		display: table-header-group;
+	}
 
-  tr, img {
-    page-break-inside: avoid;
-  }
+	tr, img {
+		page-break-inside: avoid;
+	}
 
-  img {
-    max-width: 100% !important;
-  }
+	img {
+		max-width: 100% !important;
+	}
 
-    @page {
-      margin: 0.5cm;
-    }
+		@page {
+			margin: 0.5cm;
+		}
 
-    p, h2, h3 {
-      orphans: 3;
-      widows: 3;
-    }
+		p, h2, h3 {
+			orphans: 3;
+			widows: 3;
+		}
 
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+		h2,
+		h3,
+		.page-title {
+			page-break-after: avoid;
+		}
 
-    // hide content people who print don't need to see
-    .sidebar,
-    .page-navigation,
-    .wp-prev-next,
-    .respond-form,
-    nav {
-      display: none;
-    }
+		// hide content people who print don't need to see
+		.sidebar,
+		.page-navigation,
+		.wp-prev-next,
+		.respond-form,
+		nav {
+			display: none;
+		}
+
+// Header stuff
+
+.header {
+	height: auto;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+#logo {
+	width: auto;
+	float: none;
+	text-align: right;
+	font-size: 1em;
+	
+	a {
+		text-indent: 0;
+		width: auto;
+		height: auto;
+		white-space: normal;
+		
+		&:after {
+			content: "PCHC.com";
+			display: block;
+		}
+	}
+}
+
+.header-right {
+	display: none;
+}
+
+
+// Content stuff
+
+.content-excerpt {
+	margin: 0;
+	padding: 1em 0;
+	border-bottom: none;
+	border-top: 1px solid #CCC;
+}
+
+.alignleft, img.alignleft {
+	float: left;
+	margin: 0 1.5em 1.5em 0;
+	max-width: 25% !important;
+}
+
+.alignright, img.alignright {
+	float: right;
+	margin: 0 0 1.5em 1.5em;
+	max-width: 25% !important;
+}
+
+// Footer stuff
+
+.footer-top {
+	height: auto;
+
+	.copyright {
+		margin: 1em 0;
+	}
+}
+
+#footer-locations {
+	padding: 0;
+	page-break-before: always;
+	
+	li {
+		width: 50%;
+		
+		&:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+	}
+	
+	&:before {
+		content: "PCHC Locations";
+		page-break-after: avoid;
+		display: block;
+		font-family: $header;
+		font-weight: bold;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+}
+
+
+// Providers stuff
+
+.post-type-archive {
+	.well {
+		display: none;
+	}
+	
+	.content-excerpt,
+	.type-provider.content-excerpt,
+	.type-location.content-excerpt {
+		width: 46%;
+		float: left;
+		margin-right: 2%;
+		margin-left: 2%;
+		
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+		
+		.article-header {
+			a {
+				&:after {
+					content: "";	
+				}
+			}
+			
+			.wp-post-image {
+				margin: 0 0 0.5em 0.5em;
+				float: right;
+				max-width: 20% !important;
+			}
+		}
+	}
+}
+
+.polaroid {
+	background: none;
+	border: 1px solid #CCC;
+	padding: 3px;
+	float: left;
+	margin: 0 1.5em 1.5em 0;
+	max-width: 25% !important;
+	@include box-shadow(none);
+}
+
+.wp-post-image {
+	float: right;
+	max-width: 50% !important;
+	margin: 0 0 1.5em 1.5em;
+}
+
+.well {
+	background: none !important;
+	border: 1px solid #DDD;
+	@include box-shadow(none !important);
+}
