@@ -193,6 +193,7 @@ though, go for it.
 		float: left;
 		margin-right: 2%;
 		margin-left: 2%;
+		page-break-inside: avoid;
 		
 		&:nth-child(2n+1) {
 			clear: left;
@@ -234,4 +235,23 @@ though, go for it.
 	background: none !important;
 	border: 1px solid #DDD;
 	@include box-shadow(none !important);
+	
+	a {
+		&:after {
+			content: "";
+		}
+	}
+}
+
+.post-column {
+	&.tencol {
+		float: left;
+		width: 73%;
+	}
+	
+	&.twocol {
+		float: right;
+		max-width: 25% !important;
+		margin: 0 0 1.5em 2%;
+	}
 }
