@@ -83,12 +83,12 @@
 								<span>eHealth Login</span>
 							</a>
 							
-							<a href="<?php echo home_url(); ?>/shop/online-billpay/">
+							<a href="<?php echo home_url(); ?>/online-billpay/">
 								<i class="icon-money"></i>
 								<span>Online Billpay</span>
 							</a>
 							
-							<a href="<?php echo home_url(); ?>/shop/donate-online/">
+							<a href="<?php echo home_url(); ?>/donate-online/">
 								<i class="icon-gift"></i>
 								<span>Donate Online</span>
 							</a>
@@ -106,7 +106,7 @@
 						<?php get_search_form( ); ?>
 						
 						<p class="header-contact clearfix">
-							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="<?php echo home_url(); ?>/?post_type=location">Locations &amp; Hours</a>
+							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="<?php echo home_url(); ?>/locations/">Locations &amp; Hours</a>
 						</p>
 					
 					</div>
