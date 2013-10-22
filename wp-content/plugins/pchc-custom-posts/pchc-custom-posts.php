@@ -54,7 +54,7 @@ function custom_locations() {
                 //'trackbacks', 
                 //'custom-fields', 
                 //'comments', 
-                //'revisions', 
+                'revisions', 
                 //'sticky', 
                 //'page-attributes',
             )
@@ -123,7 +123,7 @@ function custom_services() {
                 //'trackbacks', 
                 //'custom-fields', 
                 //'comments', 
-                //'revisions', 
+                'revisions', 
                 //'sticky', 
                 //'page-attributes',
             )
@@ -193,7 +193,7 @@ function custom_providers() {
                 //'trackbacks', 
                 //'custom-fields', 
                 //'comments', 
-                //'revisions', 
+                'revisions', 
                 //'sticky', 
                 //'page-attributes',
             )
