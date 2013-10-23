@@ -10,6 +10,9 @@
 
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<!-- W3TC-include-css -->
+		
 
 		<title><?php wp_title(''); ?></title>
 
@@ -49,6 +52,8 @@
 		
 		</script>
 		<!-- end analytics -->
+		
+		<!-- W3TC-include-js-head -->
 
 	</head>
 
