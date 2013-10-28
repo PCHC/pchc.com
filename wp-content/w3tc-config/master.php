@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'version' => '0.9.2.8',
+	'version' => '0.9.3',
 	'cluster.messagebus.debug' => false,
 	'cluster.messagebus.enabled' => false,
 	'cluster.messagebus.sns.region' => '',
@@ -9,7 +9,7 @@ return array(
 	'cluster.messagebus.sns.api_secret' => '',
 	'cluster.messagebus.sns.topic_arn' => '',
 	'dbcache.debug' => false,
-	'dbcache.enabled' => false,
+	'dbcache.enabled' => true,
 	'dbcache.engine' => 'file',
 	'dbcache.file.gc' => 3600,
 	'dbcache.file.locking' => false,
@@ -24,8 +24,10 @@ return array(
 	'dbcache.reject.sql' => array(
 		0 => 'gdsr_',
 		1 => 'wp_rg_',
+		2 => '_wc_session_',
 	),
 	'dbcache.reject.uri' => array(
+		0 => '',
 	),
 	'dbcache.reject.words' => array(
 		0 => '^\\s*insert\\b',
@@ -81,7 +83,7 @@ return array(
 	'fragmentcache.lifetime' => 180,
 	'fragmentcache.groups' => array(
 	),
-	'pgcache.enabled' => false,
+	'pgcache.enabled' => true,
 	'pgcache.comment_cookie_ttl' => 1800,
 	'pgcache.debug' => false,
 	'pgcache.engine' => 'file_generic',
@@ -107,7 +109,7 @@ return array(
 		2 => 'X-Pingback',
 		3 => 'P3P',
 	),
-	'pgcache.compatibility' => false,
+	'pgcache.compatibility' => true,
 	'pgcache.accept.uri' => array(
 		0 => 'sitemap(_index)?\\.xml(\\.gz)?',
 		1 => '[a-z0-9_\\-]+-sitemap([0-9]+)?\\.xml(\\.gz)?',
@@ -121,12 +123,14 @@ return array(
 	'pgcache.reject.logged' => true,
 	'pgcache.reject.logged_roles' => false,
 	'pgcache.reject.roles' => array(
+		0 => '',
 	),
 	'pgcache.reject.uri' => array(
 		0 => 'wp-.*\\.php',
 		1 => 'index\\.php',
 	),
 	'pgcache.reject.ua' => array(
+		0 => '',
 	),
 	'pgcache.reject.cookie' => array(
 		0 => 'wptouch_switch_toggle',
@@ -149,6 +153,7 @@ return array(
 	),
 	'pgcache.purge.postpages_limit' => 10,
 	'pgcache.purge.pages' => array(
+		0 => '',
 	),
 	'pgcache.purge.sitemap_regex' => '([a-z0-9_\\-]*?)sitemap([a-z0-9_\\-]*)?\\.xml',
 	'pgcache.prime.enabled' => false,
@@ -156,7 +161,7 @@ return array(
 	'pgcache.prime.limit' => 10,
 	'pgcache.prime.sitemap' => '',
 	'pgcache.prime.post.enabled' => false,
-	'minify.enabled' => false,
+	'minify.enabled' => true,
 	'minify.auto' => true,
 	'minify.debug' => false,
 	'minify.engine' => 'file',
@@ -189,13 +194,13 @@ return array(
 	'minify.css.combine' => false,
 	'minify.css.strip.comments' => false,
 	'minify.css.strip.crlf' => false,
-	'minify.css.imports' => '',
+	'minify.css.imports' => 'bubble',
 	'minify.css.groups' => array(
 	),
 	'minify.js.enable' => true,
 	'minify.js.engine' => 'js',
-	'minify.js.combine.header' => false,
-	'minify.js.header.embed_type' => 'blocking',
+	'minify.js.combine.header' => true,
+	'minify.js.header.embed_type' => 'nb-defer',
 	'minify.js.combine.body' => false,
 	'minify.js.body.embed_type' => 'blocking',
 	'minify.js.combine.footer' => false,
@@ -237,12 +242,16 @@ return array(
 	'minify.htmltidy.options.wrap' => 0,
 	'minify.reject.logged' => false,
 	'minify.reject.ua' => array(
+		0 => '',
 	),
 	'minify.reject.uri' => array(
+		0 => '',
 	),
 	'minify.reject.files.js' => array(
+		0 => '',
 	),
 	'minify.reject.files.css' => array(
+		0 => '',
 	),
 	'minify.cache.files' => array(
 		0 => 'https://ajax.googleapis.com',
@@ -368,8 +377,8 @@ return array(
 	'cdn.reject.ssl' => false,
 	'cdncache.enabled' => false,
 	'cloudflare.enabled' => false,
-	'cloudflare.email' => '',
-	'cloudflare.key' => '',
+	'cloudflare.email' => 'cviolette',
+	'cloudflare.key' => 'simple college phone dog',
 	'cloudflare.zone' => '',
 	'cloudflare.ips.ip4' => array(
 		0 => '204.93.240.0/24',
@@ -391,6 +400,7 @@ return array(
 	'varnish.enabled' => false,
 	'varnish.debug' => false,
 	'varnish.servers' => array(
+		0 => '',
 	),
 	'browsercache.enabled' => true,
 	'browsercache.no404wp' => false,
@@ -401,34 +411,34 @@ return array(
 	),
 	'browsercache.cssjs.last_modified' => true,
 	'browsercache.cssjs.compression' => true,
-	'browsercache.cssjs.expires' => false,
+	'browsercache.cssjs.expires' => true,
 	'browsercache.cssjs.lifetime' => 31536000,
 	'browsercache.cssjs.nocookies' => false,
-	'browsercache.cssjs.cache.control' => false,
+	'browsercache.cssjs.cache.control' => true,
 	'browsercache.cssjs.cache.policy' => 'cache_public_maxage',
 	'browsercache.cssjs.etag' => false,
 	'browsercache.cssjs.w3tc' => false,
 	'browsercache.cssjs.replace' => false,
 	'browsercache.html.compression' => true,
 	'browsercache.html.last_modified' => true,
-	'browsercache.html.expires' => false,
+	'browsercache.html.expires' => true,
 	'browsercache.html.lifetime' => 3600,
-	'browsercache.html.cache.control' => false,
+	'browsercache.html.cache.control' => true,
 	'browsercache.html.cache.policy' => 'cache_public_maxage',
 	'browsercache.html.etag' => false,
 	'browsercache.html.w3tc' => false,
 	'browsercache.html.replace' => false,
 	'browsercache.other.last_modified' => true,
 	'browsercache.other.compression' => true,
-	'browsercache.other.expires' => false,
+	'browsercache.other.expires' => true,
 	'browsercache.other.lifetime' => 31536000,
 	'browsercache.other.nocookies' => false,
-	'browsercache.other.cache.control' => false,
+	'browsercache.other.cache.control' => true,
 	'browsercache.other.cache.policy' => 'cache_public_maxage',
 	'browsercache.other.etag' => false,
 	'browsercache.other.w3tc' => false,
 	'browsercache.other.replace' => false,
-	'browsercache.timestamp' => '',
+	'browsercache.timestamp' => '1382543196',
 	'mobile.enabled' => false,
 	'mobile.rgroups' => array(
 		'high' => array(
@@ -616,7 +626,6 @@ return array(
 	'widget.pagespeed.key' => '',
 	'notes.wp_content_changed_perms' => true,
 	'notes.wp_content_perms' => true,
-	'notes.php_is_old' => true,
 	'notes.theme_changed' => false,
 	'notes.wp_upgraded' => false,
 	'notes.plugins_updated' => false,
@@ -666,4 +675,15 @@ return array(
 	'newrelic.cache_time' => 5,
 	'newrelic.enable_xmit' => false,
 	'newrelic.use_network_wide_id' => false,
+	'plugin.type' => '',
+	'plugin.license_key' => '',
+	'minify.auto.disable_filename_length_test' => false,
+	'browsercache.replace.exceptions' => array(
+		0 => '',
+	),
+	'pgcache.late_init' => false,
+	'pgcache.remove_charset' => false,
+	'pgcache.accept.qs' => array(
+		0 => '',
+	),
 );

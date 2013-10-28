@@ -1,0 +1,752 @@
+jQuery(document).ready(function(e){e(".woocommerce textarea[placeholder], .woocommerce-page textarea[placeholder], .woocommerce input[placeholder], .woocommerce-page input[placeholder]").placeholder();e("select.orderby").change(function(){e(this).closest("form").submit()});e("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").addClass("buttons_added").append('<input type="button" value="+" class="plus" />').prepend('<input type="button" value="-" class="minus" />');e("input.qty:not(.product-quantity input.qty)").each(function(){var t=parseFloat(e(this).attr("min"));t&&t>0&&parseFloat(e(this).val())<t&&e(this).val(t)});e(document).on("click",".plus, .minus",function(){var t=e(this).closest(".quantity").find(".qty"),n=parseFloat(t.val()),r=parseFloat(t.attr("max")),i=parseFloat(t.attr("min")),s=t.attr("step");if(!n||n==""||n=="NaN")n=0;if(r==""||r=="NaN")r="";if(i==""||i=="NaN")i=0;if(s=="any"||s==""||s==undefined||parseFloat(s)=="NaN")s=1;e(this).is(".plus")?r&&(r==n||n>r)?t.val(r):t.val(n+parseFloat(s)):i&&(i==n||n<i)?t.val(i):n>0&&t.val(n-parseFloat(s));t.trigger("change")});var t=woocommerce_params.countries.replace(/&quot;/g,'"'),n=e.parseJSON(t);e("select.country_to_state").change(function(){var t=e(this).val(),r=e(this).closest("div").find("#billing_state, #shipping_state, #calc_shipping_state"),i=r.parent(),s=r.attr("name"),o=r.attr("id"),u=r.val(),a=r.attr("placeholder");if(n[t])if(n[t].length==0){r.parent().hide().find(".chzn-container").remove();r.replaceWith('<input type="hidden" class="hidden" name="'+s+'" id="'+o+'" value="" placeholder="'+a+'" />');e("body").trigger("country_to_state_changed",[t,e(this).closest("div")])}else{var f="",l=n[t];for(var c in l)f=f+'<option value="'+c+'">'+l[c]+"</option>";r.parent().show();if(r.is("input")){r.replaceWith('<select name="'+s+'" id="'+o+'" class="state_select" placeholder="'+a+'"></select>');r=e(this).closest("div").find("#billing_state, #shipping_state, #calc_shipping_state")}r.html('<option value="">'+woocommerce_params.i18n_select_state_text+"</option>"+f);r.val(u);e("body").trigger("country_to_state_changed",[t,e(this).closest("div")])}else if(r.is("select")){i.show().find(".chzn-container").remove();r.replaceWith('<input type="text" class="input-text" name="'+s+'" id="'+o+'" placeholder="'+a+'" />');e("body").trigger("country_to_state_changed",[t,e(this).closest("div")])}else if(r.is(".hidden")){i.show().find(".chzn-container").remove();r.replaceWith('<input type="text" class="input-text" name="'+s+'" id="'+o+'" placeholder="'+a+'" />');e("body").trigger("country_to_state_changed",[t,e(this).closest("div")])}e("body").trigger("country_to_state_changing",[t,e(this).closest("div")])})});
+;/*!
+ * jQuery Cookie Plugin v1.3.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2013 Klaus Hartl
+ * Released under the MIT license
+ */(function(e){typeof define=="function"&&define.amd&&define.amd.jQuery?define(["jquery"],e):e(jQuery)})(function(e){function n(e){return e}function r(e){return decodeURIComponent(e.replace(t," "))}function i(e){e.indexOf('"')===0&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));return s.json?JSON.parse(e):e}var t=/\+/g,s=e.cookie=function(t,o,u){if(o!==undefined){u=e.extend({},s.defaults,u);if(typeof u.expires=="number"){var a=u.expires,f=u.expires=new Date;f.setDate(f.getDate()+a)}o=s.json?JSON.stringify(o):String(o);return document.cookie=[encodeURIComponent(t),"=",s.raw?o:encodeURIComponent(o),u.expires?"; expires="+u.expires.toUTCString():"",u.path?"; path="+u.path:"",u.domain?"; domain="+u.domain:"",u.secure?"; secure":""].join("")}var l=s.raw?n:r,c=document.cookie.split("; "),h=t?undefined:{};for(var p=0,d=c.length;p<d;p++){var v=c[p].split("="),m=l(v.shift()),g=l(v.join("="));if(t&&t===m){h=i(g);break}t||(h[m]=i(g))}return h};s.defaults={};e.removeCookie=function(t,n){if(e.cookie(t)!==undefined){e.cookie(t,"",e.extend(n,{expires:-1}));return!0}return!1}});
+;jQuery(document).ready(function(e){$supports_html5_storage="sessionStorage"in window&&window.sessionStorage!==null;$fragment_refresh={url:woocommerce_params.ajax_url,type:"POST",data:{action:"woocommerce_get_refreshed_fragments"},success:function(t){if(t&&t.fragments){e.each(t.fragments,function(t,n){e(t).replaceWith(n)});if($supports_html5_storage){sessionStorage.setItem("wc_fragments",JSON.stringify(t.fragments));sessionStorage.setItem("wc_cart_hash",t.cart_hash)}e("body").trigger("wc_fragments_refreshed")}}};if($supports_html5_storage){e("body").bind("added_to_cart",function(e,t,n){sessionStorage.setItem("wc_fragments",JSON.stringify(t));sessionStorage.setItem("wc_cart_hash",n)});try{var t=e.parseJSON(sessionStorage.getItem("wc_fragments")),n=sessionStorage.getItem("wc_cart_hash"),r=e.cookie("woocommerce_cart_hash");if(n==null||n==undefined||n=="")n="";if(r==null||r==undefined||r=="")r="";if(!t||!t["div.widget_shopping_cart_content"]||n!=r)throw"No fragment";e.each(t,function(t,n){e(t).replaceWith(n)});e("body").trigger("wc_fragments_loaded")}catch(i){e.ajax($fragment_refresh)}}else e.ajax($fragment_refresh);e.cookie("woocommerce_items_in_cart")>0?e(".hide_cart_widget_if_empty").closest(".widget_shopping_cart").show():e(".hide_cart_widget_if_empty").closest(".widget_shopping_cart").hide();e("body").bind("adding_to_cart",function(){e(".hide_cart_widget_if_empty").closest(".widget_shopping_cart").show()})});
+;/*
+Bones Scripts File
+Author: Eddie Machado
+
+This file should contain any js scripts you want to add to the site.
+Instead of calling it in the header or throwing it inside wp_head()
+this file will be called automatically in the footer so as not to
+slow the page load.
+
+*/
+
+// IE8 ployfill for GetComputed Style (for Responsive Script below)
+if (!window.getComputedStyle) {
+    window.getComputedStyle = function(el, pseudo) {
+        this.el = el;
+        this.getPropertyValue = function(prop) {
+            var re = /(\-([a-z]){1})/g;
+            if (prop == 'float') prop = 'styleFloat';
+            if (re.test(prop)) {
+                prop = prop.replace(re, function () {
+                    return arguments[2].toUpperCase();
+                });
+            }
+            return el.currentStyle[prop] ? el.currentStyle[prop] : null;
+        }
+        return this;
+    }
+}
+
+// as the page loads, call these scripts
+jQuery(document).ready(function($) {
+
+    /*
+    Responsive jQuery is a tricky thing.
+    There's a bunch of different ways to handle
+    it, so be sure to research and find the one
+    that works for you best.
+    */
+    
+    /* getting viewport width */
+    var responsive_viewport = $(window).width();
+    
+    /* if is below 481px */
+    if (responsive_viewport < 481) {
+    
+    } /* end smallest screen */
+    
+    /* if is larger than 481px */
+    if (responsive_viewport > 481) {
+        
+    } /* end larger than 481px */
+    
+    /* if is above or equal to 768px */
+    if (responsive_viewport >= 768) {
+    
+        /* load gravatars */
+        $('.comment img[data-gravatar]').each(function(){
+            $(this).attr('src',$(this).attr('data-gravatar'));
+        });
+        
+    }
+    
+    /* off the bat large screen actions */
+    if (responsive_viewport > 1030) {
+        
+    }
+    
+	
+	// add all your scripts here
+//	$('.toggle').toggle(function(){
+//		$('~ .nav, ~ ul', this).slideDown();
+//	}, function(){
+//		$('~ .nav, ~ ul', this).slideUp();
+//	});
+	
+	$('.toggle').each(function(){
+		var toggleTarget = $(this).data('toggleTarget');
+		if($(toggleTarget, this).length > 0) {
+			$(this).toggle(function(){
+				$(toggleTarget, this).addClass('toggle-show').removeClass('toggle-hide');
+			}, function(){
+				$(toggleTarget, this).addClass('toggle-hide').removeClass('toggle-show');
+			});
+		} else if($(this).parent().find(toggleTarget).length > 0) {
+			$(this).toggle(function(){
+				$(this).parent().find(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
+			}, function(){
+				$(this).parent().find(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
+			});
+		} else {
+			$(this).toggle(function(){
+				$(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
+			}, function(){
+				$(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
+			});
+		}
+	});
+	
+	$('.toggle-init-hide').addClass('toggle-hide').removeClass('toggle-show');
+	
+	$('button[type=reset]').click(function(){
+		var $form = $(this).parents('form');
+		$form.find('input').removeAttr('checked');
+		$form.submit();
+	});
+	
+	
+	// fix the main navigation to the top of the window if you scroll below.
+	
+	var headerHeight = 206;
+	
+	function headerNavScroll( scrollTop ){
+	
+		if( responsive_viewport < 481 ) {
+			headerHeight = 145;
+		}
+		
+		if( scrollTop > headerHeight ) {
+			$('#header-nav').addClass('fixed');
+		} else {
+			$('#header-nav').removeClass('fixed');
+		}
+	}
+	
+	headerNavScroll( $(document).scrollTop() );
+	
+	$(document).scroll(function(){
+		headerNavScroll( $(this).scrollTop() );
+	});
+	
+	$('#refine-search input').change(function(){
+		
+		var posttype = $(this).data('posttype');
+		
+		if($(this).is(':checked')) {
+			$('#main .' + posttype).fadeIn();
+		} else {
+			$('#main .' + posttype).fadeOut();
+		}
+		
+	});
+	
+ 
+}); /* end of as page load scripts */
+
+
+/*! A fix for the iOS orientationchange zoom bug.
+ Script by @scottjehl, rebound by @wilto.
+ MIT License.
+*/
+(function(w){
+	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
+	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && navigator.userAgent.indexOf( "AppleWebKit" ) > -1 ) ){ return; }
+    var doc = w.document;
+    if( !doc.querySelector ){ return; }
+    var meta = doc.querySelector( "meta[name=viewport]" ),
+        initialContent = meta && meta.getAttribute( "content" ),
+        disabledZoom = initialContent + ",maximum-scale=1",
+        enabledZoom = initialContent + ",maximum-scale=10",
+        enabled = true,
+		x, y, z, aig;
+    if( !meta ){ return; }
+    function restoreZoom(){
+        meta.setAttribute( "content", enabledZoom );
+        enabled = true; }
+    function disableZoom(){
+        meta.setAttribute( "content", disabledZoom );
+        enabled = false; }
+    function checkTilt( e ){
+		aig = e.accelerationIncludingGravity;
+		x = Math.abs( aig.x );
+		y = Math.abs( aig.y );
+		z = Math.abs( aig.z );
+		// If portrait orientation and in one of the danger zones
+        if( !w.orientation && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+			if( enabled ){ disableZoom(); } }
+		else if( !enabled ){ restoreZoom(); } }
+	w.addEventListener( "orientationchange", restoreZoom, false );
+	w.addEventListener( "devicemotion", checkTilt, false );
+})( this );
+;/*!
+ * accounting.js v0.3.2
+ * Copyright 2011, Joss Crowcroft
+ *
+ * Freely distributable under the MIT license.
+ * Portions of accounting.js are inspired or borrowed from underscore.js
+ *
+ * Full details and documentation:
+ * http://josscrowcroft.github.com/accounting.js/
+ */
+
+(function(root, undefined) {
+
+	/* --- Setup --- */
+
+	// Create the local library object, to be exported or referenced globally later
+	var lib = {};
+
+	// Current version
+	lib.version = '0.3.2';
+
+
+	/* --- Exposed settings --- */
+
+	// The library's settings configuration object. Contains default parameters for
+	// currency and number formatting
+	lib.settings = {
+		currency: {
+			symbol : "$",		// default currency symbol is '$'
+			format : "%s%v",	// controls output: %s = symbol, %v = value (can be object, see docs)
+			decimal : ".",		// decimal point separator
+			thousand : ",",		// thousands separator
+			precision : 2,		// decimal places
+			grouping : 3		// digit grouping (not implemented yet)
+		},
+		number: {
+			precision : 0,		// default precision on numbers is 0
+			grouping : 3,		// digit grouping (not implemented yet)
+			thousand : ",",
+			decimal : "."
+		}
+	};
+
+
+	/* --- Internal Helper Methods --- */
+
+	// Store reference to possibly-available ECMAScript 5 methods for later
+	var nativeMap = Array.prototype.map,
+		nativeIsArray = Array.isArray,
+		toString = Object.prototype.toString;
+
+	/**
+	 * Tests whether supplied parameter is a string
+	 * from underscore.js
+	 */
+	function isString(obj) {
+		return !!(obj === '' || (obj && obj.charCodeAt && obj.substr));
+	}
+
+	/**
+	 * Tests whether supplied parameter is a string
+	 * from underscore.js, delegates to ECMA5's native Array.isArray
+	 */
+	function isArray(obj) {
+		return nativeIsArray ? nativeIsArray(obj) : toString.call(obj) === '[object Array]';
+	}
+
+	/**
+	 * Tests whether supplied parameter is a true object
+	 */
+	function isObject(obj) {
+		return obj && toString.call(obj) === '[object Object]';
+	}
+
+	/**
+	 * Extends an object with a defaults object, similar to underscore's _.defaults
+	 *
+	 * Used for abstracting parameter handling from API methods
+	 */
+	function defaults(object, defs) {
+		var key;
+		object = object || {};
+		defs = defs || {};
+		// Iterate over object non-prototype properties:
+		for (key in defs) {
+			if (defs.hasOwnProperty(key)) {
+				// Replace values with defaults only if undefined (allow empty/zero values):
+				if (object[key] == null) object[key] = defs[key];
+			}
+		}
+		return object;
+	}
+
+	/**
+	 * Implementation of `Array.map()` for iteration loops
+	 *
+	 * Returns a new Array as a result of calling `iterator` on each array value.
+	 * Defers to native Array.map if available
+	 */
+	function map(obj, iterator, context) {
+		var results = [], i, j;
+
+		if (!obj) return results;
+
+		// Use native .map method if it exists:
+		if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
+
+		// Fallback for native .map:
+		for (i = 0, j = obj.length; i < j; i++ ) {
+			results[i] = iterator.call(context, obj[i], i, obj);
+		}
+		return results;
+	}
+
+	/**
+	 * Check and normalise the value of precision (must be positive integer)
+	 */
+	function checkPrecision(val, base) {
+		val = Math.round(Math.abs(val));
+		return isNaN(val)? base : val;
+	}
+
+
+	/**
+	 * Parses a format string or object and returns format obj for use in rendering
+	 *
+	 * `format` is either a string with the default (positive) format, or object
+	 * containing `pos` (required), `neg` and `zero` values (or a function returning
+	 * either a string or object)
+	 *
+	 * Either string or format.pos must contain "%v" (value) to be valid
+	 */
+	function checkCurrencyFormat(format) {
+		var defaults = lib.settings.currency.format;
+
+		// Allow function as format parameter (should return string or object):
+		if ( typeof format === "function" ) format = format();
+
+		// Format can be a string, in which case `value` ("%v") must be present:
+		if ( isString( format ) && format.match("%v") ) {
+
+			// Create and return positive, negative and zero formats:
+			return {
+				pos : format,
+				neg : format.replace("-", "").replace("%v", "-%v"),
+				zero : format
+			};
+
+		// If no format, or object is missing valid positive value, use defaults:
+		} else if ( !format || !format.pos || !format.pos.match("%v") ) {
+
+			// If defaults is a string, casts it to an object for faster checking next time:
+			return ( !isString( defaults ) ) ? defaults : lib.settings.currency.format = {
+				pos : defaults,
+				neg : defaults.replace("%v", "-%v"),
+				zero : defaults
+			};
+
+		}
+		// Otherwise, assume format was fine:
+		return format;
+	}
+
+
+	/* --- API Methods --- */
+
+	/**
+	 * Takes a string/array of strings, removes all formatting/cruft and returns the raw float value
+	 * alias: accounting.`parse(string)`
+	 *
+	 * Decimal must be included in the regular expression to match floats (defaults to
+	 * accounting.settings.number.decimal), so if the number uses a non-standard decimal 
+	 * separator, provide it as the second argument.
+	 *
+	 * Also matches bracketed negatives (eg. "$ (1.99)" => -1.99)
+	 *
+	 * Doesn't throw any errors (`NaN`s become 0) but this may change in future
+	 */
+	var unformat = lib.unformat = lib.parse = function(value, decimal) {
+		// Recursively unformat arrays:
+		if (isArray(value)) {
+			return map(value, function(val) {
+				return unformat(val, decimal);
+			});
+		}
+
+		// Fails silently (need decent errors):
+		value = value || 0;
+
+		// Return the value as-is if it's already a number:
+		if (typeof value === "number") return value;
+
+		// Default decimal point comes from settings, but could be set to eg. "," in opts:
+		decimal = decimal || lib.settings.number.decimal;
+
+		 // Build regex to strip out everything except digits, decimal point and minus sign:
+		var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]),
+			unformatted = parseFloat(
+				("" + value)
+				.replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
+				.replace(regex, '')         // strip out any cruft
+				.replace(decimal, '.')      // make sure decimal point is standard
+			);
+
+		// This will fail silently which may cause trouble, let's wait and see:
+		return !isNaN(unformatted) ? unformatted : 0;
+	};
+
+
+	/**
+	 * Implementation of toFixed() that treats floats more like decimals
+	 *
+	 * Fixes binary rounding issues (eg. (0.615).toFixed(2) === "0.61") that present
+	 * problems for accounting- and finance-related software.
+	 */
+	var toFixed = lib.toFixed = function(value, precision) {
+		precision = checkPrecision(precision, lib.settings.number.precision);
+		var power = Math.pow(10, precision);
+
+		// Multiply up by precision, round accurately, then divide and use native toFixed():
+		return (Math.round(lib.unformat(value) * power) / power).toFixed(precision);
+	};
+
+
+	/**
+	 * Format a number, with comma-separated thousands and custom precision/decimal places
+	 *
+	 * Localise by overriding the precision and thousand / decimal separators
+	 * 2nd parameter `precision` can be an object matching `settings.number`
+	 */
+	var formatNumber = lib.formatNumber = function(number, precision, thousand, decimal) {
+		// Resursively format arrays:
+		if (isArray(number)) {
+			return map(number, function(val) {
+				return formatNumber(val, precision, thousand, decimal);
+			});
+		}
+
+		// Clean up number:
+		number = unformat(number);
+
+		// Build options object from second param (if object) or all params, extending defaults:
+		var opts = defaults(
+				(isObject(precision) ? precision : {
+					precision : precision,
+					thousand : thousand,
+					decimal : decimal
+				}),
+				lib.settings.number
+			),
+
+			// Clean up precision
+			usePrecision = checkPrecision(opts.precision),
+
+			// Do some calc:
+			negative = number < 0 ? "-" : "",
+			base = parseInt(toFixed(Math.abs(number || 0), usePrecision), 10) + "",
+			mod = base.length > 3 ? base.length % 3 : 0;
+
+		// Format the number:
+		return negative + (mod ? base.substr(0, mod) + opts.thousand : "") + base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");
+	};
+
+
+	/**
+	 * Format a number into currency
+	 *
+	 * Usage: accounting.formatMoney(number, symbol, precision, thousandsSep, decimalSep, format)
+	 * defaults: (0, "$", 2, ",", ".", "%s%v")
+	 *
+	 * Localise by overriding the symbol, precision, thousand / decimal separators and format
+	 * Second param can be an object matching `settings.currency` which is the easiest way.
+	 *
+	 * To do: tidy up the parameters
+	 */
+	var formatMoney = lib.formatMoney = function(number, symbol, precision, thousand, decimal, format) {
+		// Resursively format arrays:
+		if (isArray(number)) {
+			return map(number, function(val){
+				return formatMoney(val, symbol, precision, thousand, decimal, format);
+			});
+		}
+
+		// Clean up number:
+		number = unformat(number);
+
+		// Build options object from second param (if object) or all params, extending defaults:
+		var opts = defaults(
+				(isObject(symbol) ? symbol : {
+					symbol : symbol,
+					precision : precision,
+					thousand : thousand,
+					decimal : decimal,
+					format : format
+				}),
+				lib.settings.currency
+			),
+
+			// Check format (returns object with pos, neg and zero):
+			formats = checkCurrencyFormat(opts.format),
+
+			// Choose which format to use for this value:
+			useFormat = number > 0 ? formats.pos : number < 0 ? formats.neg : formats.zero;
+
+		// Return with currency symbol added:
+		return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));
+	};
+
+
+	/**
+	 * Format a list of numbers into an accounting column, padding with whitespace
+	 * to line up currency symbols, thousand separators and decimals places
+	 *
+	 * List should be an array of numbers
+	 * Second parameter can be an object containing keys that match the params
+	 *
+	 * Returns array of accouting-formatted number strings of same length
+	 *
+	 * NB: `white-space:pre` CSS rule is required on the list container to prevent
+	 * browsers from collapsing the whitespace in the output strings.
+	 */
+	lib.formatColumn = function(list, symbol, precision, thousand, decimal, format) {
+		if (!list) return [];
+
+		// Build options object from second param (if object) or all params, extending defaults:
+		var opts = defaults(
+				(isObject(symbol) ? symbol : {
+					symbol : symbol,
+					precision : precision,
+					thousand : thousand,
+					decimal : decimal,
+					format : format
+				}),
+				lib.settings.currency
+			),
+
+			// Check format (returns object with pos, neg and zero), only need pos for now:
+			formats = checkCurrencyFormat(opts.format),
+
+			// Whether to pad at start of string or after currency symbol:
+			padAfterSymbol = formats.pos.indexOf("%s") < formats.pos.indexOf("%v") ? true : false,
+
+			// Store value for the length of the longest string in the column:
+			maxLength = 0,
+
+			// Format the list according to options, store the length of the longest string:
+			formatted = map(list, function(val, i) {
+				if (isArray(val)) {
+					// Recursively format columns if list is a multi-dimensional array:
+					return lib.formatColumn(val, opts);
+				} else {
+					// Clean up the value
+					val = unformat(val);
+
+					// Choose which format to use for this value (pos, neg or zero):
+					var useFormat = val > 0 ? formats.pos : val < 0 ? formats.neg : formats.zero,
+
+						// Format this value, push into formatted list and save the length:
+						fVal = useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(val), checkPrecision(opts.precision), opts.thousand, opts.decimal));
+
+					if (fVal.length > maxLength) maxLength = fVal.length;
+					return fVal;
+				}
+			});
+
+		// Pad each number in the list and send back the column of numbers:
+		return map(formatted, function(val, i) {
+			// Only if this is a string (not a nested array, which would have already been padded):
+			if (isString(val) && val.length < maxLength) {
+				// Depending on symbol position, pad after symbol or at index 0:
+				return padAfterSymbol ? val.replace(opts.symbol, opts.symbol+(new Array(maxLength - val.length + 1).join(" "))) : (new Array(maxLength - val.length + 1).join(" ")) + val;
+			}
+			return val;
+		});
+	};
+
+
+	/* --- Module Definition --- */
+
+	// Export accounting for CommonJS. If being loaded as an AMD module, define it as such.
+	// Otherwise, just add `accounting` to the global object
+	if (typeof exports !== 'undefined') {
+		if (typeof module !== 'undefined' && module.exports) {
+			exports = module.exports = lib;
+		}
+		exports.accounting = lib;
+	} else if (typeof define === 'function' && define.amd) {
+		// Return the library as an AMD module:
+		define([], function() {
+			return lib;
+		});
+	} else {
+		// Use accounting.noConflict to restore `accounting` back to its original value.
+		// Returns a reference to the library's `accounting` object;
+		// e.g. `var numbers = accounting.noConflict();`
+		lib.noConflict = (function(oldAccounting) {
+			return function() {
+				// Reset the value of the root's `accounting` variable:
+				root.accounting = oldAccounting;
+				// Delete the noConflict method:
+				lib.noConflict = undefined;
+				// Return reference to the library to re-assign it:
+				return lib;
+			};
+		})(root.accounting);
+
+		// Declare `fx` on the root (global/window) object:
+		root['accounting'] = lib;
+	}
+
+	// Root will be `window` in browser or `global` on the server:
+}(this));
+
+;jQuery(document).ready(function($) {
+
+	function init_addon_totals() {
+
+		$('.cart').on( 'keyup change', '.product-addon input, .product-addon textarea', function() {
+
+			if ( $(this).attr('maxlength') > 0 ) {
+
+				var value = $(this).val();
+				var remaining = $(this).attr('maxlength') - value.length;
+
+				$(this).next('.chars_remaining').find('span').text( remaining );
+
+			}
+
+		} );
+
+		$('.cart').find('.addon-custom, .addon-custom-textarea').each(function(){
+
+			if ( $(this).attr('maxlength') > 0 ) {
+
+				$(this).after('<small class="chars_remaining"><span>' + $(this).attr('maxlength') + '</span> ' + woocommerce_addons_params.i18n_remaining + '</small>' );
+
+			}
+
+		} );
+
+		$('.cart').on( 'change', '.product-addon input, .product-addon textarea, .product-addon select, input.qty', function() {
+			var $cart = $(this).closest('.cart');
+			$cart.trigger('woocommerce-product-addons-update');
+		} );
+
+		$('.variations_form').on('found_variation', function( event, variation ) {
+			var $variation_form = $(this);
+			var $totals         = $variation_form.find('#product-addons-total');
+
+			if ( $( variation.price_html ).find('.amount:last').size() ) {
+		 		product_price = $( variation.price_html ).find('.amount:last').text();
+				product_price = product_price.replace( woocommerce_addons_params.currency_format_thousand_sep, '' );
+				product_price = product_price.replace( woocommerce_addons_params.currency_format_decimal_sep, '.' );
+				product_price = product_price.replace(/[^0-9\.]/g, '');
+				product_price = parseFloat( product_price );
+
+				$totals.data( 'price', product_price );
+			}
+			$variation_form.trigger('woocommerce-product-addons-update');
+		});
+
+		$('.cart').bind( 'woocommerce-product-addons-update', function() {
+			var total         = 0;
+			var $cart         = $(this);
+			var $totals       = $cart.find('#product-addons-total');
+			var product_price = $totals.data( 'price' );
+			var product_type  = $totals.data( 'type' );
+
+			// Move totals
+			if ( product_type == 'variable' ) {
+				$cart.find('.single_variation').after( $totals );
+			}
+
+			$cart.find('.addon').each(function() {
+				var addon_cost = 0;
+
+				if ( $(this).is('.addon-custom-price') ) {
+					addon_cost = $(this).val();
+				} else if ( $(this).is('.addon-input_multiplier') ) {
+					if( isNaN( $(this).val() ) || $(this).val() == "" ) { // Number inputs return blank when invalid
+						$(this).val('');
+						$(this).closest('p').find('.addon-alert').show();
+					} else {
+						if( $(this).val() != "" ){
+							$(this).val( Math.ceil( $(this).val() ) );
+						}
+						$(this).closest('p').find('.addon-alert').hide();
+					}
+					addon_cost = $(this).data('price') * $(this).val();
+				} else if ( $(this).is('.addon-checkbox, .addon-radio') ) {
+					if ( $(this).is(':checked') )
+						addon_cost = $(this).data('price');
+				} else if ( $(this).is('.addon-select') ) {
+					if ( $(this).val() )
+						addon_cost = $(this).find('option:selected').data('price');
+				} else {
+					if ( $(this).val() )
+						addon_cost = $(this).data('price');
+				}
+
+				if ( ! addon_cost )
+					addon_cost = 0;
+
+				total = parseFloat( total ) + parseFloat( addon_cost );
+			} );
+
+			var qty = parseFloat( $cart.find('input.qty').val() );
+
+			if ( total > 0 && qty > 0 ) {
+
+				total = parseFloat( total * qty );
+
+				var formatted_addon_total = accounting.formatMoney( total, {
+					symbol 		: woocommerce_addons_params.currency_format_symbol,
+					decimal 	: woocommerce_addons_params.currency_format_decimal_sep,
+					thousand	: woocommerce_addons_params.currency_format_thousand_sep,
+					precision 	: woocommerce_addons_params.currency_format_num_decimals,
+					format		: woocommerce_addons_params.currency_format
+				} );
+
+				if ( product_price ) {
+
+					product_total_price = parseFloat( product_price * qty );
+
+					var formatted_grand_total = accounting.formatMoney( product_total_price + total, {
+						symbol 		: woocommerce_addons_params.currency_format_symbol,
+						decimal 	: woocommerce_addons_params.currency_format_decimal_sep,
+						thousand	: woocommerce_addons_params.currency_format_thousand_sep,
+						precision 	: woocommerce_addons_params.currency_format_num_decimals,
+						format		: woocommerce_addons_params.currency_format
+					} );
+				}
+
+				html = '<dl class="product-addon-totals"><dt>' + woocommerce_addons_params.i18n_addon_total + '</dt><dd><strong><span class="amount">' + formatted_addon_total + '</span></strong></dd>';
+
+				if ( formatted_grand_total ) {
+					html = html + '<dt>' + woocommerce_addons_params.i18n_grand_total + '</dt><dd><strong><span class="amount">' + formatted_grand_total + '</span></strong></dd>';
+				}
+
+				html = html + '</dl>';
+
+				$totals.html( html );
+
+			} else {
+				$totals.empty();
+			}
+
+			$('body').trigger('updated_addons');
+
+		} );
+
+		$('.cart').find('.addon-custom, .addon-custom-textarea, .product-addon input, .product-addon textarea, .product-addon select, input.qty').change();
+	}
+
+	init_addon_totals();
+
+	$( '.variations_form .product-addon' ).closest( '.cart' ).find( '.variations select' ).change();
+
+	// Quick view
+	$('body').on('quick-view-displayed', function() {
+		init_addon_totals();
+	});
+});
