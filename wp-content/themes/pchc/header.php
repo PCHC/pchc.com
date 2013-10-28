@@ -144,14 +144,17 @@
 
 			</header> <!-- end header -->
 			
-			<?php if ( is_active_sidebar( 'sidebar_above_content' ) || is_front_page() ) : ?>
+			<?php 
+				if( function_exists( 'wpmd_is_phone' ) ) {
+					$is_phone = wpmd_is_phone();
+				}
+			?>
 			
+			<?php if ( ( is_active_sidebar( 'sidebar_above_content' ) || is_front_page() ) && !$is_phone ) : ?>
+				
 				<div id="above-content" class="hidden-phone">
 
 					<div id="inner-above-content" class="wrap clearfix">
-					
-						<?php //get_template_part( 'homepage', 'feature' ); ?>
-						<?php echo do_shortcode("[metaslider id=73]"); ?>
 
 						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
 				
