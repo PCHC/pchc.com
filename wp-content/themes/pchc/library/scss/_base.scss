@@ -1583,6 +1583,40 @@ FEATURE STYLES
 	}
 }
 
+
+/*********************
+BELOW CONTENT SERVICES
+*********************/
+#below-content {
+	li {
+		float: left;
+		width: 50%;
+		margin: 0;
+		padding: 0;
+		
+		a {
+			display: block;
+			text-align: center;
+			margin: 0.25em 0.5em;
+			font-family: $sans-serif;
+			background: mix($pchc-blue, #FFF, 7%);
+			line-height: 2.5em;
+			text-decoration: none;
+			@include text-shadow(0 1px 0 #FFF);
+			@include border-radius(3px);
+			@include transition(0.15s all ease-out);
+			
+			&:hover {
+				background: $pchc-blue;
+				color: #FFF;
+				@include text-shadow(none);
+				@include box-shadow(0 3px 5px rgba(#000, 0.3) inset);
+			}
+		}
+	}
+}
+
+
 /*********************
 FOOTER STYLES
 *********************/

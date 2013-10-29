@@ -37,18 +37,24 @@ class PCHC_Services_List extends WP_Widget {
 		extract( $args );
 		
 		//Our variables from the widget settings.
-		$title = apply_filters('widget_title', 'All Services' );
+		$title = apply_filters('widget_title', $instance['title'] );
 		
 		echo $before_widget;
 
 		// Display the widget title 
-		if ( $title )
+		if ( $title ) {
+			
+			if ( $instance['toggle'] ) {
 			echo '<button type="button" class="toggle" data-toggle-target="~ .allservices">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>';
+			}
+					
 			echo $before_title . $title . $after_title;
+			
+		}
 
 	
 
@@ -66,7 +72,11 @@ class PCHC_Services_List extends WP_Widget {
 
         if( $the_posts->have_posts() ) { 
         
-	        echo '<ul class="toggle-init-hide allservices">';
+			if( $instance['toggle'] ) {
+				echo '<ul class="toggle-init-hide allservices">';
+	        } else {
+		        echo '<ul class="allservices">';
+	        }
 	      
 	        while( $the_posts->have_posts() ) { $the_posts->the_post(); ?>
                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -87,6 +97,9 @@ class PCHC_Services_List extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		
+		$instance['title'] = esc_attr($new_instance['title']);
+		$instance['toggle'] = esc_attr($new_instance['toggle']);
+		
 		//print_r($new_instance);
 		//exit;
 
@@ -99,10 +112,14 @@ class PCHC_Services_List extends WP_Widget {
 
 	
 	function form( $instance ) {
+		$title = esc_attr($instance['title']);
+		$toggle = esc_attr($instance['toggle']);
 		?>
-
-		<p>
-			<em>This widget has no configurable options</em>
+		
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label><br>
+		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
+		
+		<p><input type="checkbox" <?php checked( $toggle, 'true' ); ?> name="<?php echo $this->get_field_name('toggle') ?>" value="false" id="<?php echo $this->get_field_id('toggle') ?>" /> <label for="<?php echo $this->get_field_id('toggle') ?>"><?php _e( 'Make widget toggle open & closed' ); ?></label>
 		</p>
 
 	<?php }
