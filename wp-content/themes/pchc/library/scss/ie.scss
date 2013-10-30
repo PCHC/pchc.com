@@ -67,4 +67,26 @@ body {
 
 .lt-ie8 {
 	@import "font-awesome-ie7";
+	
+	.browser-alert {
+		background: #fcf8e3;
+		border: 3px solid #c09853;
+		color: #C0985B;
+		font-family: $sans-serif;
+		padding: 0.5em;
+		font-size: 0.9em;
+		text-align: center;
+		
+		a {
+			color: #c09853;
+			font-weight: bold;
+			&:hover {
+				color: $pchc-blue;
+			}
+		}
+		
+		p {
+			margin: 0;
+		}
+	}
 }

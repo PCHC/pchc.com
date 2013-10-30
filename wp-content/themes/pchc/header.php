@@ -53,6 +53,19 @@
 		</script>
 		<!-- end analytics -->
 		
+		<!-- Pingdom monitoring -->
+		<script>
+		var _prum = [['id', '52713701abe53d4463000000'],
+		             ['mark', 'firstbyte', (new Date()).getTime()]];
+		(function() {
+		    var s = document.getElementsByTagName('script')[0]
+		      , p = document.createElement('script');
+		    p.async = 'async';
+		    p.src = '//rum-static.pingdom.net/prum.min.js';
+		    s.parentNode.insertBefore(p, s);
+		})();
+		</script>
+		
 		<!-- W3TC-include-js-head -->
 
 	</head>
@@ -60,6 +73,12 @@
 	<body <?php body_class(); ?>>
 
 		<div id="container">
+		
+			
+			<div class="browser-alert">
+				<p>It looks like you are using an out-of-date web browser. PCHC.com may not display correctly in older browsers. Please consider updating. <a href="http://www.browsehappy.com/">Learn More ></a>
+			</div>
+			
 
 			<header class="header" role="banner">
 
