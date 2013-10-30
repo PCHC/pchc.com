@@ -73,6 +73,12 @@
 	<body <?php body_class(); ?>>
 
 		<div id="container">
+		
+			
+			<div class="browser-alert">
+				<p>It looks like you are using an out-of-date web browser. PCHC.com may not display correctly in older browsers. Please consider updating. <a href="http://www.browsehappy.com/">Learn More ></a>
+			</div>
+			
 
 			<header class="header" role="banner">
 
