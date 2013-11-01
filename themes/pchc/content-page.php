@@ -11,8 +11,21 @@
 	<section class="entry-content clearfix" itemprop="articleBody">
 		<?php if( has_post_thumbnail() ) {
 			$image_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
-			$imgwidth = $image_data[1];
-			$imgheight = $image_data[2];
+			// Check to see if the data gives us width & height
+			if( !empty( $image_data[1] ) ) {
+				$imgwidth = $image_data[1];
+				$imgheight = $image_data[2];
+			} else {
+				// Remove "i[0-9].wp.com/" from Photon image url to get local image
+				$pattern = '/i[0-9]{3}\.wp\.com\//i';
+				$replacement = '';
+				$local_img_full = preg_replace( $pattern, $replacement, $image_data[0] );
+				
+				// Get dimensions of local fullsize image
+				$local_image_size = getimagesize( $local_img_full );
+				$imgwidth = $local_image_size[0];
+				$imgheight = $local_image_size[1];
+			}
 			
 			if( $imgwidth / $imgheight < 1.7 ) {
 				the_post_thumbnail( 'pchc-thumb-300w', array(
