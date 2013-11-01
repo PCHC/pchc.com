@@ -132,7 +132,7 @@ function bones_scripts_and_styles() {
     // ie-only style sheet
     wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
     
-    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '' );
+    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '' );
     
     wp_register_style( 'google-webfonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
 
