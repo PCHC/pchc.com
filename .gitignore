@@ -1,0 +1,24 @@
+# Ignore folders
+images/
+plugins/
+w3tc-config/
+uploads/
+upgrade/
+cache/
+
+# Ignore specific files
+advanced-cache.php
+db.php
+object-cache.php
+NwcH4gA97Oaji7hD.php
+.htaccess
+
+# Ignore data and junk files
+*.DS_Store
+.sass-cache/
+*Thumbs.DB
+
+# Don’t ignore these custom plugins
+!plugins/pchc-custom-posts/
+!plugins/pchc-subpages/
+!plugins/pchc-services-list.php
