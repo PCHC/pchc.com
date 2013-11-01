@@ -219,6 +219,9 @@ function bones_theme_support() {
 			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
 		)
 	);
+	
+	// Declaring WooCommerce support
+	add_theme_support( 'woocommerce' );
 } /* end bones theme support */
 
 
