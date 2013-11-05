@@ -66,7 +66,7 @@ function custom_locations() {
 	
     /* this adds your post tags to your custom post type */
 	//register_taxonomy_for_object_type('post_tag', 'practice');
-	
+	flush_rewrite_rules( false );
 } 
 
 	// adding the function to the Wordpress init
@@ -135,7 +135,7 @@ function custom_services() {
 	
     /* this adds your post tags to your custom post type */
 	//register_taxonomy_for_object_type('post_tag', 'practice');
-	
+	flush_rewrite_rules( false );
 } 
 
 	// adding the function to the Wordpress init
@@ -205,7 +205,7 @@ function custom_providers() {
 	
     /* this adds your post tags to your custom post type */
 	//register_taxonomy_for_object_type('post_tag', 'practice');
-	
+	flush_rewrite_rules( false );
 } 
 
 	// adding the function to the Wordpress init
