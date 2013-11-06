@@ -441,12 +441,6 @@ function modify_post_mime_types( $post_mime_types ) {
 			__( 'Manage PDFs' ), 
 			_n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span class="count">(%s)</span>' )
 		);
-		
-	$post_mime_types['text/csv'] = array( 
-			__( 'CSVs' ), 
-			__( 'Manage CSVs' ), 
-			_n_noop( 'CSV <span class="count">(%s)</span>', 'CSVs <span class="count">(%s)</span>' )
-		);
 
 	// then we return the $post_mime_types variable
 	return $post_mime_types;
