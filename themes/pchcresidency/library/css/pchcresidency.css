@@ -62,17 +62,17 @@ header.header {
 	border-radius: 6px;
 }
 
-.alignleft, img.alignleft, {
+.alignleft, img.alignleft {
 	float: left;
 	margin: 0 20px 20px 10px;
 }
 
-.alignright, img.alignright, {
+.alignright, img.alignright {
 	float: right;
 	margin: 0 10px 20px 20px;
 }
 
-.aligncenter, img.aligncenter, {
+.aligncenter, img.aligncenter {
 	margin: 0 auto 20px auto;
 }
 
