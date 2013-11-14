@@ -19,6 +19,9 @@ NwcH4gA97Oaji7hD.php
 .sass-cache/
 *Thumbs.DB
 
+# Don’t ignore theme image folders
+!themes/pchc*/library/images/
+
 # Don’t ignore these custom plugins
 !plugins/pchc-custom-posts/
 !plugins/pchc-subpages/

@@ -123,6 +123,26 @@ POSTS & CONTENT STYLES
 			
 } /* end .entry-content */
 
+.post-type-archive {
+		
+	.type-provider {
+		&.content-excerpt {
+			width: 32.7%;
+			padding: 1em;
+			margin: 0;
+			border: none;
+			display: inline-block;
+			vertical-align: top;
+
+			.thumb-provider {
+				float: none;
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+
 /* at this larger size, we can start to align images */
 .alignleft, img.alignleft { 
 	margin-right: 1.5em;

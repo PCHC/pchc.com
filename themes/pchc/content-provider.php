@@ -20,14 +20,16 @@
 	<section class="entry-content clearfix" itemprop="articleBody">
 	
 		<?php the_post_thumbnail( 'pchc-thumb-300w', array(
-				'class'	=>	'alignright polaroid',
+				'class'	=>	'alignright rounded',
 			)
 		); ?>
 	
 		<?php the_content(); ?>
 		
 		<?php
-			$fields = get_fields();
+			if( function_exists('get_fields') )
+				$fields = get_fields();
+			
 			
 			if( $fields )
 			{
@@ -57,7 +59,7 @@
 	<footer class="article-footer">
 		<?php the_tags('<p class="tags"><span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', '</p>'); ?>
 		
-		<?php MRP_show_related_posts(); ?>
+		<?php if( function_exists('MRP_show_related_posts') ) MRP_show_related_posts(); ?>
 		
 	</footer> <!-- end article footer -->
 
