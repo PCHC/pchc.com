@@ -872,7 +872,39 @@ img {
 		.post-type-archive {
 		
 			.type-provider {
-				
+				&.content-excerpt {
+					padding: 1em 0;
+					margin: 0;
+					border: none;
+					display: block;
+					vertical-align: top;
+
+					.thumb-provider {
+						float: right;
+						max-width: 33%;
+						margin-left: 1em;
+
+						&:after {
+							display: block;
+							content: "";
+							clear: both;
+						}
+					}
+
+					.provider-archive-related {
+						font-size: 0.8em;
+						line-height: 1.2em;
+						margin-bottom: 0.5em;
+
+						a {
+							text-decoration: none;
+						}
+
+						.related-title {
+							color: #555;
+						}
+					}
+				}
 			}
 			
 			.type-service {

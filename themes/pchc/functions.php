@@ -42,7 +42,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'pchc-thumb-128w', 128, 9999 );
+add_image_size( 'pchc-thumb-provider', 205, 205, true );
 add_image_size( 'pchc-thumb-300w', 300, 9999 );
 add_image_size( 'pchc-thumb-750w', 750, 9999 );
 add_image_size( 'pchc-location', 750, 420, true );
