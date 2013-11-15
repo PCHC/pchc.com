@@ -139,7 +139,7 @@ if( !empty( $_POST ) ) {
 							// 	);
 							// }
 							
-							$posts_per_page = $_POST ? -1 : 20;
+							$posts_per_page = $_POST ? -1 : 21;
 							$nopaging = $_POST ? true : false;
 							
 							$args = array(
