@@ -5,6 +5,7 @@ w3tc-config/
 uploads/
 upgrade/
 cache/
+backupwordpress*/
 
 # Ignore specific files
 advanced-cache.php
