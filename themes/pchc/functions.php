@@ -152,6 +152,19 @@ function bones_register_sidebars() {
 	*/
 } // don't remove this bracket!
 
+/************* EMAIL FILTERS *********************/
+
+function new_mail_from( $old ) {
+	return 'noreply@pchc.com';
+}
+
+function new_mail_from_name( $old ) {
+	return 'PCHC.com';
+}
+
+add_filter( 'wp_mail_from', 'new_mail_from' );
+add_filter( 'wp_mail_from_name', 'new_mail_from_name' );
+
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
