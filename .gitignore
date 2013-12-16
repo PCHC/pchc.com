@@ -6,6 +6,7 @@ uploads/
 upgrade/
 cache/
 backupwordpress*/
+themes/twentyfourteen/
 
 # Ignore specific files
 advanced-cache.php
