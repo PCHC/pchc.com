@@ -204,4 +204,35 @@ function bones_comments($comment, $args, $depth) {
 <?php
 } // don't remove this bracket!
 
+function pchc_customize_register( $wp_customize ) {
+	//All our sections, settings, and controls will be added here
+	$wp_customize->add_setting( 'analytics_code' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_section( 'pchc_new_section_analytics' , array(
+		'title'      => __( 'Google Analytics', 'pchc' ),
+		'priority'   => 30,
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'analytics_code',
+		array(
+			'label'          => __( 'Drop analytics code here:', 'pchc' ),
+			'section'        => 'pchc_new_section_analytics',
+			'settings'       => 'analytics_code',
+			'type'           => 'text',
+		)
+	) );
+}
+add_action( 'customize_register', 'pchc_customize_register' );
+
+function pchc_customize_analytics() {
+	echo get_theme_mod( 'analytics_code' );
+}
+
+add_action( 'wp_head', 'pchc_customize_analytics', 999);
+
 ?>
