@@ -206,14 +206,15 @@ function bones_comments($comment, $args, $depth) {
 
 function pchc_customize_register( $wp_customize ) {
 	//All our sections, settings, and controls will be added here
+
+	$wp_customize->add_section( 'pchc_analytics' , array(
+		'title'      => __( 'Google Analytics', 'pchc' ),
+		'priority'   => 1000,
+	) );
+
 	$wp_customize->add_setting( 'analytics_code' , array(
 		'default'     => '',
 		'transport'   => 'refresh',
-	) );
-
-	$wp_customize->add_section( 'pchc_new_section_analytics' , array(
-		'title'      => __( 'Google Analytics', 'pchc' ),
-		'priority'   => 30,
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control(
@@ -221,9 +222,98 @@ function pchc_customize_register( $wp_customize ) {
 		'analytics_code',
 		array(
 			'label'          => __( 'Drop analytics code here:', 'pchc' ),
-			'section'        => 'pchc_new_section_analytics',
+			'section'        => 'pchc_analytics',
 			'settings'       => 'analytics_code',
 			'type'           => 'text',
+		)
+	) );
+
+
+	$wp_customize->add_section( 'pchc_header_links', array(
+		'title'	=> __( 'Header Links', 'pchc' ),
+		'priority'	=> 1001,
+	) );
+
+	$wp_customize->add_setting( 'pchc_facebook_url' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_facebook_url',
+		array(
+			'label'          => __( 'Facebook URL', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_facebook_url',
+			'type'           => 'text',
+		)
+	) );
+
+	$wp_customize->add_setting( 'pchc_twitter_url' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_twitter_url',
+		array(
+			'label'          => __( 'Twitter URL', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_twitter_url',
+			'type'           => 'text',
+		)
+	) );
+
+	$wp_customize->add_setting( 'pchc_youtube_url' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_youtube_url',
+		array(
+			'label'          => __( 'YouTube URL', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_youtube_url',
+			'type'           => 'text',
+		)
+	) );
+
+	$wp_customize->add_setting( 'pchc_google_url' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_google_url',
+		array(
+			'label'          => __( 'Google+ URL', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_google_url',
+			'type'           => 'text',
+		)
+	) );
+
+	$wp_customize->add_setting( 'pchc_head_links' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_head_links',
+		array(
+			'label'          => __( 'Show Find Physician / eHealth / Billpay / Donate links', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_head_links',
+			'type'           => 'checkbox',
+			'choices'	=> array(
+				'1'	=> __('')
+			)
 		)
 	) );
 }
