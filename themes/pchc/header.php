@@ -81,34 +81,50 @@
 						<?php endif; ?>
 
 						<div id="header-icons" class="visible-desktop clearfix">
-							<a href="<?php echo home_url(); ?>/providers/">
-									<i class="icon-user-md"></i>
-								<span>Find a Physician</span>
-							</a>
+
+							<?php if( get_theme_mod( 'pchc_head_links' ) ) : ?>
+								<a href="<?php echo home_url(); ?>/providers/">
+										<i class="icon-user-md"></i>
+									<span>Find a Physician</span>
+								</a>
+								
+								<a href="<?php echo home_url(); ?>/patient-resources/pchc-ehealth/">
+									<i class="icon-medkit"></i>
+									<span>eHealth Login</span>
+								</a>
+								
+								<a href="<?php echo home_url(); ?>/online-billpay/">
+									<i class="icon-money"></i>
+									<span>Online Billpay</span>
+								</a>
+								
+								<a href="<?php echo home_url(); ?>/donate-online/">
+									<i class="icon-gift"></i>
+									<span>Donate Online</span>
+								</a>
+							<?php endif; ?>
 							
-							<a href="<?php echo home_url(); ?>/patient-resources/pchc-ehealth/">
-								<i class="icon-medkit"></i>
-								<span>eHealth Login</span>
-							</a>
-							
-							<a href="<?php echo home_url(); ?>/online-billpay/">
-								<i class="icon-money"></i>
-								<span>Online Billpay</span>
-							</a>
-							
-							<a href="<?php echo home_url(); ?>/donate-online/">
-								<i class="icon-gift"></i>
-								<span>Donate Online</span>
-							</a>
-							
-							<a href="http://www.facebook.com/PenobscotCommunityHealthCare" target="_blank">
+							<a href="<?php echo get_theme_mod( 'pchc_facebook_url' ) ? get_theme_mod( 'pchc_facebook_url' ) : 'https://www.facebook.com/PenobscotCommunityHealthCare'; ?>" target="_blank">
 								<i class="icon-facebook-sign"></i>
 							</a>
+
+							<?php if( get_theme_mod( 'pchc_twitter_url' ) ) : ?>
+								<a href="<?php echo get_theme_mod( 'pchc_twitter_url' ); ?>" target="_blank">
+									<i class="icon-twitter-sign"></i>
+								</a>
+							<?php endif; ?>
+
+							<?php if( get_theme_mod( 'pchc_google_url' ) ) : ?>
+								<a href="<?php echo get_theme_mod( 'pchc_google_url' ); ?>" target="_blank">
+									<i class="icon-google-plus-sign"></i>
+								</a>
+							<?php endif; ?>
 							
-							<a href="http://www.youtube.com/pchcvideo" target="_blank">
-								<i class="icon-youtube-sign"></i>
-							</a>
-							
+							<?php if( get_theme_mod( 'pchc_youtube_url' ) ) : ?>
+								<a href="<?php echo get_theme_mod( 'pchc_youtube_url' ); ?>" target="_blank">
+									<i class="icon-youtube-sign"></i>
+								</a>
+							<?php endif; ?>
 						</div>
 						
 						<?php get_search_form( ); ?>
