@@ -1,0 +1,6 @@
+#logo {
+
+	a {
+		@include vector-bg-with-fallback(pchc-dental-logo);
+	}
+}

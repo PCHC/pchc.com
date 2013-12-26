@@ -207,6 +207,8 @@ function bones_comments($comment, $args, $depth) {
 function pchc_customize_register( $wp_customize ) {
 	//All our sections, settings, and controls will be added here
 
+
+	// ANALYTICS SECTION
 	$wp_customize->add_section( 'pchc_analytics' , array(
 		'title'      => __( 'Google Analytics', 'pchc' ),
 		'priority'   => 1000,
@@ -229,6 +231,7 @@ function pchc_customize_register( $wp_customize ) {
 	) );
 
 
+	// HEADER LINKS SECTION
 	$wp_customize->add_section( 'pchc_header_links', array(
 		'title'	=> __( 'Header Links', 'pchc' ),
 		'priority'	=> 1001,
@@ -316,6 +319,42 @@ function pchc_customize_register( $wp_customize ) {
 			)
 		)
 	) );
+
+	$wp_customize->add_setting( 'pchc_phone_number' , array(
+		'default'     => '207-404-8000',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_phone_number',
+		array(
+			'label'          => __( 'Phone Number', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_phone_number',
+			'type'           => 'text',
+		)
+	) );
+
+	$wp_customize->add_setting( 'pchc_locations_hours' , array(
+		'default'     => '1',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_locations_hours',
+		array(
+			'label'          => __( 'Show Locations / Hours Link', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_locations_hours',
+			'type'           => 'checkbox',
+			'choices'	=> array(
+				'1'	=> __('')
+			)
+		)
+	) );
+
 }
 add_action( 'customize_register', 'pchc_customize_register' );
 
