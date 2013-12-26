@@ -22,6 +22,7 @@ NwcH4gA97Oaji7hD.php
 
 # Don’t ignore theme image folders
 !themes/pchc*/library/images/
+!themes/pchc*/images/
 
 # Don’t ignore these custom plugins
 !plugins/pchc-custom-posts/
