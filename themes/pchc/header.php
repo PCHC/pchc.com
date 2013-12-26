@@ -130,7 +130,9 @@
 						<?php get_search_form( ); ?>
 						
 						<p class="header-contact clearfix">
-							<a href="tel:+12074048000">207-404-8000</a> &bull; <a href="<?php echo home_url(); ?>/locations/">Locations &amp; Hours</a>
+							<?php echo get_theme_mod( 'pchc_phone_number' ); ?> <?php if( get_theme_mod( 'pchc_locations_hours' ) ) : ?>
+								&bull; <a href="<?php echo home_url(); ?>/locations/">Locations &amp; Hours</a>
+							<?php endif; ?>
 						</p>
 					
 					</div>
