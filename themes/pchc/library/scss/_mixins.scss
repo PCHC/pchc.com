@@ -75,6 +75,23 @@ $link-color:        $pchc-blue;
 //$link-hover:        darken($link-color, 9%);
 $link-hover:		$pchc-red;
 
+$font-size-base:          14px !default;
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+// Tables
+// -------------------------
+
+$table-cell-padding:                 8px !default;
+$table-condensed-cell-padding:       5px !default;
+
+$table-bg:                           transparent !default; // overall background-color
+$table-bg-accent:                    #f9f9f9 !default; // for striping
+$table-bg-hover:                     #f5f5f5 !default;
+$table-bg-active:                    $table-bg-hover !default;
+
+$table-border-color:                 #ddd !default; // table and cell border
+
 /*
 Here's a great tutorial on how to
 use color variables properly:
