@@ -17,5 +17,3 @@ WebHooks! Whenever an update is pushed to the GitHub repository, it hits an addr
 ## I've got questions! HELP!
 
 Get in touch with Chris Violette at PCHC. He's the one running the show on the website.
-
-This edit to test GitHub webhook
