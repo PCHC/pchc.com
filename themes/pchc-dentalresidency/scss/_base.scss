@@ -1,3 +1,10 @@
+#logo {
+
+	a {
+		@include vector-bg-with-fallback(pchc-dental-logo);
+	}
+}
+
 blockquote {
 	padding: 10px 20px;
 	margin: 0 0 20px;
