@@ -14,6 +14,17 @@ This repository just hosts the theme files and a few custom plugins. Since core 
 
 WebHooks! Whenever an update is pushed to the GitHub repository, it hits an address on PCHC.com with a POST request, which then executes a `git pull` in its own repository (on the master branch, by the way). So, changes are almost instantaneous. Easy peasy, lemon squeezy.
 
+## What do I need to make things go smoothly?
+
+First off, you'll need to know your way around [Git](http://git-scm.com/) and GitHub. [Try GitHub](http://try.github.io/) is a good crash-course in both.
+
+Secondly, you'll need a general understanding of HTML, CSS, PHP, and [WordPress](http://wordpress.org/).
+
+Thirdly, all the themes use [SASS](http://sass-lang.com/) stylesheets with [Compass](http://compass-style.org/), which do a lot of awesome things and then compile into a regular CSS file. You can either:
+
+ * install SASS & Compass and run `compass watch` from a command line in the `SCSS` directory of the theme you're working on. This will watch for any changes to the `.scss` files and compile them into the corresponding `.css` files.
+ * download a GUI application like [Scout](http://mhs.github.io/scout-app/) to do the command-line stuff for you
+
 ## I've got questions! HELP!
 
 Get in touch with Chris Violette at PCHC. He's the one running the show on the website.
