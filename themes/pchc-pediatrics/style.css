@@ -1,0 +1,9 @@
+/*!
+Theme Name:	PCHC Pediatrics
+Theme URI:	http://www.themble.com/bones
+Description:	This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="https://github.com/eddiemachado/bones/issues" title="Bones Issues">Bones Issues</a> page on Github. You'll want to customize this for your clients with your own information.
+Author:		Chris Violette
+Author URI:	http://www.cv-designs.com/
+Template:	pchc
+Version:	1.0.0
+*/blockquote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #eee}blockquote p{font-size:17.5px;font-weight:300;line-height:1.25;font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}blockquote p:last-child{margin-bottom:0}blockquote small,blockquote .small{display:block;line-height:1.428571429;color:#999}blockquote small:before,blockquote .small:before{content:'\2014 \00A0'}blockquote:last-child{margin-bottom:0}blockquote:before,blockquote:after{content:""}h2 small{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:200;font-size:0.65em;color:#999}@media only screen and (min-width: 481px){#logo a{background-image:url("images/pchc-pediatrics-logo.png");background-image:none,url("images/pchc-pediatrics-logo.svg")}}
