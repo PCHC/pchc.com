@@ -25,6 +25,13 @@ Thirdly, all the themes use [SASS](http://sass-lang.com/) stylesheets with [Comp
  * install SASS & Compass and run `compass watch` from a command line in the `SCSS` directory of the theme you're working on. This will watch for any changes to the `.scss` files and compile them into the corresponding `.css` files.
  * download a GUI application like [Scout](http://mhs.github.io/scout-app/) to do the command-line stuff for you
 
+#### Tools of the trade:
+
+Here's some of the stuff I use, but use whatevever works for you:
+
+ * Text Editor -- [Sublime Text](http://www.sublimetext.com/)
+ * GUI Git client -- [SourceTree](http://www.sourcetreeapp.com/)
+
 ## I've got questions! HELP!
 
 Get in touch with Chris Violette at PCHC. He's the one running the show on the website.
