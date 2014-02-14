@@ -124,7 +124,7 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'pchc-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+    wp_register_script( 'pchc-modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 
     // register main stylesheet
     wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -158,11 +158,20 @@ function bones_scripts_and_styles() {
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
+
+    wp_deregister_script('jquery');
+	wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null);
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'pchc-js' );
 
   }
 }
+
+function pchc_footer_filter() {
+	echo '<script>window.jQuery || document.write(\'<script src="/wp-includes/js/jquery/jquery.js">\x3C/script>\')</script>' . "\n";
+	echo '<script>window.Modernizr || document.write(\'<script src="' . get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js">\x3C/script>\')</script>' . "\n";
+}
+add_filter( 'wp_footer' , 'pchc_footer_filter' );
 
 /*********************
 THEME SUPPORT
