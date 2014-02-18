@@ -73,26 +73,15 @@ jQuery(document).ready(function($) {
 //		$('~ .nav, ~ ul', this).slideUp();
 //	});
 	
-	$('.toggle').each(function(){
+	$('.toggle').click( function(e){
+		e.preventDefault();
 		var toggleTarget = $(this).data('toggleTarget');
 		if($(toggleTarget, this).length > 0) {
-			$(this).toggle(function(){
-				$(toggleTarget, this).addClass('toggle-show').removeClass('toggle-hide');
-			}, function(){
-				$(toggleTarget, this).addClass('toggle-hide').removeClass('toggle-show');
-			});
+			$(toggleTarget, this).toggleClass('toggle-show');
 		} else if($(this).parent().find(toggleTarget).length > 0) {
-			$(this).toggle(function(){
-				$(this).parent().find(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
-			}, function(){
-				$(this).parent().find(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
-			});
+			$(this).parent().find(toggleTarget).toggleClass('toggle-show');
 		} else {
-			$(this).toggle(function(){
-				$(toggleTarget).addClass('toggle-show').removeClass('toggle-hide');
-			}, function(){
-				$(toggleTarget).addClass('toggle-hide').removeClass('toggle-show');
-			});
+			$(toggleTarget).toggleClass('toggle-show');
 		}
 	});
 	
