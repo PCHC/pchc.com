@@ -11,7 +11,7 @@
 				)
 			); ?>
 		<?php else : ?>
-			<img src="<?php echo get_stylesheet_directory_uri() . '/library/images/no-provider.jpg'; ?>" alt="<?php the_title(); ?>" class="rounded thumb-provider">
+			<img src="<?php echo get_template_directory_uri() . '/library/images/no-provider.jpg'; ?>" alt="<?php the_title(); ?>" class="rounded thumb-provider">
 		<?php endif; ?>
 		</a>
 
