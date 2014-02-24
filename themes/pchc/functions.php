@@ -364,4 +364,88 @@ function pchc_customize_analytics() {
 
 add_action( 'wp_head', 'pchc_customize_analytics', 999);
 
+function pchc_pre_get_posts( $query )
+{
+	// validate
+	if( is_admin() ){
+		return $query;
+	}
+
+	// project example
+	if( isset( $query->query_vars['post_type'] ) ) {
+		if( $query->query_vars['post_type'] == 'location' ) {
+
+			$query->set('orderby', 'menu_order');
+			$query->set('order', 'ASC');
+			$query->set('posts_per_page', -1);
+			$query->set('nopaging', true);
+
+		} else if( $query->query_vars['post_type'] == 'service' ) {
+
+			$query->set('orderby', 'title');
+			$query->set('order', 'ASC');
+			$query->set('posts_per_page', 5);
+			$query->set('nopaging', true);
+
+		} else if( $query->query_vars['post_type'] == 'provider' ) {
+
+			$query->set('orderby', 'title');
+			$query->set('order', 'ASC');
+			$query->set('posts_per_page', 21);
+
+			if( !empty( $_GET['filter'] ) ) {
+				$related_posts = array();
+				$filter_posts =  $_GET['filter'];
+				
+				$related_posts = pchc_MRP_get_related_providers( $filter_posts );
+				
+				$filtered_providers = array();
+				
+				if( !empty( $related_posts ) ) {
+				
+					foreach( $related_posts as $k => $v ) {
+						if( !empty( $v ) ) {
+							foreach( $v as $key => $value ) {
+								array_push( $filtered_providers, $key );
+							}
+						}
+					}
+				
+				}
+				
+				$filtered_providers_unique = array_unique( $filtered_providers );
+				if( !empty( $filtered_providers_unique ) ){
+					//$query->set('posts_per_page', -1);
+					//$query->set('nopaging', true);
+					$query->set('paged', get_query_var('paged'));
+					$query->set('post__in', $filtered_providers_unique);
+				} else {
+					$_GET['filter'] = '';
+					$_GET['flash'] = 'Sorry, no providers were found matching that filter.';
+				}
+				
+			}
+		}
+	}   
+
+	// always return
+	return $query;
+
+}
+add_action('pre_get_posts', 'pchc_pre_get_posts');
+
+function pchc_MRP_get_related_providers( $related_post_ids = array() ) {
+
+
+	
+	$rel_posts = array();
+
+	foreach( $related_post_ids as $post_id ) {
+		array_push( $rel_posts, MRP_get_related_posts( $post_id, false, true, 'provider' ) );
+	}
+	
+	return $rel_posts;
+	
+}
+
 ?>
