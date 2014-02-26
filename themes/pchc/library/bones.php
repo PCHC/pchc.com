@@ -124,7 +124,7 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'pchc-modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
+    wp_register_script( 'pchc-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 
     // register main stylesheet
     wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -132,9 +132,9 @@ function bones_scripts_and_styles() {
     // ie-only style sheet
     wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
     
-    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '' );
+    wp_register_style( 'font-awesome', 'https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '' );
     
-    wp_register_style( 'google-webfonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
+    wp_register_style( 'google-webfonts', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -160,7 +160,7 @@ function bones_scripts_and_styles() {
     */
 
     wp_deregister_script('jquery');
-	wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null);
+	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null);
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'pchc-js' );
 
