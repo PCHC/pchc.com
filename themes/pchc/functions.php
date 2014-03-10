@@ -25,6 +25,10 @@ sidebars, comments, ect.
 */
 require_once('library/bones.php'); // if you remove this, bones will break
 /*
+2. library/custom-posts.php
+	- Adds locations/services/providers to the theme.
+*/
+require_once('library/custom-posts.php');
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets

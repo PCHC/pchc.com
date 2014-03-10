@@ -9,4 +9,16 @@
 		    wp_enqueue_style( 'pchc-child-stylesheet' );
 	    }
     }
+
+    function pchc_custom_locations() {
+		// Disables Locations custom posts -- remove this function to enable in this child theme.
+	}
+
+	function pchc_custom_providers() {
+		// Disables Providers custom posts -- remove this function to enable in this child theme.
+	}
+
+	function pchc_custom_services() {
+		// Disables Services custom posts -- remove this function to enable in this child theme.
+	}
 ?>
