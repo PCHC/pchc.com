@@ -10,6 +10,33 @@
 	    }
     }
 
+    function order_by_lastname( $orderby, $query ) {
+
+	    // first you should check to make sure sure you're only filtering the particular query
+	    // you want to hack. return $orderby if its not the correct query;
+	    global $wpdb;
+
+	    $orderby_statement = "SUBSTR( LTRIM({$wpdb->posts}.post_title), LOCATE(' ',LTRIM({$wpdb->posts}.post_title)))";
+	    return $orderby_statement;
+
+	}
+
+	function peds_pre_get_posts( $query ) {
+		// validate
+		if( is_admin() ){
+			return $query;
+		}
+
+		if( isset( $query->query_vars['post_type'] ) ) {
+			if( $query->query_vars['post_type'] == 'staff' ) {
+				add_filter( 'posts_orderby', 'order_by_lastname' );
+			}
+		}
+
+		return $query;
+	}
+	add_action('pre_get_posts', 'peds_pre_get_posts');
+
     
 	/* function pchc_custom_locations() {
 		// Disables Locations custom posts -- remove this function to enable in this child theme.
