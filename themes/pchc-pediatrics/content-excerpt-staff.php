@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt content-excerpt-provider'); ?> role="article">
+<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix content-excerpt content-excerpt-provider type-provider'); ?> role="article">
 
 	<?php $the_meta = get_post_meta( $post->ID ); ?>
 
