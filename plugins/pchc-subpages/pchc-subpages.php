@@ -39,7 +39,7 @@ function PCHC_subpage_peek( $order = 'DESC', $orderby = 'date', $excerpt = 'true
 	
 	// create output
 	if ($subpages->have_posts()) :
-		$output = '<ul>';
+		$output = '<ul class="pchc-subpages">';
 		while ($subpages->have_posts()) : $subpages->the_post();
 			$output .= '<li><'.$titletag.'><a href="'.get_permalink().'">'.get_the_title().'</a></'.$titletag.'>';
 			if( $excerpt == 'true' ) {
