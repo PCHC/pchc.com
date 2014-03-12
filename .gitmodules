@@ -1,0 +1,3 @@
+[submodule "themes/pchc-noahsnotes"]
+	path = themes/pchc-noahsnotes
+	url = git@github.com:pixleight/wordpress-bootstrap.git
