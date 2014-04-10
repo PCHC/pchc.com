@@ -1,3 +1,7 @@
 [submodule "themes/pchc-noahsnotes"]
 	path = themes/pchc-noahsnotes
 	url = git@github.com:pixleight/wordpress-bootstrap.git
+[submodule "themes/pchc-dental"]
+	path = themes/pchc-dental
+	url = git@github.com:pixleight/wordpress-bootstrap.git
+	branch = pchc-dental
