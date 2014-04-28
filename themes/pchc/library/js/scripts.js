@@ -167,3 +167,9 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+// Add data-useragent="" to html element
+// Style IE 10 like this: html[data-useragent*='MSIE 10.0']{}
+// http://css-tricks.com/ie-10-specific-styles/
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
