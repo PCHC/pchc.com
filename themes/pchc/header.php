@@ -36,6 +36,11 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
+
+		<meta property="og:image" content="http://pchc.com/wp-content/themes/pchc/screenshot.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="300">
+		<meta property="og:image:height" content="225">
 		
 		<!-- Pingdom monitoring -->
 		<script>
