@@ -289,6 +289,22 @@ function pchc_customize_register( $wp_customize ) {
 		)
 	) );
 
+	$wp_customize->add_setting( 'pchc_linkedin_url' , array(
+		'default'     => '',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'pchc_linkedin_url',
+		array(
+			'label'          => __( 'LinkedIn URL', 'pchc' ),
+			'section'        => 'pchc_header_links',
+			'settings'       => 'pchc_linkedin_url',
+			'type'           => 'text',
+		)
+	) );
+
 	$wp_customize->add_setting( 'pchc_google_url' , array(
 		'default'     => '',
 		'transport'   => 'refresh',

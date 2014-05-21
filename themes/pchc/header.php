@@ -119,6 +119,12 @@
 								</a>
 							<?php endif; ?>
 
+							<?php if( get_theme_mod( 'pchc_linkedin_url' ) ) : ?>
+								<a href="<?php echo get_theme_mod( 'pchc_linkedin_url' ); ?>" target="_blank">
+									<i class="icon-linkedin-sign"></i>
+								</a>
+							<?php endif; ?>
+
 							<?php if( get_theme_mod( 'pchc_google_url' ) ) : ?>
 								<a href="<?php echo get_theme_mod( 'pchc_google_url' ); ?>" target="_blank">
 									<i class="icon-google-plus-sign"></i>
