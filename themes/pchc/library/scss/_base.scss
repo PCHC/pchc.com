@@ -2372,3 +2372,22 @@ table {
     }
   }
 }
+
+.providers-filter {
+	h4 {
+		margin-bottom: 1em;
+	}	
+}
+.filter-section {
+	ul {
+		margin: 0 0 1em;
+	}
+	li {
+		display: inline-block;
+		width: 49%;
+		padding-left: 3%;
+		vertical-align: top;
+		line-height: 1.2em;
+		margin-bottom: 0.5em;
+	}
+}
