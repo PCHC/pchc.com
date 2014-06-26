@@ -384,6 +384,17 @@ function pchc_customize_analytics() {
 
 add_action( 'wp_head', 'pchc_customize_analytics', 999);
 
+function order_by_lastname( $orderby, $query ) {
+
+    // first you should check to make sure sure you're only filtering the particular query
+    // you want to hack. return $orderby if its not the correct query;
+    global $wpdb;
+
+    $orderby_statement = "SUBSTR( LTRIM({$wpdb->posts}.post_title), LOCATE(' ',LTRIM({$wpdb->posts}.post_title)))";
+    return $orderby_statement;
+
+}
+
 function pchc_pre_get_posts( $query )
 {
 	// validate
@@ -409,7 +420,8 @@ function pchc_pre_get_posts( $query )
 
 		} else if( $query->query_vars['post_type'] == 'provider' ) {
 
-			$query->set('orderby', 'title');
+			//$query->set('orderby', 'title');
+			add_filter( 'posts_orderby', 'order_by_lastname' );
 			$query->set('order', 'ASC');
 			$query->set('posts_per_page', 21);
 

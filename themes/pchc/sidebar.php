@@ -3,6 +3,10 @@
 					<?php if ( is_active_sidebar( 'sidebar_top' ) ) : ?>
 					
 						<div id="sidebar-top">
+
+							<?php if( is_post_type_archive( 'provider' ) ) :
+								get_template_part( 'filter', 'provider' ); 
+							endif; ?>
 						
 							<?php if( is_search() ) : ?>
 								<div class="widget" id="refine-search">
