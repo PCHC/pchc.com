@@ -175,23 +175,3 @@
 				<?php endif; ?>
 
 			</header> <!-- end header -->
-			
-			<?php 
-				if( function_exists( 'wpmd_is_phone' ) ) {
-					$is_phone = wpmd_is_phone();
-				}
-			?>
-			
-			<?php if ( ( is_active_sidebar( 'sidebar_above_content' ) || is_front_page() ) && !$is_phone ) : ?>
-				
-				<div id="above-content" class="hidden-phone">
-
-					<div id="inner-above-content" class="wrap clearfix">
-
-						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
-				
-					</div><!-- end #inner-above-content -->
-					
-				</div><!-- end #above-content -->
-
-			<?php endif; ?>
