@@ -384,7 +384,7 @@ function pchc_customize_analytics() {
 
 add_action( 'wp_head', 'pchc_customize_analytics', 999);
 
-function order_by_lastname( $orderby, $query ) {
+function order_by_lastname( $orderby ) {
 
     // first you should check to make sure sure you're only filtering the particular query
     // you want to hack. return $orderby if its not the correct query;
