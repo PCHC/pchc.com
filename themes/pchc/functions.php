@@ -390,7 +390,7 @@ function order_by_lastname( $orderby ) {
     // you want to hack. return $orderby if its not the correct query;
     global $wpdb;
 
-    if( $query->query_vars['post_type'] == 'provider' ) {
+    if( $query->query_vars['post_type'] == 'provider' || $query->query_vars['post_type'] == 'staff' ) {
     	$orderby_statement = "SUBSTR( LTRIM({$wpdb->posts}.post_title), LOCATE(' ',LTRIM({$wpdb->posts}.post_title)))";
     	return $orderby_statement;
 	} else {
