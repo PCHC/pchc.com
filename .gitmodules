@@ -5,3 +5,7 @@
 	path = themes/pchc-dental
 	url = git@github.com:pixleight/wordpress-bootstrap.git
 	branch = pchc-dental
+[submodule "themes/pchc-peds"]
+	path = themes/pchc-peds
+	url = git@github.com:PCHC/pediatrics.git
+	branch = master
