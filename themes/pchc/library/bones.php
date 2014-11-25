@@ -77,9 +77,9 @@ function bones_head_cleanup() {
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
   // remove WP version from css
-  add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+  // add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
   // remove Wp version from scripts
-  add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+  // add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
 } /* end bones head cleanup */
 
@@ -127,12 +127,12 @@ function bones_scripts_and_styles() {
     wp_register_script( 'pchc-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 
     // register main stylesheet
-    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '3', 'all' );
 
     // ie-only style sheet
-    wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
+    wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '3.6.0' );
     
-    wp_register_style( 'font-awesome', 'https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '' );
+    wp_register_style( 'font-awesome', 'https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '3.2.1' );
     
     wp_register_style( 'google-webfonts', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
 
