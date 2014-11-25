@@ -1572,9 +1572,13 @@ FEATURE STYLES
 *********************/
 	
 #above-content {
-	background: $pchc-blue;
+	background: none;
 	color: #FFF;
 	overflow: hidden;
+
+	.widget {
+		margin-bottom: 0;
+	}
 	
 	.wrap {
 		

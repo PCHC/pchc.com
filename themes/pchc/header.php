@@ -175,3 +175,17 @@
 				<?php endif; ?>
 
 			</header> <!-- end header -->
+			
+			<?php if  ( is_active_sidebar( 'sidebar_above_content' ) && is_front_page() ) : ?>
+				
+				<div id="above-content" class="">
+
+					<div id="inner-above-content" class="wrap clearfix">
+
+						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
+				
+					</div><!-- end #inner-above-content -->
+					
+				</div><!-- end #above-content -->
+
+			<?php endif; ?>
