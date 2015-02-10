@@ -10,6 +10,7 @@
 
     <!-- Google Chrome Frame for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="refresh" content="10;URL=http://www.mainehealthequity.org">
     
     <!-- W3TC-include-css -->
 
