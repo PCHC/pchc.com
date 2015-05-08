@@ -10,4 +10,5 @@
 	url = git@github.com:PCHC/pediatrics.git
 [submodule "themes/pchc-board"]
 	path = themes/pchc-board
-	url = https://github.com/roots/sage.git
+    url = git@github.com:PCHC/pchc-board.git
+    branch = pchc-board/master
