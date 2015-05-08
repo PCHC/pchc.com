@@ -8,3 +8,6 @@
 [submodule "themes/pchc-peds"]
 	path = themes/pchc-peds
 	url = git@github.com:PCHC/pediatrics.git
+[submodule "themes/pchc-board"]
+	path = themes/pchc-board
+	url = https://github.com/roots/sage.git
