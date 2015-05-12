@@ -4,7 +4,7 @@
 					<div id="inner-footer-top" class="inner-footer wrap clearfix">
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 						<p class="accreditation hidden-phone">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/ncqa-2011.png"><br>
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/ncqa-2011.png" alt="NCQA"> <img src="<?php echo get_template_directory_uri(); ?>/library/images/aaahc-2015.png" alt="AAAHC"><br>
 							PCHC is nationally accredited for quality.<br>
 							PCHC is a FTCA Deemed Facility
 						</p>
