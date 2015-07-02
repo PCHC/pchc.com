@@ -505,7 +505,7 @@ function pchc_access_denied_splash() {
 	if ( empty( $blogs ) )
 		wp_die( sprintf( __( 'You attempted to access the "%1$s" dashboard, but you do not currently have privileges on this site. If you believe you should be able to access the "%1$s" dashboard, please contact your network administrator.' ), $blog_name ), 403 );
 
-	$ourput = '<h2>' . __( 'Welcome to the PCHC.com family of websites.' ) . '</h2>';
+	$output = '<h2>' . __( 'Welcome to the PCHC.com family of websites.' ) . '</h2>';
 	$output .= '<p>' . __( 'It looks like you do not have an account for PCHC.com, but for one of our family websites. If you believe this is in error, please ' ) . '<a href="' . esc_url( 'http://pchc.com/new-website#feedback' ) . '" target="_blank">' . __( 'click here to fill out our website feedback form.' ) . '</a>' . '</p>';
 	$output .= '<p>' . __( 'Please view the list below to access the site you would like to visit:' ) . '</p>';
 
