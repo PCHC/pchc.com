@@ -484,4 +484,45 @@ function pchc_MRP_get_related_providers( $related_post_ids = array() ) {
 	
 }
 
+/**
+ * Displays an access denied message when a user tries to view a site's dashboard they
+ * do not have access to.
+ *
+ * @since 3.2.0
+ * @access private
+ */
+function pchc_access_denied_splash() {
+	if ( ! is_user_logged_in() || is_network_admin() )
+		return;
+
+	$blogs = get_blogs_of_user( get_current_user_id() );
+
+	if ( wp_list_filter( $blogs, array( 'userblog_id' => get_current_blog_id() ) ) )
+		return;
+
+	$blog_name = get_bloginfo( 'name' );
+
+	if ( empty( $blogs ) )
+		wp_die( sprintf( __( 'You attempted to access the "%1$s" dashboard, but you do not currently have privileges on this site. If you believe you should be able to access the "%1$s" dashboard, please contact your network administrator.' ), $blog_name ), 403 );
+
+	$ourput = '<h2>' . __( 'Welcome to the PCHC.com family of websites.' ) . '</h2>';
+	$output .= '<p>' . __( 'It looks like you do not have an account for PCHC.com, but for one of our family websites. If you believe this is in error, please ' ) . '<a href="' . esc_url( 'http://pchc.com/new-website#feedback' ) . '" target="_blank">' . __( 'click here to fill out our website feedback form.' ) . '</a>' . '</p>';
+	$output .= '<p>' . __( 'Please view the list below to access the site you would like to visit:' ) . '</p>';
+
+	$output .= '<h3>' . __('Your Sites') . '</h3>';
+	$output .= '<table>';
+
+	foreach ( $blogs as $blog ) {
+		$output .= '<tr>';
+		$output .= "<td><strong>{$blog->blogname}</strong></td>";
+		$output .= '<td><a href="' . esc_url( get_home_url( $blog->userblog_id ) ). '">' . __( 'View Site' ) . '</a></td>';
+		$output .= '</tr>';
+	}
+
+	$output .= '</table>';
+
+	wp_die( $output, 403 );
+}
+add_action( 'admin_page_access_denied', 'pchc_access_denied_splash', 99 );
+
 ?>
