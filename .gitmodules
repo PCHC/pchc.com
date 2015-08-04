@@ -12,3 +12,7 @@
 	path = themes/pchc-board
     url = git@github.com:PCHC/pchc-board.git
     branch = pchc-board/master
+[submodule "themes/hopehouse"]
+	path = themes/hopehouse
+	url = git@github.com:PCHC/hopehouse.git
+	branch = hopehouse
