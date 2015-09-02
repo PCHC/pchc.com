@@ -87,7 +87,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'sidebar_middle',
 		'name' => __('Right Sidebar (middle)', 'bonestheme'),
@@ -97,7 +97,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'sidebar_bottom',
 		'name' => __('Right Sidebar (bottom)', 'bonestheme'),
@@ -107,7 +107,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'sidebar_above_content',
 		'name' => __('Above Content', 'bonestheme'),
@@ -117,7 +117,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'sidebar_below_content',
 		'name' => __('Below Content', 'bonestheme'),
@@ -127,7 +127,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	add_filter('widget_text', 'do_shortcode');
 
 	/*
@@ -431,14 +431,14 @@ function pchc_pre_get_posts( $query )
 
 			if( !empty( $_GET['filter'] ) ) {
 				$related_posts = array();
-				$filter_posts =  $_GET['filter'];
-				
+				$filter_posts =  esc_sql($_GET['filter']);
+
 				$related_posts = pchc_MRP_get_related_providers( $filter_posts );
-				
+
 				$filtered_providers = array();
-				
+
 				if( !empty( $related_posts ) ) {
-				
+
 					foreach( $related_posts as $k => $v ) {
 						if( !empty( $v ) ) {
 							foreach( $v as $key => $value ) {
@@ -446,9 +446,9 @@ function pchc_pre_get_posts( $query )
 							}
 						}
 					}
-				
+
 				}
-				
+
 				$filtered_providers_unique = array_unique( $filtered_providers );
 				if( !empty( $filtered_providers_unique ) ){
 					//$query->set('posts_per_page', -1);
@@ -459,10 +459,10 @@ function pchc_pre_get_posts( $query )
 					$_GET['filter'] = '';
 					$_GET['flash'] = 'Sorry, no providers were found matching that filter.';
 				}
-				
+
 			}
 		}
-	}   
+	}
 
 	// always return
 	return $query;
@@ -473,15 +473,15 @@ add_action('pre_get_posts', 'pchc_pre_get_posts');
 function pchc_MRP_get_related_providers( $related_post_ids = array() ) {
 
 
-	
+
 	$rel_posts = array();
 
 	foreach( $related_post_ids as $post_id ) {
 		array_push( $rel_posts, MRP_get_related_posts( $post_id, false, true, 'provider' ) );
 	}
-	
+
 	return $rel_posts;
-	
+
 }
 
 /**
