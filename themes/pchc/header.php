@@ -182,10 +182,7 @@
 
 					<div id="inner-above-content" class="wrap clearfix">
 
-						<?php // dynamic_sidebar( 'sidebar_above_content' ); ?>
-<a href="http://pchc.com/flushots/?utm_source=website&utm_medium=slider&utm_content=&utm_campaign=flushots">
-<img src="/wp-content/uploads/2015/10/flu-shot_2015-09-29.jpg" alt="Get a flu shot today!">
-</a>
+						<?php dynamic_sidebar( 'sidebar_above_content' ); ?>
 				
 					</div><!-- end #inner-above-content -->
 					
