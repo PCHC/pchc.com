@@ -135,7 +135,7 @@ TOGGLE BUTTONS
 	z-index: 1;
 	@include border-radius(3px);
 //	@include box-shadow(rgba(#FFF, 0.0980392) 0px 1px 0px 0px inset, rgba(#FFF, 0.0745098) 0px 1px 0px 0px);
-	
+
 	.icon-bar {
 		display: block;
 		height: 2px;
@@ -145,17 +145,17 @@ TOGGLE BUTTONS
 		@include border-radius(3px);
 		@include box-shadow(rgba(#000, 0.247059) 0px 1px 0px 0px);
 	}
-	
+
 	&:hover {
 //		background: $toggle-light-blue;
 //		@include background-image(linear-gradient(lighten($toggle-light-blue, 12%), $pchc-blue));
 	}
-	
+
 	&:active {
 //		background: $pchc-darkblue;
 //		@include background-image(linear-gradient($pchc-blue, $toggle-light-blue));
 	}
-	
+
 	&.toggle:before {
 		display: block;
 		content: 'Tap to Expand';
@@ -167,7 +167,7 @@ TOGGLE BUTTONS
 		opacity: 0.8;
 		@include transform(translate(0, -50%));
 	}
-	
+
 	&.toggle-link:before {
 		display: none;
 	}
@@ -209,7 +209,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	a {
 		text-decoration: none;
 	}
-	
+
 	color: $pchc-blue;
 }
 
@@ -256,7 +256,7 @@ HEADER STYLES
 		margin: 0;
 		float: left;
 		width: (100% / 3);
-		
+
 		a {
 			display: block;
 			overflow: hidden;
@@ -271,33 +271,33 @@ HEADER STYLES
 			margin: 10px 0;
 		}
 	}
-	
+
 .header-right {
 	float: right;
 	width: (100% / 3 * 2);
 	margin-top: 10px;
 }
-	
+
 #header-icons {
 	float: right;
 	margin-top: 10px;
 	font-size: 0.75em;
-	
+
 	a {
 		text-decoration: none;
 		color: rgba(#FFF, 0.5);
 		@include transition(all 0.2s ease-in);
-		
+
 		&:hover {
 			color: #FFF;
 		}
 	}
-	
+
 	i {
 		font-size: 2.25em;
 		margin-left: 0.4em;
 	}
-	
+
 	span {
 		display: inline-block;
 		text-align: left;
@@ -313,7 +313,7 @@ HEADER STYLES
 	width: 100%;
 	padding-left: 5%;
 	margin-top: 1em;
-	
+
 	.button.btn, .s {
 		margin: 0 1%;
 		font-size: 1.1em;
@@ -323,7 +323,7 @@ HEADER STYLES
 		font-family: $sans-serif;
 		@include border-radius(3px);
 	}
-	
+
 	.button.btn {
 		float: right;
 		width: 15%;
@@ -332,18 +332,18 @@ HEADER STYLES
 		background: lighten($pchc-blue, 3%);
 		border: 1px solid lighten($pchc-blue, 3%);
 		@include box-shadow(0 4px 0 $pchc-darkblue);
-		
+
 		&:hover {
 			background: lighten($pchc-blue, 5%);
 			border-color: lighten($pchc-blue, 5%);
 		}
-		
+
 		&:active {
 			margin-top: 2px;
 			@include box-shadow(0 2px 0 $pchc-darkblue);
 		}
 	}
-	
+
 	.s {
 		border: 1px solid $pchc-blue;
 		float: left;
@@ -353,7 +353,7 @@ HEADER STYLES
 		outline: none;
 		@include box-sizing(border-box);
 		@include box-shadow(0 4px 0 $pchc-darkblue);
-		
+
 		&:focus {
 			margin-top: -2px;
 			@include box-shadow(0 6px 0 $pchc-darkblue);
@@ -369,7 +369,7 @@ HEADER STYLES
 	font-weight: bold;
 	font-size: 0.9em;
 	margin: 0.25em 0;
-	
+
 	a {
 		color: #FFF;
 		text-decoration: none;
@@ -379,13 +379,13 @@ HEADER STYLES
 #menu-header-mobile-menu {
 	width: 100%;
 	padding-left: 5%;
-	
+
 	li {
 		width: (100% / 3);
 		margin: 0;
 		padding: 0 1%;
 		float: left;
-		
+
 		a {
 			font-size: 0.8em;
 			text-align: center;
@@ -396,7 +396,7 @@ HEADER STYLES
 			background: $pchc-darkblue;
 			color: #FFF;
 			@include border-radius(3px);
-			
+
 			&:hover {
 				background: #FFF;
 				color: $pchc-blue;
@@ -420,22 +420,22 @@ and more scalable.
 
 #header-nav {
 	background: $pchc-darkblue;
-	
+
 	.toggle {
 		&:before {
 			color: #FFF;
 		}
-		
+
 	}
-	
-	
+
+
 }
 
 .admin-bar {
 	#header-nav {
 		&.fixed {
 			.wrap  {
-				margin-top: 28px;	
+				margin-top: 28px;
 			}
 		}
 	}
@@ -457,7 +457,7 @@ and more scalable.
 		a {
 			text-decoration: none;
 			color: #FFF;
-			
+
 			display: block;
 			background: $pchc-blue;
 			line-height: 1em;
@@ -465,7 +465,7 @@ and more scalable.
 			margin-bottom: 0.5em;
 			@include border-radius(3px);
 			@include box-shadow(0 1px 1px rgba(#000, 0.5), inset 0 1px 1px rgba(#FFF, 0.1));
-			
+
 			position: relative;
 			z-index: 1;
 
@@ -480,7 +480,7 @@ and more scalable.
 				color: #FFF;
 				@include box-shadow(inset 0 1px 1px rgba(#000, 0.5), 0 1px 1px rgba(#FFF, 0.1));
 			}
-			
+
 			.toggle {
 				position: absolute;
 				z-index: 10;
@@ -494,7 +494,7 @@ and more scalable.
 		&:first-child {}
 
 		&:last-child {}
-		
+
 		&.has-dropdown {
 			a {
 				.toggle {
@@ -524,7 +524,7 @@ and more scalable.
 					&:focus {}
 
 					&:link {}
-					
+
 					.toggle {
 						display: none !important;
 					}
@@ -563,7 +563,7 @@ and more scalable.
 
 .nav-toggle {
 	margin-top: 0.5em;
-	
+
 	.icon-bar {
 		background: darken(#FFF, 5%);
 	}
@@ -590,7 +590,7 @@ and more scalable.
 //		vertical-align: middle;
 //		@include text-shadow(0px -1px 0px rgba(#000, 0.2470539));
 //		@include box-shadow(rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px 0px);
-//		
+//
 //		.icon-bar {
 //			@include box-shadow(rgba(0, 0, 0, 0.247059) 0px 1px 0px 0px);
 //			background: rgb(245, 245, 245);
@@ -699,7 +699,7 @@ img {
 			}
 
 			ul {
-			
+
 				list-style-type: disc;
 
 				li {}
@@ -748,7 +748,7 @@ img {
 			}
 
 		} /* end .entry-content */
-		
+
 		/*
 		image alignment on a screen this size may be
 		a bit difficult. It's set to start aligning
@@ -762,13 +762,13 @@ img {
 		}
 		.alignright, img.alignright {}
 		.aligncenter, img.aligncenter {}
-		
+
 		.alignleft, img.alignleft, .alignright, img.alignright, .aligncenter, img.aligncenter {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		
+
 		.polaroid {
 			padding: 0.5em;
 			@include border-radius(0.25em);
@@ -805,7 +805,7 @@ img {
 				margin: 0;
 
 				a {
-					
+
 				}
 
 				img {
@@ -819,7 +819,7 @@ img {
 					@include border-radius(3px);
 					@include transition(all .15s ease-out);
 				}
-				
+
 				a:hover {
 					img {
 						background: #FCFCFC;
@@ -838,7 +838,7 @@ img {
 			}
 
 		} /* end .gallery */
-		
+
 		@for $i from 1 to 8 {
 			.gallery-columns-#{$i} {
 				.gallery-item {
@@ -857,24 +857,24 @@ img {
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
-		
+
 		.content-excerpt {
 			border-bottom: 1px solid lighten($pchc-brown, 35%);
 			margin-bottom: 1em;
 			padding-bottom: 1em;
-			
+
 			&:last-child {
 				border-bottom: none;
 				margin-bottom: 0;
 			}
 		}
-		
+
 		/******************************************************************
 		POST TYPE STYLES
 		******************************************************************/
-		
+
 		.post-type-archive {
-		
+
 			.type-provider {
 				&.content-excerpt {
 					padding: 1em 0;
@@ -910,11 +910,11 @@ img {
 					}
 				}
 			}
-			
+
 			.type-service {
-				
+
 			}
-			
+
 			.type-location {
 				&.content-excerpt {
 					width: 50%;
@@ -923,15 +923,15 @@ img {
 					margin: 0;
 					border-top: 1px solid lighten($pchc-brown, 35%);
 					border-bottom: none;
-					
+
 					&:nth-child(2n+1) {
 						clear: left;
 					}
 				}
 			}
-		
+
 		}
-		
+
 article {
 	ul {
 		&.pchc-subpages {
@@ -948,7 +948,7 @@ article {
 	}
 }
 
-		
+
 /******************************************************************
 SEARCH RESULTS STYLES
 ******************************************************************/
@@ -962,79 +962,79 @@ $search-label-mix: 80%;
 		position: relative;
 		z-index: 1;
 	}
-	
+
 	.type-post {
 		$post-color: #000;
 		background: mix($post-color, #FFF, $search-mix/2);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-page {
 		$post-color: #1F7FBF;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-attachment {
 		$post-color: #BF1FB5;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-product {
 		$post-color: #49BF1F;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-jobman_job {
 		$post-color: #000000;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-location {
 		$post-color: $pchc-brown;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-service {
 		$post-color: $pchc-red;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.type-provider {
 		$post-color: $pchc-blue;
 		background: mix($post-color, #FFF, $search-mix);
-		
+
 		.post-type-label {
 			background: mix($post-color, #FFF, $search-label-mix);
 		}
 	}
-	
+
 	.post-type-label {
 		position: absolute;
 		top: 0;
@@ -1070,27 +1070,27 @@ $search-label-mix: 80%;
 	margin-bottom: 0;
 	@include box-shadow(0 -5px 15px rgba(#000,0.2));
 	@include border-radius(3px 3px 0 0);
-	
+
 	&.toggle-hide {
 		top: 100%;
 		bottom: auto;
 	}
-	
+
 	&.toggle-show {
 		top: auto;
 		bottom: 0;
-		
+
 		.widgettitle {
 			&:after {
 				content: "\2193";
 			}
 		}
 	}
-	
+
 	.js & {
 		display: block;
 	}
-	
+
 	.widgettitle {
 		position: absolute;
 		right: 10%;
@@ -1102,19 +1102,19 @@ $search-label-mix: 80%;
 		margin-bottom: 0;
 		@include transform-origin(0,0);
 		@include border-radius(3px 3px 0 0);
-		
+
 		&:after {
 			content: "\2191";
 			display: inline;
 			padding-left: 0.5em;
 		}
 	}
-	
+
 	ul {
 		margin-bottom: 0;
 		@include column-count(2);
 	}
-	
+
 	label {
 		display: block;
 		padding: 0.25em;
@@ -1228,7 +1228,7 @@ PAGE NAVI STYLES
 			background: $navbg;
 			@include border-radius(3px);
 			@include box-shadow(0 1px 1px rgba(#000,0.2));
-			
+
 			li {
 				list-style-type: none;
 				margin: 0;
@@ -1236,24 +1236,24 @@ PAGE NAVI STYLES
 				font-size: 0.8em;
 				color: $pchc-blue;
 				@include text-shadow(0 1px 0 rgba(#FFF, 0.8));
-				
+
 				a {
 					text-decoration: none;
-					
+
 					&:hover {
-						
+
 						~ i {
 							color: $pchc-red;
 						}
 					}
 				}
 			}
-			
+
 			.next-link {
 				float: right;
 				text-align: right;
 			}
-			
+
 			.prev-link {
 				float: left;
 			}
@@ -1565,12 +1565,12 @@ SIDEBARS & ASIDES
 		}
 
 	}
-	
-	
+
+
 /*********************
 FEATURE STYLES
 *********************/
-	
+
 #above-content {
 	background: none;
 	color: #FFF;
@@ -1579,28 +1579,28 @@ FEATURE STYLES
 	.widget {
 		margin-bottom: 0;
 	}
-	
+
 	.wrap {
-		
+
 	}
-	
+
 	a {
 		color: rgba(#FFF, 0.75);
-		
+
 		&:hover {
 			color: #FFF;
 		}
 	}
-	
+
 	.widget, #homepage-features {
 		padding: 0;
 	}
-	
+
 	.homepage-feature {
 		width: (100% / 3);
 		float: left;
 		padding: 0 20px;
-		
+
 		img {
 			max-width: 100%;
 			height: auto;
@@ -1608,12 +1608,12 @@ FEATURE STYLES
 			@include border-radius(50%);
 			@include box-shadow(0 10px 20px rgba(#000, 0.3));
 			@include transition(all 0.2s ease-in);
-			
+
 			&:hover {
 				@include box-shadow(0 10px 25px rgba(#000, 0.4));
 			}
 		}
-		
+
 		h3 {
 			font-family: $sans-serif;
 			text-align: left;
@@ -1622,15 +1622,15 @@ FEATURE STYLES
 			color: #FFF;
 			font-weight: 200;
 		}
-		
+
 		.content {
 			font-family: $sans-serif;
 			font-weight: 100;
 			font-size: 1.2em;
-			
+
 			p {
 				margin: 0 0 1em;
-				
+
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -1649,7 +1649,7 @@ BELOW CONTENT SERVICES
 		width: 50%;
 		margin: 0;
 		padding: 0;
-		
+
 		a {
 			display: block;
 			text-align: center;
@@ -1661,7 +1661,7 @@ BELOW CONTENT SERVICES
 			@include text-shadow(0 1px 0 #FFF);
 			@include border-radius(3px);
 			@include transition(0.15s all ease-out);
-			
+
 			&:hover {
 				background: $pchc-blue;
 				color: #FFF;
@@ -1708,28 +1708,28 @@ FOOTER STYLES
 	padding: 0;
 	font-size: 0.8em;
 	padding: 2em 0;
-	
+
 	li {
 		margin: 0 0 20px 0;
 		padding: 0 20px 0 0;
 		width: (100%/3);
 		float: left;
-		
+
 		h4 {
 			font-size: 1em;
 			font-family: $serif;
 			font-weight: bold;
 			margin: 0;
 		}
-		
+
 		p {
 			margin: 0;
 		}
-		
+
 		a {
 			color: #FFF;
 		}
-		
+
 		&:nth-child(3n+1) {
 			clear: left;
 		}
@@ -1737,7 +1737,7 @@ FOOTER STYLES
 }
 
 .footer {
-	
+
 }
 
 	/*
@@ -1749,7 +1749,7 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
-	
+
 	#footer {
 
 		.nav {
@@ -1760,7 +1760,7 @@ FOOTER STYLES
 					padding: 10px;
 					color: #FFF;
 					border: none;
-					
+
 					&:hover {
 						background: $pchc-brown;
 					}
@@ -1780,11 +1780,11 @@ FOOTER STYLES
 	border: none;
 	@include border-radius(3px);
 	@include box-shadow(none);
-	
+
 	&:nth-child(2n) {
 		background: #F3F3F3;
 	}
-	
+
 	.icon {
 		img {
 			height: 32px;
@@ -1793,24 +1793,24 @@ FOOTER STYLES
 			@include border-radius(3px);
 		}
 	}
-	
+
 	.filetitle {
 		max-width: 50%;
-		
+
 		a {
 			line-height: 1.1em;
 		}
 	}
-	
+
 	.info {
 		margin: 0 10px;
 		height: auto;
 		background: url(../images/download-sprite.png) 100% 0 no-repeat;
 	}
-	
+
 	&:hover {
 		.info {
-			background-position: 100% -200px; 
+			background-position: 100% -200px;
 		}
 	}
 }
@@ -1819,12 +1819,12 @@ ul.treeview {
 	li {
 		margin-left: 0;
 	}
-	
+
 	img {
 		max-height: 16px;
 		margin: 0;
 	}
-	
+
 	.last {
 		float: none;
 	}
@@ -1844,16 +1844,16 @@ ul.treeview {
 	z-index: 1;
 	color: #fff;
 	margin: 0;
-	
+
 	//.effect-7
 	@include transition(background 0.2s, color 0.2s);
-	
+
 	img {
 		display: block;
 		margin: 0;
 		@include box-shadow(none);
 	}
-	
+
 	&:before {
 		speak: none;
 		font-size: 48px;
@@ -1864,7 +1864,7 @@ ul.treeview {
 		text-transform: none;
 		display: block;
 		-webkit-font-smoothing: antialiased;
-		
+
 		//.sub-b
 		@include transform(scale(0.8));
 		opacity: 0.7;
@@ -1872,7 +1872,7 @@ ul.treeview {
 		-moz-transition: -moz-transform 0.2s, opacity0.2s;
 		transition: transform 0.2s, opacity0.2s;
 	}
-	
+
 	&:after {
 		pointer-events: none;
 		position: absolute;
@@ -1881,30 +1881,30 @@ ul.treeview {
 		border-radius: 50%;
 		content: '';
 		@include box-sizing(content-box);
-		
+
 		//.effect-07
 		top: -8px;
 		left: -8px;
 		padding: 8px;
 		z-index: -1;
 		opacity: 0;
-		
+
 		//.sub-b
 		@include box-shadow(4px 4px white);
-		@include transform(rotate(-90deg));	
+		@include transform(rotate(-90deg));
 		-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
 		-moz-transition: opacity 0.2s, -moz-transform 0.2s;
 		transition: opacity 0.2s, transform 0.2s;
 	}
-	
+
 	&:hover {
 		color: #fff;
-		
+
 		&:before {
 			@include transform(scale(1));
 			opacity: 1;
 		}
-		
+
 		&:after {
 			opacity: 1;
 			@include transform(rotate(0deg));
@@ -1913,7 +1913,7 @@ ul.treeview {
 }
 
 .metaslider {
-	
+
 	.slider-wrapper {
 		&.theme-light {
 			background: $pchc-blue;
@@ -1937,7 +1937,7 @@ ul.treeview {
 		font-weight: 100;
 		@include opacity(1);
 		@include border-radius(6px 0 0 0);
-		
+
 		h2 {
 			color: #FFF;
 		}
@@ -1955,43 +1955,43 @@ NINJA FORMS STYLES
 		border: 1px solid #F0F0F0;
 		padding: 1em;
 		@include border-radius(3px);
-		
+
 		#ninja_forms_required_items {
 			color: $pchc-red;
 		}
-		
+
 		.ninja-forms-response-msg {
 			padding: 1em;
 			border: 1px solid rgba(#FFF,1);
 			background: rgba(#FFF,0.5);
 			margin-bottom: 10px;
 			@include border-radius(3px);
-			
+
 			&.ninja-forms-error-msg {
 				background: rgba($pchc-red, 0.075);
 				border-color: rgba($pchc-red, 0.3);
 				color: $pchc-red;
 			}
-			
+
 			p:last-child {
 				margin-bottom: 0;
 			}
 		}
-		
+
 		.field-wrap {
 			padding: 0.5em;
-		
+
 			label {
 				display: block;
 				width: 30%;
 				line-height: 1.8em;
 				vertical-align: middle;
-				
+
 				.ninja-forms-help-text {
 					margin: 0;
 				}
 			}
-			
+
 			.ninja-forms-field {
 				display: inline-block;
 				width: 65%;
@@ -2006,47 +2006,47 @@ NINJA FORMS STYLES
 				@include border-radius(3px);
 				@include box-shadow(inset 0 1px 1px rgba(#000, 0.075));
 				@include transition(all linear 0.2s);
-				
+
 				&:focus {
 					outline: 0;
 					outline: thin dotted \9;
 					border-color: rgba($pchc-blue, 0.5);
 					@include box-shadow(inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba($pchc-blue, 0.5));
 				}
-				
+
 				&.ninja-forms-req:focus {
 					border-color: rgba($pchc-red, 0.5);
 					@include box-shadow(inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba($pchc-red, 0.5));
 				}
-				
+
 				&[type=checkbox], &[type=radio] {
 					width: auto;
 					@include box-shadow(none);
 				}
 			}
-			
+
 			.ninja-forms-field-description {
 				font-size: 0.8em;
 				color: #555;
 			}
-			
+
 			.ninja-forms-field-error {
 				clear: both;
 				font-size: 0.8em;
 				font-style: italic;
 				color: $pchc-red;
 			}
-			
+
 			&.label-above, &.label-below {
 				label {
 					display: block;
 					width: 100%;
 				}
-				
+
 				.ninja-forms-field {
 					display: block;
 					width: 100%;
-					
+
 					&[type=checkbox], &[type=radio] {
 						display: inline-block;
 						width: auto;
@@ -2054,45 +2054,45 @@ NINJA FORMS STYLES
 					}
 				}
 			}
-			
+
 			&.label-left {
 				label {
 					float: left;
 				}
-				
+
 				.ninja-forms-field {
 					float: right;
 				}
 			}
-			
+
 			&.label-right {
 				label {
 					float: right;
 				}
-				
+
 				.ninja-forms-field {
 					float: left;
 				}
 			}
-			
+
 			&.label-inside {
 				label {
-					
+
 				}
-				
+
 				.ninja-forms-field {
 					width: 100%;
 				}
 			}
-			
+
 			&:nth-child(2n) {
 				background: #F5F5F5;
 			}
-			
+
 			&.submit-wrap {
 				padding: 0;
 				background: none;
-				
+
 				.ninja-forms-field {
 					width: auto;
 					float: right;
@@ -2101,7 +2101,7 @@ NINJA FORMS STYLES
 					color: #FFF;
 					@include box-shadow(0 1px 1px rgba(#000, 0.075));
 					@include transition(all 0.1s ease-out);
-					
+
 					&:hover {
 						border-color: $pchc-darkblue;
 						background: $pchc-blue;
@@ -2111,7 +2111,7 @@ NINJA FORMS STYLES
 			}
 		}
 	}
-	
+
 }
 
 
@@ -2121,27 +2121,27 @@ WOOCOMMERCE STYLES
 
 .woocommerce, .woocommerce-page {
 	div.product {
-		
+
 		div.images {
-			
+
 		}
-		
+
 		div.summary {
-			
+
 		}
-		
+
 		&.no-thumbnail {
-			
+
 			div.images {
 				display: none;
 			}
-			
+
 			div.summary {
 				float: none;
 				width: auto;
 			}
 		}
-		
+
 		.woocommerce-tabs {
 			.panel {
 				h2 {
@@ -2380,7 +2380,7 @@ table {
 .providers-filter {
 	h4 {
 		margin-bottom: 1em;
-	}	
+	}
 }
 .filter-section {
 	ul {
@@ -2393,5 +2393,19 @@ table {
 		vertical-align: top;
 		line-height: 1.2em;
 		margin-bottom: 0.5em;
+	}
+}
+
+.leadership-role-group {
+	border-bottom: 1px solid #dad0cc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+	article {
+		float: left;
+		width: 25%;
+		padding: 0 1em 1em;
+		&:nth-child(4n+1){
+			clear: left;
+		}
 	}
 }
