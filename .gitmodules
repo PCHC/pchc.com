@@ -16,3 +16,7 @@
 	path = themes/hopehouse
 	url = git@github.com:PCHC/hopehouse.git
 	branch = hopehouse
+[submodule "themes/pchc-dentalresidency2016"]
+	path = themes/pchc-dentalresidency2016
+	url = git@github.com:PCHC/dentalresidency.git
+	branch = pchc-dentalresidency
