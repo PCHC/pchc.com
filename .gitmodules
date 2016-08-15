@@ -20,3 +20,7 @@
 	path = themes/pchc-dentalresidency2016
 	url = git@github.com:PCHC/dentalresidency.git
 	branch = pchc-dentalresidency
+[submodule "themes/pchc-recovery"]
+	path = themes/pchc-recovery
+	url = git@github.com:PCHC/gantry-child.git
+	branch = pchc-recovery
