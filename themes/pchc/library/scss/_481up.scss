@@ -206,3 +206,18 @@ do they need tweaking?
 		height: 60px;
 	}
 }			
+
+.disclaimer {
+	margin: 0.5em auto;
+	> small {
+	  text-align: center;
+	  margin: 0.5em auto;
+	  max-width: 90%;
+	  line-height: 1.5em;
+	  display: block;
+	  color: #FFF;
+	  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+	  font-size: 0.8em;
+	  font-weight: 300;
+	}
+}

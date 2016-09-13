@@ -64,6 +64,10 @@
 						wp_reset_postdata();
 						?>
 	
+						<p class="disclaimer"><small>In its work delivering medical and related services, PCHC and its employees are deemed federal Public Health Services employees. <br>
+						This means that PCHC and its employees are covered by the Federal Tort Claims Act.<br>
+						Ask PCHC’s Chief Compliance &amp; Risk Officer if you have questions about this.</small></p>
+
 					</div> <!-- end #inner-footer-bottom -->
 	
 				</div> <!-- end footer -->
