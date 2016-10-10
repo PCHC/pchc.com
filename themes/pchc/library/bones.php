@@ -127,13 +127,13 @@ function bones_scripts_and_styles() {
     wp_register_script( 'pchc-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 
     // register main stylesheet
-    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '3', 'all' );
+    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '3.7', 'all' );
 
     // ie-only style sheet
-    wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '3.6.0' );
-    
+    wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '3.7' );
+
     wp_register_style( 'font-awesome', 'https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), '3.2.1' );
-    
+
     wp_register_style( 'google-webfonts', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400|Asul:400,700', array(), '' );
 
     // comment reply script for threaded comments
@@ -228,7 +228,7 @@ function bones_theme_support() {
 			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
 		)
 	);
-	
+
 	// Declaring WooCommerce support
 	add_theme_support( 'woocommerce' );
 } /* end bones theme support */
@@ -445,9 +445,9 @@ function modify_post_mime_types( $post_mime_types ) {
 	// select the mime type, here: 'application/pdf'
 	// then we define an array with the label values
 
-	$post_mime_types['application/pdf'] = array( 
-			__( 'PDFs' ), 
-			__( 'Manage PDFs' ), 
+	$post_mime_types['application/pdf'] = array(
+			__( 'PDFs' ),
+			__( 'Manage PDFs' ),
 			_n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span class="count">(%s)</span>' )
 		);
 
@@ -464,36 +464,36 @@ function pchc_posts_category($atts){ // [posts_category name="category" num="num
 		'name' => 'news',
 		'num' => '10',
 	), $atts));
-	
+
 	$catID = get_cat_id( $name );
-	
-	$loop = new WP_Query( array( 
-	    'post_type' => 'post', 
+
+	$loop = new WP_Query( array(
+	    'post_type' => 'post',
 	    'category_name' => $name,
 	    'posts_per_page' => $num,
 	));
-	
+
 	if( $loop->have_posts() ) :
-		
+
 		while( $loop->have_posts() ) : $loop->the_post();
-		
+
 			ob_start();
 			get_template_part( 'content-excerpt', 'index' );
 			$content .= ob_get_contents();
 			ob_end_clean();
-		
+
 		endwhile;
-		
+
 		$content .= '<nav class="wp-prev-next">';
 		$content .= '<ul class="clearfix">';
 		$content .= '<li class="next-link">';
 		$content .= '<a href="' . get_category_link( $catID ) . '">More ' . get_category( $catID )->name . '</a> <i class="icon-chevron-right"></i>';
 		$content .= '</li></ul></nav>';
-		
+
 	endif;
-	
+
 	wp_reset_postdata();
-	
+
 	return $content;
 }
 
