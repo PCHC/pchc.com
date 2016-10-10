@@ -1,5 +1,5 @@
 			<footer id="footer" role="contentinfo">
-			
+
 				<div class="footer-top">
 					<div id="inner-footer-top" class="inner-footer wrap clearfix">
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
@@ -8,9 +8,10 @@
 							PCHC is nationally accredited for quality.<br>
 							PCHC is a FTCA Deemed Facility
 						</p>
+
 					</div>
 				</div>
-				
+
 				<?php if( has_nav_menu( 'footer-links' ) ) : ?>
 				<div class="footer-mid">
 					<div id="inner-footer-mid" class="inner-footer wrap clearfix">
@@ -20,10 +21,17 @@
 					</div>
 				</div>
 				<?php endif; ?>
-	
+
 				<div class="footer-bottom">
-	
+
 					<div id="inner-footer-bottom" class="inner-footer wrap clearfix">
+
+						<?php if ( is_active_sidebar( 'footer_top' ) ) : ?>
+							<div id="footer-top-widget" class="footer-widget clearfix">
+								<?php dynamic_sidebar( 'footer_top' ); ?>
+							</div><!-- end #footer-top-widget -->
+						<?php endif; ?>
+						
 						<?php
 						$args = array(
 							'post_type'			=>	'location',
@@ -31,47 +39,49 @@
 							'order'				=>	'ASC',
 							'posts_per_page'	=>	-1,
 						);
-						
+
 						$locations = new WP_Query( $args );
-						
+
 						if( $locations->have_posts() ) : ?>
-							
+
 							<ul id="footer-locations" class="clearfix">
-							
+
 							<?php while( $locations->have_posts() ) : $locations->the_post(); ?>
-							
+
 								<li class="footer-location">
 									<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-									<?php 
-										
+									<?php
+
 										echo wpautop( get_field('address') );
-										
+
 										echo wpautop( get_field('primary_phone_number') );
-										
+
 										echo wpautop( get_field('secondary_phone_number') );
-										
+
 									?>
-									
+
 								</li>
-							
+
 							<?php endwhile; ?>
-							
+
 							</ul>
 							<div class="clearfix"></div>
-						
-						<?php endif; 
-						
+
+						<?php endif;
+
 						wp_reset_postdata();
 						?>
-	
-						<p class="disclaimer"><small>In its work delivering medical and related services, PCHC and its employees are deemed federal Public Health Services employees. <br>
-						This means that PCHC and its employees are covered by the Federal Tort Claims Act.<br>
-						Ask PCHC’s Chief Compliance &amp; Risk Officer if you have questions about this.</small></p>
+
+						<?php if ( is_active_sidebar( 'footer_bottom' ) ) : ?>
+							<div id="footer-bottom-widget" class="footer-widget clearfix">
+								<?php dynamic_sidebar( 'footer_bottom' ); ?>
+							</div><!-- end #footer-bottom-widget -->
+						<?php endif; ?>
 
 					</div> <!-- end #inner-footer-bottom -->
-	
+
 				</div> <!-- end footer -->
-			
+
 			</footer>
 
 		</div> <!-- end #container -->

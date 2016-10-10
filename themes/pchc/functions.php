@@ -128,6 +128,26 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+	register_sidebar(array(
+		'id' => 'footer_top',
+		'name' => __('Footer Top', 'bonestheme'),
+		'description' => __('This area appears in the footer, just above the menu.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'footer_bottom',
+		'name' => __('Footer Bottom', 'bonestheme'),
+		'description' => __('This area appears in the footer, at the very bottom.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
 	add_filter('widget_text', 'do_shortcode');
 
 	/*
