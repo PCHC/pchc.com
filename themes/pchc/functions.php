@@ -131,7 +131,7 @@ function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'footer_top',
 		'name' => __('Footer Top', 'bonestheme'),
-		'description' => __('This area appears in the footer, just above the menu.', 'bonestheme'),
+		'description' => __('This area appears in the footer, just below the menu.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
