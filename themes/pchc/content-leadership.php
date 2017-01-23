@@ -8,10 +8,10 @@
 			<?php else: ?>
 				<?php the_title(); ?>
 			<?php endif; ?>
-			<?php if( get_field('title') ) : ?>
-				<p class="byline vcard" itemprop="about"><?php echo get_field('title'); ?></p>
-			<?php endif; ?>
 		</h1>
+    <?php if( get_field('title') ) : ?>
+      <p class="byline vcard" itemprop="about"><?php echo get_field('title'); ?></p>
+    <?php endif; ?>
 
 	</header> <!-- end article header -->
 
