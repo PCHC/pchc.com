@@ -28,3 +28,7 @@
 	path = themes/pchc-seaport2017
 	url = https://github.com/PCHC/gantry-child-theme.git
 	branch = themes/seaport2017
+[submodule "themes/hopehouse"]
+	path = themes/hopehouse
+	url = https://github.com/PCHC/hopehouse.git
+	branch = hopehouse
