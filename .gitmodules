@@ -28,3 +28,7 @@
 	path = themes/pchc-recovery
 	url = git@github.com:PCHC/gantry-child.git
 	branch = pchc-recovery
+[submodule "themes/pchc-seaport2017"]
+	path = themes/pchc-seaport2017
+	url = https://github.com/PCHC/gantry-child-theme.git
+	branch = themes/seaport2017
