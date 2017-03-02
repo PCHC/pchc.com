@@ -127,7 +127,7 @@ function bones_scripts_and_styles() {
     wp_register_script( 'pchc-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 
     // register main stylesheet
-    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '3.8', 'all' );
+    wp_register_style( 'pchc-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), false, 'all' );
 
     // ie-only style sheet
     wp_register_style( 'pchc-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '3.7' );
