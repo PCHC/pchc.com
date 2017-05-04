@@ -35,6 +35,14 @@
 
 			<?php the_content(); ?>
 
+      <?php if( get_field('answering_service') ) { ?>
+        <section class="entry-details">
+          <div class="well">
+            <strong>Calls are routed to our answering service after 5pm.</strong>
+          </div>
+        </section>
+      <?php } ?>
+
 			<?php
 			$fields = get_fields();
 
@@ -44,26 +52,17 @@
 				{
 					// get_field_object( $field_name, $post_id, $options )
 					// - $value has already been loaded for us, no point to load it again in the get_field_object function
-					if( $value && $field_name != 'address' && $field_name != 'show_map' ) {
+					if( $value && $field_name != 'address' && $field_name != 'show_map' && $field_name != 'answering_service' ) {
 
 						$field = get_field_object($field_name, false, array('load_value' => false));
-
-            if( $field_name == 'answering_service' && $value ) { ?>
-
-              <section class="entry-details">
-  							<div class="well">
-                  <p><strong>All calls are routed to our answering service after 5pm.</strong></p>
-                </div>
-  						</section>
-
-            <?php } else { ?>
+            ?>
 
   						<section class="entry-details">
   							<h3><?php echo $field['label']; ?></h3>
   							<?php echo wpautop( $value ); ?>
   						</section>
 
-						<?php }
+						<?php
 					}
 				}
 			}
